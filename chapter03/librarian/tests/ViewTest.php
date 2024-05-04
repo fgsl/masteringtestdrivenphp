@@ -345,6 +345,8 @@ class ViewTest extends TestCase
             1 => ["pipe", "w"],
             2 => ["file", "/dev/null", "a"]
          );
-        return proc_open('nohup php -S localhost:8008 &',$descriptorspec,$path);
+        $process = proc_open('nohup php -S localhost:8008 &',$descriptorspec,$path);
+        sleep(1);
+        return $process;
     }
 }
