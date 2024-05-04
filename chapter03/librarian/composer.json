@@ -3,7 +3,7 @@
         "phpunit/phpunit": "^11.1"
     },
     "autoload" : {
-        "files": ["functions.book.php"]
+        "files": ["book.functions.php"]
     },
     "require": {
         "fgsl/rest": "*"
