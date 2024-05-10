@@ -278,6 +278,7 @@ function updateAuthorInJSON(int $code, array $data)
     $sourcePath = getConfig()['author_json_filepath'];
     $content = file_get_contents($sourcePath);
     $authors = json_decode($content);
+    $authors = is_null($authors) ? [] : $authors;
     $changed = false;
     foreach($authors as $index => $author) {
         if ((int) $author->code == $code) {
@@ -285,6 +286,7 @@ function updateAuthorInJSON(int $code, array $data)
                 $author->$key = $value;
             }
             $authors[$index] = $author;
+            $changed = true;
         }
     }
     $targetPath = str_replace('.json','.tmp',$sourcePath);
@@ -349,10 +351,12 @@ function deleteAuthorInJSON(int $code)
     $sourcePath = getConfig()['author_json_filepath'];
     $content = file_get_contents($sourcePath);
     $authors = json_decode($content);
+    $authors = is_null($authors) ? [] : $authors;
     $changed = false;
     foreach($authors as $index => $author) {
         if ((int) $author->code == $code) {
             unset($authors[$index]);
+            $changed = true;
         }
     }
     $targetPath = str_replace('.json','.tmp',$sourcePath);
@@ -504,7 +508,7 @@ function readBooksInPlainText()
 {
     $filepath = getConfig()['book_plaintext_filepath'];
     $handle = fopen($filepath,'r');
-    $authors = [];
+    $books = [];
     while(!feof($handle)){
         $row = fread($handle, BOOK_ROW_LENGTH);
         $book = [
@@ -625,6 +629,7 @@ function updateBookInJSON(int $code, array $data)
     $sourcePath = getConfig()['book_json_filepath'];
     $content = file_get_contents($sourcePath);
     $books = json_decode($content);
+    $books = is_null($books) ? [] : $books;
     $changed = false;
     foreach($books as $index => $book) {
         if ((int) $book->code == $code) {
@@ -632,6 +637,7 @@ function updateBookInJSON(int $code, array $data)
                 $book->$key = $value;
             }
             $books[$index] = $book;
+            $changed = true;
         }
     }
     $targetPath = str_replace('.json','.tmp',$sourcePath);
@@ -675,7 +681,7 @@ function deleteBookInCSV(int $code)
     $changed = false;
     while(!feof($sourceHandle)){
         $row = fgetcsv($sourceHandle, null, ';');
-        if (!is_array($row) || count($row) != 4) continue;
+        if (!is_array($row) || count($row) != 3) continue;
         $readCode = (int) $row[0];        
         if ($readCode == $code){
             $changed = true;
@@ -696,10 +702,12 @@ function deleteBookInJSON(int $code)
     $sourcePath = getConfig()['book_json_filepath'];
     $content = file_get_contents($sourcePath);
     $books = json_decode($content);
+    $books = is_null($books) ? [] : $books;
     $changed = false;
     foreach($books as $index => $book) {
         if ((int) $book->code == $code) {
             unset($books[$index]);
+            $changed = true;
         }
     }
     $targetPath = str_replace('.json','.tmp',$sourcePath);
