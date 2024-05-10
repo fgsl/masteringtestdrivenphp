@@ -256,7 +256,7 @@ function deleteBookInCSV(int $code)
     $changed = false;
     while(!feof($sourceHandle)){
         $row = fgetcsv($sourceHandle, null, ';');
-        if (!is_array($row) || count($row) != 4) continue;
+        if (!is_array($row) || count($row) != 3) continue;
         $readCode = (int) $row[0];        
         if ($readCode == $code){
             $changed = true;

@@ -1,6 +1,5 @@
 <?php
 require 'vendor/autoload.php';
-prepareFile('book');
 ?>
 <!doctype html>
 <html>

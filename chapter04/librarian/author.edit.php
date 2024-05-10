@@ -1,7 +1,6 @@
 <?php
 require 'vendor/autoload.php';
 $code = $_GET['code'] ?? 0;
-prepareFile('author');
 $author = getAuthorByCode($code);
 ?>
 <!doctype html>
