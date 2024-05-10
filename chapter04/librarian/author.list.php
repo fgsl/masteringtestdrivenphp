@@ -1,6 +1,5 @@
 <?php
 require 'vendor/autoload.php';
-prepareFile('author');
 ?>
 <!doctype html>
 <html>

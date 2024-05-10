@@ -173,7 +173,7 @@ function readBooksInPlainText()
 {
     $filepath = getConfig()['book_plaintext_filepath'];
     $handle = fopen($filepath,'r');
-    $authors = [];
+    $books = [];
     while(!feof($handle)){
         $row = fread($handle, BOOK_ROW_LENGTH);
         $book = [

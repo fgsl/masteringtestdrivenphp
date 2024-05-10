@@ -37,5 +37,14 @@ abstract class AbstractBackupTest extends TestCase
             copy($authorPath . '.bkp', $authorPath);
             unlink($authorPath . '.bkp');
         }
+    }
+    
+    protected function deleteBooksAndAuthors(string $type)
+    {
+        $type = ($type == 'txt' ? 'plaintext' : $type);
+        $filepath = getConfig()["book_{$type}_filepath"];
+        unlink($filepath);
+        $filepath = getConfig()["author_{$type}_filepath"];
+        unlink($filepath);
     }    
 }
