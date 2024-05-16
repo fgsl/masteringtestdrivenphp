@@ -91,13 +91,6 @@ class DatabaseTest extends TestCase
         truncateTable('authors');
     }    
 
-    private function truncateTable(string $table)
-    {
-        $mysqli = getConnection();
-        $mysqli->query('DELETE FROM ' . $table);
-        $mysqli->query('ALTER TABLE ' . $table . ' AUTO_INCREMENT = 1');
-    }
-
     public static function tearDownAfterClass():void
     {
         proc_terminate(self::$process);
