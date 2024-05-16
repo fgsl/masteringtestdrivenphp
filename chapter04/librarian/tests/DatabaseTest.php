@@ -5,7 +5,6 @@
  */
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Attributes\CoversNothing;
-use Fgsl\Rest\Rest;
 
 class DatabaseTest extends TestCase
 {
