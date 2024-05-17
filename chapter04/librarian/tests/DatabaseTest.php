@@ -49,7 +49,6 @@ class DatabaseTest extends TestCase
         $authors = readAuthorsInDatabase();
         $this->assertCount(3,$authors);
         $this->assertEquals('Agatha',$authors[1]['first_name']);
-        $filepath = getConfig()['author_plaintext_filepath'];
         truncateTable('authors');
     }
     
