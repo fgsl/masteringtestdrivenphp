@@ -92,7 +92,6 @@ class DatabaseTest extends TestCase
 
     public static function tearDownAfterClass():void
     {
-        proc_terminate(self::$process);
         replaceConfigFileContent("'database' => 'librarian_test'","'database' => 'librarian'");
     }    
 }
