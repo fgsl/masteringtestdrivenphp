@@ -150,42 +150,6 @@ class JSONTest extends AbstractBackupTest
         $this->assertStringContainsString('vie',$book['title']);
         $this->deleteBooksAndAuthors('json');        
     }
-
-    /**
-     * @coversNothing
-     */    
-    #[CoversNothing()]
-    public function testDeleteBookInPlainText()
-    {
-        saveAuthorInPlainText('Alencar','de','José');
-        saveBookInPlainText('O Guarani',1);
-        saveBookInPlainText('Iracema',1);
-        saveBookInPlainText('Ubirajara',1);
-        $book = readBookInPlainTextByCode(2);
-        $this->assertStringContainsString('Iracema',$book['title']);
-        deleteBookInPlainText(2);
-        $book = readBookInPlainTextByCode(2);
-        $this->assertEmpty($book);
-        $this->deleteBooksAndAuthors('txt');
-    }
-    
-    /**
-     * @coversNothing
-     */    
-    #[CoversNothing()]
-    public function testDeleteBookInCSV()
-    {
-        saveAuthorInCSV('Alencar','de','José');
-        saveBookInCSV('O Guarani',1);
-        saveBookInCSV('Iracema',1);
-        saveBookInCSV('Ubirajara',1);
-        $book = readBookInCSVByCode(2);
-        $this->assertStringContainsString('Iracema',$book['title']);
-        deleteBookInCSV(2);
-        $book = readBookInCSVByCode(2);
-        $this->assertEmpty($book);
-        $this->deleteBooksAndAuthors('csv');
-    }
     
     /**
      * @coversNothing
