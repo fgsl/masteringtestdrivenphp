@@ -43,8 +43,10 @@ function updateAuthorInDatabase(int $code, array $data)
         $types .= 's';
         $values[] = $value;
     }
+    $types .= 'i';
+    $values[] = $code;
     $placeholders = substr($placeholders,0,strlen($placeholders)-1);
-    $stmt = $mysqli->prepare('UPDATE authors SET ' . $placeholders);
+    $stmt = $mysqli->prepare('UPDATE authors SET ' . $placeholders . ' WHERE code = ?');
     $stmt->bind_param($types, ...$values);
     return $stmt->execute();
 }
@@ -96,8 +98,10 @@ function updateBookInDatabase(int $code, array $data)
         $types .=  is_int($value) ? 'i' : 's';
         $values[] = $value;
     }
+    $types .= 'i';
+    $values[] = $code;
     $placeholders = substr($placeholders,0,strlen($placeholders)-1);
-    $stmt = $mysqli->prepare('UPDATE books SET ' . $placeholders);
+    $stmt = $mysqli->prepare('UPDATE books SET ' . $placeholders . ' WHERE code = ?');
     $stmt->bind_param($types, ...$values);
     return $stmt->execute();
 }
