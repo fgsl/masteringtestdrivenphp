@@ -6,3 +6,5 @@ This is the repository for the source code from the book _Mastering Test Driven 
 * [Chapter 2](./chapter02/)
 * [Chapter 3](./chapter03/)
 * [Chapter 4](./chapter04/)
+* [Chapter 5](./chapter05/)
+* [Chapter 6](./chapter06/)
