@@ -8,3 +8,4 @@ This is the repository for the source code from the book _Mastering Test Driven 
 * [Chapter 4](./chapter04/)
 * [Chapter 5](./chapter05/)
 * [Chapter 6](./chapter06/)
+* [Chapter 7](./chapter07/)
