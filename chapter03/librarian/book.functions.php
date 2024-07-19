@@ -772,7 +772,7 @@ function listAuthorsInTable()
     return $html;
 }
 
-function listBooksForSelect($code)
+function listAuthorsForSelect($code)
 {
     $fileFormat = getConfig()['file_format'];
     $authors = [];

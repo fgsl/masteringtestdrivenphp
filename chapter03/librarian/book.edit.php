@@ -17,7 +17,7 @@ $book = getBookByCode($code);
 <input type="text" name="title" value="<?=$book['title']?>"><br/>
 <label for="author_code">Author:</label>
 <select name="author_code">
-<?=listBooksForSelect($book['author_code'] ?? 0)?>
+<?=listAuthorsForSelect($book['author_code'] ?? 0)?>
 </select><br/>
 <input type="hidden" name="code" value="<?=$code?>"><br/>
 <input type="submit" value="save">
