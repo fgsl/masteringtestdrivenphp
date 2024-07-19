@@ -82,7 +82,7 @@ function listAuthorsInTable()
     return $html;
 }
 
-function listBooksForSelect($code)
+function listAuthorsForSelect($code)
 {
     $storageFormat = getConfig()['storage_format'];
     $authors = [];
