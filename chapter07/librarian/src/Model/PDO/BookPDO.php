@@ -53,8 +53,9 @@ class BookPDO
             $fields[$placeholder] = $value;
         }
         $placeholders = substr($placeholders,0,strlen($placeholders)-1);        
-        $sql = 'UPDATE books SET ' . $placeholders;
+        $sql = 'UPDATE books SET ' . $placeholders . ' WHERE code = :code';
         $statement = $this->pdo->prepare($sql);
+        $statement->bindParam('code', $code);
         foreach($fields as $field => &$value){
             $statement->bindParam(":$field", $value);
         }
