@@ -127,7 +127,7 @@ function listAuthorsForSelect($code)
     }
     $html = '';
     foreach($authors as $author){
-        $authorName = $author->firstName . ' ' . $author->middleNname . ' ' . $author->lastName;
+        $authorName = $author->firstName . ' ' . $author->middleName . ' ' . $author->lastName;
         $html.='<option value="' . $author->code . '"' . ($author->code == $code ? ' selected ' : '') . '>' . $authorName . '</option>';
     }
     return $html;
