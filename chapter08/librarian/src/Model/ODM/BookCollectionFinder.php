@@ -35,13 +35,4 @@ class BookCollectionFinder
         }
         return new BookRowSet($result->toArray());
     }
-
-    public function update(int $code, array $data)
-    {
-        $result = $this->database->books->updateOne(
-            ['code' => $code],
-            ['$set' => $data]
-        );
-        return $result->getModifiedCount() == 1;
-    }
 }
