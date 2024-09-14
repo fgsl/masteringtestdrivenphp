@@ -11,7 +11,7 @@ return [
         'dsn' => 'mysql:dbname=librarian_test;host=localhost',
         'host' => 'localhost',
         'username' => 'root',
-        'password' => 'mysql',
+        'password' => '',
         'database' => 'librarian_test'
     ]
 ];
