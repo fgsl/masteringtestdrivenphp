@@ -124,11 +124,7 @@ class Author extends AbstractPageController
         };
 
         try {
-            return (new $dataGateway())->delete($code, [
-                'last_name' => $lastName, 
-                'middle_name' => $middleName, 
-                'first_name' => $firstName]
-            );
+            return (new $dataGateway())->delete($code);
         } catch (\Exception $e){
             return false;
         }
