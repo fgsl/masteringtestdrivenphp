@@ -1,17 +1,17 @@
 <?php
 namespace Librarian\Controller\REST;
-use Librarian\Model\PDO\BookPDO;
+use Librarian\Model\BookProxy;
 /**
  * @author Flávio Gomes da Silva Lisboa
  * @license LGPL-3.0 license <https://www.gnu.org/licenses/lgpl-3.0.html.en>
  */
-class BookREST
+class BookREST extends AbstractRESTController
 {
-    private BookPDO $bookPDO;
+    private BookProxy $bookProxy;
 
     public function __construct()
     {
-        $this->bookPDO = new BookPDO();
+        $this->bookProxy = new BookProxy();
     }
 
     public function post(array $data): array
@@ -21,27 +21,28 @@ class BookREST
 
         $response = ['included' => false];
 
-        if ($this->bookPDO->save($title, $authorCode))
+        if ($this->bookProxy->save($title, $authorCode))
         {
             $response = ['included' => true];
         }
         return $response;
     }
 
-    public function get(int $code): array
+    
+
+    public function get(int $code): mixed
     {
         if ($code == 0) {
-            return $this->bookPDO->readBooks();
+            return $this->bookProxy->getFinder()->readAll()->getRows();
         }
-        return $this->bookPDO->readByCode($code);
+        return $this->bookProxy->getByCode($code);
     }
     
     public function put(array $data): array
     {
         $code = (int)$data['code'];
-        unset($data['code']);
         $response = ['updated' => false];
-        if ($this->bookPDO->update($code, $data))
+        if ($this->bookProxy->update($code, $data['title'],$data['author_code']))
         {
             $response = ['updated' => true];
         }
@@ -51,7 +52,7 @@ class BookREST
     public function delete(int $code): array
     {
         $response = ['deleted' => false];
-        if ($this->bookPDO->delete($code))
+        if ($this->bookProxy->delete($code))
         {
             $response = ['deleted' => true];
         }
