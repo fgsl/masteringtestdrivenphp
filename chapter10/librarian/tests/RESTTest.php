@@ -4,30 +4,36 @@
  * @license LGPL-3.0 license <https://www.gnu.org/licenses/lgpl-3.0.html.en>
  */
 use PHPUnit\Framework\TestCase;
-use PHPUnit\Framework\Attributes\CoversNothing;
-use Librarian\Model\REST\AuthorREST;
-use Librarian\Model\REST\BookREST;
+use PHPUnit\Framework\Attributes\CoversClass;
+use Librarian\Controller\REST\AuthorREST;
+use Librarian\Controller\REST\BookREST;
 use Fgsl\Rest\Rest;
 use Librarian\Test\PHPServer;
+use Librarian\Model\Entity;
+use Librarian\Util\Config;
 
+/**
+ * @covers AuthorREST
+ * @covers BookREST
+ * @covers Entity
+ * @covers Config
+ */
+#[CoversClass(AuthorREST::class)]
+#[CoversClass(BookREST::class)]
+#[CoversClass(Entity::class)]
+#[CoversClass(Config::class)]
 class RESTTest extends TestCase
 {
     public static function setUpBeforeClass(): void 
     {
-        replaceConfigFileContent("'database' => 'librarian'","'database' => 'librarian_test'");        
-        replaceConfigFileContent('dbname=librarian','dbname=librarian_test');        
+        putenv('LIBRARIAN_TEST_ENVIRONMENT=true');
         PHPServer::getInstance()->start();
     }
 
     // author tests
-    /**
-     * @coversNothing
-     */
-    #[CoversNothing()]
     public function testSaveAuthor()
     {        
-        truncateTable('authors');
-        $url = 'http://localhost:8008/author.php';
+        $url = 'http://localhost:8008/index.php?api=author';
         $rest = new Rest();
         $data = [
             'first_name' => 'George',
@@ -39,17 +45,12 @@ class RESTTest extends TestCase
         $this->assertIsObject($json);
         $this->assertObjectHasProperty('included',$json);
         $this->assertTrue($json->included);
-        truncateTable('authors');
+        Entity::clear('author');
     }
 
-    /**
-     * @coversNothing
-     */    
-    #[CoversNothing()]
     public function testReadAuthor()
     {
-        truncateTable('authors');
-        $url = 'http://localhost:8008/author.php';
+        $url = 'http://localhost:8008/index.php?api=author';
         $rest = new Rest();
         $data = [
             'first_name' => 'Johann',
@@ -69,20 +70,15 @@ class RESTTest extends TestCase
             'last_name' => 'Doyle'
         ];
         $rest->doPost($data, [], $url, 200);
-        $response = $rest->doGet([], $url . '?code=2', 200);
+        $response = $rest->doGet([], $url . '&code=2', 200);
         $author = json_decode($response);
-        $this->assertEquals('Scott',$author->middle_name);
-        truncateTable('authors');
+        $this->assertEquals('Scott',$author->middleName);
+        Entity::clear('author');
     }
 
-    /**
-     * @coversNothing
-     */    
-    #[CoversNothing()]
     public function testReadAuthors()
     {
-        truncateTable('authors');
-        $url = 'http://localhost:8008/author.php';
+        $url = 'http://localhost:8008/index.php?api=author';
         $rest = new Rest();
         $data = [
             'first_name' => 'Mary',
@@ -105,18 +101,13 @@ class RESTTest extends TestCase
         $response = $rest->doGet([], $url, 200);
         $authors = json_decode($response);
         $this->assertCount(3,$authors);
-        $this->assertEquals('Agatha',$authors[1]->first_name);
-        truncateTable('authors');
+        $this->assertEquals('Agatha',$authors[1]->firstName);
+        Entity::clear('author');
     }
     
-    /**
-     * @coversNothing
-     */    
-    #[CoversNothing()]
     public function testUpdateAuthor()
     {
-        truncateTable('authors');
-        $url = 'http://localhost:8008/author.php';
+        $url = 'http://localhost:8008/index.php?api=author';
         $rest = new Rest();
         $data = [
             'first_name' => 'Guy',
@@ -136,26 +127,22 @@ class RESTTest extends TestCase
             'last_name' => 'Balzac'
         ];
         $rest->doPost($data, [], $url, 200);
-        $response = $rest->doGet([], $url . '?code=1', 200);
+        $response = $rest->doGet([], $url . '&code=1', 200);
         $author = json_decode($response);
-        $this->assertEquals('Guy',$author->first_name);
+        $this->assertEquals('Guy',$author->firstName);
         $data = $this->getAuthorArray('Rudolf','Erich','Raspe');
         $data['code'] = $author->code;
         $rest->doPut($data,[], $url, 200);
-        $response = $rest->doGet([], $url . '?code=1', 200);
+        $response = $rest->doGet([], $url . '&code=1', 200);
         $author = json_decode($response);
-        $this->assertEquals('Rudolf',$author->first_name);
-        truncateTable('authors');
+        $this->assertEquals('Rudolf',$author->firstName);
+        Entity::clear('author');
     }
    
-    /**
-     * @coversNothing
-     */    
-    #[CoversNothing()]
     public function testDeleteAuthor()
     {
-        truncateTable('authors');
-        $url = 'http://localhost:8008/author.php';
+
+        $url = 'http://localhost:8008/index.php?api=author';
         $rest = new Rest();
         $data = [
             'first_name' => 'Machado',
@@ -175,80 +162,62 @@ class RESTTest extends TestCase
             'last_name' => 'Queiroz'
         ];
         $rest->doPost($data, [], $url, 200);
-        $response = $rest->doGet([], $url . '?code=2', 200);
+        $response = $rest->doGet([], $url . '&code=2', 200);
         $author = json_decode($response);
-        $this->assertEquals('Alencar',$author->last_name);
-        $rest->doDelete([], $url . '?code=2', 200);
-        $response = $rest->doGet([], $url . '?code=2', 200);
+        $this->assertEquals('Alencar',$author->lastName);
+        $rest->doDelete([], $url . '&code=2', 200);
+        $response = $rest->doGet([], $url . '&code=2', 200);
         $author = json_decode($response);
-        $this->assertEmpty($author);
-        truncateTable('authors');
+        $this->assertEquals(0, $author->code);
+        Entity::clear('author');
     }    
     // book tests
-    /**
-     * @coversNothing
-     */
-    #[CoversNothing()]
     public function testSaveBook()
     {
-        truncateTable('books');
-        truncateTable('authors');
         $rest = new Rest();
         $data = $this->getAuthorArray('Herbert','George','Wells');
-        $url = 'http://localhost:8008/author.php';
+        $url = 'http://localhost:8008/index.php?api=author';
         $rest->doPost($data, [], $url, 200);
         $data = [
             'title' => 'The Time Machine',
             'author_code' => 1
         ];
-        $url = 'http://localhost:8008/book.php';
+        $url = 'http://localhost:8008/index.php?api=book';
         $response = $rest->doPost($data, [], $url, 200);
         $json = json_decode($response);
         $this->assertIsObject($json);
         $this->assertObjectHasProperty('included',$json);
         $this->assertTrue($json->included); 
-        truncateTable('books');
-        truncateTable('authors');
+        Entity::clear('book');
+        Entity::clear('author');
     }
   
-    /**
-     * @coversNothing
-     */    
-    #[CoversNothing()]
     public function testReadBook()
     {
-        truncateTable('books');
-        truncateTable('authors');        
         $rest = new Rest();
         $data = $this->getAuthorArray('Johann','Wolfgang','Von Goethe');
-        $url = 'http://localhost:8008/author.php';
+        $url = 'http://localhost:8008/index.php?api=author';
         $rest->doPost($data, [], $url, 200);
         $data = [
             'title' => 'Fausto',
             'author_code' => 1
         ];
-        $url = 'http://localhost:8008/book.php';
+        $url = 'http://localhost:8008/index.php?api=book';
         $rest->doPost($data, [], $url, 200);
-        $response = $rest->doGet([], $url . '?code=1', 200);
+        $response = $rest->doGet([], $url . '&code=1', 200);
         $book = json_decode($response);
         $this->assertStringContainsString('Fausto',$book->title);
-        truncateTable('books');
-        truncateTable('authors');
+        Entity::clear('book');
+        Entity::clear('author');
     }
     
-    /**
-     * @coversNothing
-     */    
-    #[CoversNothing()]
     public function testReadBooks()
     {
-        truncateTable('books');
-        truncateTable('authors');
         $rest = new Rest();
         $data = $this->getAuthorArray('Agatha','Mary','Christie');
-        $url = 'http://localhost:8008/author.php';
+        $url = 'http://localhost:8008/index.php?api=author';
         $rest->doPost($data, [], $url, 200);
-        $url = 'http://localhost:8008/book.php';
+        $url = 'http://localhost:8008/index.php?api=book';
         $data = $this->getBookArray('Murder on the Orient Express',1);
         $rest->doPost($data, [], $url, 200);
         $data = $this->getBookArray('Death on the Nile',1);
@@ -259,30 +228,24 @@ class RESTTest extends TestCase
         $books = json_decode($response);        
         $this->assertCount(3,$books);
         $this->assertStringContainsString('Orient',$books[0]->title);
-        truncateTable('books');
-        truncateTable('authors');
+        Entity::clear('book');
+        Entity::clear('author');
     }
     
-    /**
-     * @coversNothing
-     */    
-    #[CoversNothing()]
     public function testUpdateBook()
     { 
-        truncateTable('books');
-        truncateTable('authors');
         $rest = new Rest();
         $data = $this->getAuthorArray('Honoré','de','Balzac');
-        $url = 'http://localhost:8008/author.php';
+        $url = 'http://localhost:8008/index.php?api=author';
         $rest->doPost($data, [], $url, 200);
-        $url = 'http://localhost:8008/book.php';
+        $url = 'http://localhost:8008/index.php?api=book';
         $data = $this->getBookArray('La Vendetta',1);
         $rest->doPost($data, [], $url, 200);
         $data = $this->getBookArray('Le Contrat de mariage',1);
         $rest->doPost($data, [], $url, 200);
         $data = $this->getBookArray('La Femme de trente ans',1);
         $rest->doPost($data, [], $url, 200);
-        $response = $rest->doGet([], $url . '?code=2', 200);
+        $response = $rest->doGet([], $url . '&code=2', 200);
         $book = json_decode($response);
         $this->assertStringContainsString('mariage',$book->title);
         $data = [
@@ -290,41 +253,35 @@ class RESTTest extends TestCase
             'code' => 2
         ];
         $rest->doPut($data, [], $url, 200);
-        $response = $rest->doGet([], $url . '?code=2', 200);
+        $response = $rest->doGet([], $url . '&code=2', 200);
         $book = json_decode($response);
         $this->assertStringContainsString('vie',$book->title);
-        truncateTable('books');
-        truncateTable('authors');
+        Entity::clear('book');
+        Entity::clear('author');
     }
    
-    /**
-     * @coversNothing
-     */    
-    #[CoversNothing()]
     public function testDeleteBook()
     {
-        truncateTable('books');
-        truncateTable('authors');
         $rest = new Rest();
         $data = $this->getAuthorArray('José','de','Alencar');
-        $url = 'http://localhost:8008/author.php';
+        $url = 'http://localhost:8008/index.php?api=author';
         $rest->doPost($data, [], $url, 200);
-        $url = 'http://localhost:8008/book.php';
+        $url = 'http://localhost:8008/index.php?api=book';
         $data = $this->getBookArray('O Guarani',1);
         $rest->doPost($data, [], $url, 200);
         $data = $this->getBookArray('Iracema',1);
         $rest->doPost($data, [], $url, 200);        
         $data = $this->getBookArray('Ubirajara',1);
         $rest->doPost($data, [], $url, 200);
-        $response = $rest->doGet([], $url . '?code=2', 200);
+        $response = $rest->doGet([], $url . '&code=2', 200);
         $book = json_decode($response);                
         $this->assertStringContainsString('Iracema',$book->title);
-        $response = $rest->doDelete([], $url . '?code=2', 200);
-        $response = $rest->doGet([], $url . '?code=2', 200);
+        $response = $rest->doDelete([], $url . '&code=2', 200);
+        $response = $rest->doGet([], $url . '&code=2', 200);
         $book = json_decode($response);
-        $this->assertEmpty($book);
-        truncateTable('books');
-        truncateTable('authors');
+        $this->assertEquals(0, $book->code);
+        Entity::clear('book');
+        Entity::clear('author');
     }
 
     private function getAuthorArray(string $firstName, string $middleName, string $lastName)
@@ -347,7 +304,6 @@ class RESTTest extends TestCase
     public static function tearDownAfterClass(): void
     {
         PHPServer::getInstance()->stop();
-        replaceConfigFileContent("'database' => 'librarian_test'","'database' => 'librarian'");        
-        replaceConfigFileContent('dbname=librarian_test','dbname=librarian');
+        putenv('LIBRARIAN_TEST_ENVIRONMENT=false');
     }
 }

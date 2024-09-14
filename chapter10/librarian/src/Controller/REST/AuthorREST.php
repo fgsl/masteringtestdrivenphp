@@ -1,17 +1,18 @@
 <?php
 namespace Librarian\Controller\REST;
-use Librarian\Model\PDO\AuthorPDO;
+use Librarian\Model\AuthorProxy;
+
 /**
  * @author Flávio Gomes da Silva Lisboa
  * @license LGPL-3.0 license <https://www.gnu.org/licenses/lgpl-3.0.html.en>
  */
-class AuthorREST
+class AuthorREST extends AbstractRESTController
 {
-    private AuthorPDO $authorPDO;
+    private AuthorProxy $authorProxy;
 
     public function __construct()
     {
-        $this->authorPDO = new AuthorPDO();
+        $this->authorProxy = new AuthorProxy();
     }
 
     public function post(array $data): array
@@ -22,19 +23,19 @@ class AuthorREST
 
         $response = ['included' => false];
 
-        if ($this->authorPDO->save($firstName, $middleName, $lastName))
+        if ($this->authorProxy->save($lastName, $middleName, $firstName))
         {
             $response = ['included' => true];
         }
         return $response;
     }
 
-    public function get(int $code): array
+    public function get(int $code): mixed
     {
         if ($code == 0) {
-            return $this->authorPDO->readAuthors();            
+            return $this->authorProxy->getFinder()->readAll()->getRows();
         }
-        return $this->authorPDO->readByCode($code);
+        return $this->authorProxy->getByCode($code);
     }
     
     public function put(array $data): array
@@ -42,7 +43,7 @@ class AuthorREST
         $code = (int) $data['code'];
         unset($data['code']);
         $response = ['updated' => false];
-        if ($this->authorPDO->update($code, $data))
+        if ($this->authorProxy->update($code, $data))
         {
             $response = ['updated' => true];
         }
@@ -52,7 +53,7 @@ class AuthorREST
     public function delete(int $code): array
     {
         $response = ['deleted' => false];
-        if ($this->authorPDO->delete($code))
+        if ($this->authorProxy->delete($code))
         {
             $response = ['deleted' => true];
         }

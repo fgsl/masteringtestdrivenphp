@@ -5,7 +5,7 @@
  */
 namespace Librarian\Test;
 
-class PHPServer 
+final class PHPServer 
 {
     private $process;
     private static $instance = null;
@@ -23,13 +23,17 @@ class PHPServer
 
     public function start(): bool
     {
+        $output = shell_exec('ps -aux | grep "php -S"');
+        if (str_contains($output, 'localhost:8008')){
+            return true;
+        }
         $path = realpath(__DIR__ . '/../../');
         $descriptorspec = array(
             0 => ["pipe", "r"], 
             1 => ["pipe", "w"],
             2 => ["file", "/dev/null", "a"]
          );
-        $process = proc_open('nohup php -S localhost:8008 &',$descriptorspec,$path);
+        $process = proc_open('nohup php -S localhost:8008 router.php &',$descriptorspec,$path);
         sleep(1);
         if (is_bool($process)){
             return false;
@@ -40,7 +44,30 @@ class PHPServer
 
     public function stop(): bool
     {
-        return proc_terminate($this->process);
+        $argv = $_SERVER['argv'];
+        if (isset($argv[1]) && $argv[1] == '--coverage-html'){
+            return false;
+        }
+
+        if (is_null($this->process)){
+            $output = shell_exec('ps -aux | grep "php -S"');
+            if (str_contains($output, 'localhost:8008')){
+                do {
+                    $output = str_replace('  ',' ',$output, $count);   
+                } while ($count > 0);   
+                $pieces = explode(' ',$output);
+                $pid = $pieces[1];
+                shell_exec('kill -9 ' . $pid);
+                return true;
+            }
+        }
+        $running = true;
+        while ($running){
+            $status = proc_get_status($this->process);
+            $running = $status['running'];
+            proc_terminate($this->process);
+        }
+        return true;
     }
 
 }
