@@ -13,11 +13,6 @@ use Librarian\Model\ODM\Collection;
 
 class CollectionTest extends TestCase
 {
-    public static function setUpBeforeClass(): void
-    {
-        replaceConfigFileContent("'database' => 'librarian'","'database' => 'librarian_test'");
-    }
-
     /**
      * @coversNothing
      */
@@ -188,10 +183,5 @@ class CollectionTest extends TestCase
         $this->assertEmpty($book->code);
         (new Collection('books'))->drop();
         (new Collection('authors'))->drop();
-    }    
-    
-    public static function tearDownAfterClass():void
-    {
-        replaceConfigFileContent("'database' => 'librarian_test'","'database' => 'librarian'");
     }    
 }

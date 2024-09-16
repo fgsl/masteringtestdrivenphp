@@ -12,6 +12,6 @@ return [
         'host' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'librarian'
+        'database' => 'librarian_test'
     ]
 ];
