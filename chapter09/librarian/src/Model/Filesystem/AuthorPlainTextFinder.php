@@ -49,7 +49,7 @@ class AuthorPlainTextFinder extends AbstractAuthorFilesystem implements FinderIn
         $handle = fopen($filepath,'r');
         $authors = new AuthorRowSet();
         while(!feof($handle)){
-            $row = fread($handle, AUTHOR_ROW_LENGTH);
+            $row = fread($handle, self::ROW_LENGTH);
             $author = new Author(
                 (int) trim(substr($row, 0, self::CODE_LENGTH)),
                 trim(substr($row, self::CODE_LENGTH + (2 * self::NAME_LENGTH) + 1, self::NAME_LENGTH)),

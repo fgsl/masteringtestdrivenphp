@@ -56,7 +56,7 @@ class AuthorPlainText extends AbstractAuthorFilesystem
         $handle = fopen($filepath,'r');
         $authors = [];
         while(!feof($handle)){
-            $row = fread($handle, AUTHOR_ROW_LENGTH);
+            $row = fread($handle, self::ROW_LENGTH);
             $author = [
                 'code' => (int) substr($row,0,self::CODE_LENGTH),
                 'last_name' => trim(substr($row, self::CODE_LENGTH, self::NAME_LENGTH)),
