@@ -62,7 +62,6 @@ class JSONTextTest extends TestCase
         $authorJSON->save('Doyle','Arthur','Conan');
         $author = (new AuthorJSONFinder())->readByCode(2);
         $this->assertEquals('Scott',$author->middleName);
-        $filepath = Config::get('author_json_filepath');
         Entity::clear('author');
     }
     
@@ -75,7 +74,6 @@ class JSONTextTest extends TestCase
         $authors = (new AuthorJSONFinder())->readAll();
         $this->assertCount(3,$authors);
         $this->assertEquals('Agatha',$authors->get(1)->firstName);
-        $filepath = Config::get('author_json_filepath');
         Entity::clear('author');
     }
    
