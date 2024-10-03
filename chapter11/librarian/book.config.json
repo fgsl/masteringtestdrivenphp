@@ -1,0 +1,16 @@
+{
+    "author_plaintext_file": "authors.txt",
+    "author_csv_file":"authors.csv",
+    "author_json_file":"authors.json",
+    "book_plaintext_file":"books.txt",
+    "book_csv_file": "books.csv",
+    "book_json_file": "books.json",
+    "storage_format": "rdb",
+    "db": {
+        "dsn": "mysql:dbname=librarian;host=localhost",
+        "username": "root",
+        "password": "mysql",
+        "database": "librarian",
+        "host": "localhost"
+    }
+}
