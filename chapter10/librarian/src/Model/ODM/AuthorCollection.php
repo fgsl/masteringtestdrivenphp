@@ -18,24 +18,6 @@ class AuthorCollection extends AbstractCollection
         return $insertOneResult->getInsertedCount() == 1;
     }
 
-    public function readByCode(int $code)
-    {
-        $result = $this->database->authors->findOne(['code' => $code]);
-        if (is_null($result)){
-            return [];
-        }
-        return $result;
-    }
-
-    public function readAll()
-    {
-        $result = $this->database->authors->find();
-        if (is_null($result)){
-            return [];
-        }
-        return $result->toArray();
-    }
-
     public function update(int $code, array $data)
     {
         $result = $this->database->authors->updateOne(
