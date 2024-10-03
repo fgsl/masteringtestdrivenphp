@@ -127,11 +127,11 @@ class Book extends AbstractPageController
     protected function getBookByCode($code): BookModel
     {
         try {
-            $author = $this->getBookFinder()->readByCode($code);
+            $book = $this->getBookFinder()->readByCode($code);
         } catch(\Exception $e) {
-            $author = new AuthorModel();
+            $book = new BookModel();
         }
-        return $author;
+        return $book;
     }
 
     protected function listBooksInTable(): string
