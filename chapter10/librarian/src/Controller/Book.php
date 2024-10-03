@@ -132,7 +132,7 @@ class Book extends AbstractPageController
         } catch(\Exception $e) {
             $book = new BookModel();
         }
-        return book;
+        return $book;
     }
 
     protected function listBooksInTable(): string

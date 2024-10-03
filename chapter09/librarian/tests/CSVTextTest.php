@@ -3,7 +3,6 @@
  * @author Flávio Gomes da Silva Lisboa
  * @license LGPL-3.0 license <https://www.gnu.org/licenses/lgpl-3.0.html.en>
  */
-use Librarian\Test\AbstractBackupTest;
 use PHPUnit\Framework\Attributes\CoversNothing;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Librarian\Model\Filesystem\AuthorCSV;
@@ -18,7 +17,7 @@ use Librarian\Model\Filesystem\BookCSVFinder;
  */
 #[CoversClass(AuthorCSV::class)]
 #[CoversClass(BookCSV::class)]
-class CSVTextTest extends AbstractBackupTest
+class CSVTextTest
 {
     // author tests
     public function testSaveAuthor()
