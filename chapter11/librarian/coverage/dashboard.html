@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css?v=11.0.5" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css?v=11.0.5" rel="stylesheet" type="text/css">
+  <link href="_css/style.css?v=11.0.5" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Controller/AbstractPageController.php.html#7">Librarian\Controller\AbstractPageController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/REST/AbstractRESTController.php.html#7">Librarian\Controller\REST\AbstractRESTController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Test/PHPServer.php.html#8">Librarian\Test\PHPServer</a></td><td class="text-right">5%</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#19">Librarian\Controller\Book</a></td><td class="text-right">8%</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#17">Librarian\Controller\Author</a></td><td class="text-right">8%</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#8">Librarian\Model\AuthorProxy</a></td><td class="text-right">51%</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#8">Librarian\Model\BookProxy</a></td><td class="text-right">55%</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookJSONFinder.php.html#15">Librarian\Model\Filesystem\BookJSONFinder</a></td><td class="text-right">86%</td></tr>
+       <tr><td><a href="src/Model/Filesystem/AuthorJSONFinder.php.html#13">Librarian\Model\Filesystem\AuthorJSONFinder</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="src/Model/ODM/AuthorCollectionFinder.php.html#13">Librarian\Model\ODM\AuthorCollectionFinder</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="src/Model/ODM/BookCollectionFinder.php.html#14">Librarian\Model\ODM\BookCollectionFinder</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookCSVFinder.php.html#15">Librarian\Model\Filesystem\BookCSVFinder</a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Controller/Book.php.html#19">Librarian\Controller\Book</a></td><td class="text-right">1903</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#17">Librarian\Controller\Author</a></td><td class="text-right">1733</td></tr>
+       <tr><td><a href="src/Test/PHPServer.php.html#8">Librarian\Test\PHPServer</a></td><td class="text-right">133</td></tr>
+       <tr><td><a href="src/Controller/REST/AbstractRESTController.php.html#7">Librarian\Controller\REST\AbstractRESTController</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#8">Librarian\Model\AuthorProxy</a></td><td class="text-right">84</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#8">Librarian\Model\BookProxy</a></td><td class="text-right">69</td></tr>
+       <tr><td><a href="src/Controller/AbstractPageController.php.html#7">Librarian\Controller\AbstractPageController</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookCSVFinder.php.html#15">Librarian\Model\Filesystem\BookCSVFinder</a></td><td class="text-right">11</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookJSONFinder.php.html#15">Librarian\Model\Filesystem\BookJSONFinder</a></td><td class="text-right">9</td></tr>
+       <tr><td><a href="src/Model/Filesystem/AuthorJSONFinder.php.html#13">Librarian\Model\Filesystem\AuthorJSONFinder</a></td><td class="text-right">9</td></tr>
+       <tr><td><a href="src/Model/ODM/AuthorCollectionFinder.php.html#13">Librarian\Model\ODM\AuthorCollectionFinder</a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="src/Model/ODM/BookCollectionFinder.php.html#14">Librarian\Model\ODM\BookCollectionFinder</a></td><td class="text-right">4</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Controller/AbstractPageController.php.html#11"><abbr title="Librarian\Controller\AbstractPageController::run">run</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/AbstractPageController.php.html#19"><abbr title="Librarian\Controller\AbstractPageController::redirect">redirect</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#32"><abbr title="Librarian\Controller\Author::save">save</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#51"><abbr title="Librarian\Controller\Author::message">message</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#56"><abbr title="Librarian\Controller\Author::insert">insert</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#73"><abbr title="Librarian\Controller\Author::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#100"><abbr title="Librarian\Controller\Author::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#113"><abbr title="Librarian\Controller\Author::remove">remove</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#143"><abbr title="Librarian\Controller\Author::listAuthorsInTable">listAuthorsInTable</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#34"><abbr title="Librarian\Controller\Book::save">save</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#51"><abbr title="Librarian\Controller\Book::message">message</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#56"><abbr title="Librarian\Controller\Book::insert">insert</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#73"><abbr title="Librarian\Controller\Book::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#95"><abbr title="Librarian\Controller\Book::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#108"><abbr title="Librarian\Controller\Book::remove">remove</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#138"><abbr title="Librarian\Controller\Book::listBooksInTable">listBooksInTable</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#177"><abbr title="Librarian\Controller\Book::listAuthorsForSelect">listAuthorsForSelect</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/REST/AbstractRESTController.php.html#9"><abbr title="Librarian\Controller\REST\AbstractRESTController::run">run</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/REST/AbstractRESTController.php.html#34"><abbr title="Librarian\Controller\REST\AbstractRESTController::getPutData">getPutData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Test/PHPServer.php.html#13"><abbr title="Librarian\Test\PHPServer::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Test/PHPServer.php.html#24"><abbr title="Librarian\Test\PHPServer::start">start</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Test/PHPServer.php.html#45"><abbr title="Librarian\Test\PHPServer::stop">stop</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#161"><abbr title="Librarian\Controller\Author::getAuthorFinder">getAuthorFinder</abbr></a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#159"><abbr title="Librarian\Controller\Book::getBookFinder">getBookFinder</abbr></a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#10"><abbr title="Librarian\Model\AuthorProxy::getDataGateway">getDataGateway</abbr></a></td><td class="text-right">45%</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#42"><abbr title="Librarian\Model\AuthorProxy::getFinder">getFinder</abbr></a></td><td class="text-right">45%</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#10"><abbr title="Librarian\Model\BookProxy::getDataGateway">getDataGateway</abbr></a></td><td class="text-right">45%</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#42"><abbr title="Librarian\Model\BookProxy::getFinder">getFinder</abbr></a></td><td class="text-right">45%</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#133"><abbr title="Librarian\Controller\Author::getByCode">getByCode</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#128"><abbr title="Librarian\Controller\Book::getByCode">getByCode</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#60"><abbr title="Librarian\Model\AuthorProxy::getByCode">getByCode</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#70"><abbr title="Librarian\Model\AuthorProxy::update">update</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#80"><abbr title="Librarian\Model\AuthorProxy::delete">delete</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#59"><abbr title="Librarian\Model\BookProxy::getByCode">getByCode</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#84"><abbr title="Librarian\Model\BookProxy::delete">delete</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="src/Test/PHPServer.php.html#16"><abbr title="Librarian\Test\PHPServer::getInstance">getInstance</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#27"><abbr title="Librarian\Model\AuthorProxy::save">save</abbr></a></td><td class="text-right">71%</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#28"><abbr title="Librarian\Model\BookProxy::save">save</abbr></a></td><td class="text-right">71%</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#69"><abbr title="Librarian\Model\BookProxy::update">update</abbr></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="src/Model/ODM/AuthorCollectionFinder.php.html#24"><abbr title="Librarian\Model\ODM\AuthorCollectionFinder::readAll">readAll</abbr></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="src/Model/ODM/BookCollectionFinder.php.html#25"><abbr title="Librarian\Model\ODM\BookCollectionFinder::readAll">readAll</abbr></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookJSONFinder.php.html#17"><abbr title="Librarian\Model\Filesystem\BookJSONFinder::readByCode">readByCode</abbr></a></td><td class="text-right">86%</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookJSONFinder.php.html#39"><abbr title="Librarian\Model\Filesystem\BookJSONFinder::readAll">readAll</abbr></a></td><td class="text-right">86%</td></tr>
+       <tr><td><a href="src/Model/Filesystem/AuthorJSONFinder.php.html#15"><abbr title="Librarian\Model\Filesystem\AuthorJSONFinder::readByCode">readByCode</abbr></a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="src/Model/Filesystem/AuthorJSONFinder.php.html#38"><abbr title="Librarian\Model\Filesystem\AuthorJSONFinder::readAll">readAll</abbr></a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookCSVFinder.php.html#42"><abbr title="Librarian\Model\Filesystem\BookCSVFinder::readAll">readAll</abbr></a></td><td class="text-right">88%</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookPlainTextFinder.php.html#42"><abbr title="Librarian\Model\Filesystem\BookPlainTextFinder::readAll">readAll</abbr></a></td><td class="text-right">88%</td></tr>
+       <tr><td><a href="src/Model/Filesystem/AuthorCSVFinder.php.html#42"><abbr title="Librarian\Model\Filesystem\AuthorCSVFinder::readAll">readAll</abbr></a></td><td class="text-right">88%</td></tr>
+       <tr><td><a href="src/Model/Filesystem/AuthorPlainTextFinder.php.html#42"><abbr title="Librarian\Model\Filesystem\AuthorPlainTextFinder::readAll">readAll</abbr></a></td><td class="text-right">88%</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookCSVFinder.php.html#17"><abbr title="Librarian\Model\Filesystem\BookCSVFinder::readByCode">readByCode</abbr></a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Controller/Author.php.html#32"><abbr title="Librarian\Controller\Author::save">save</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#56"><abbr title="Librarian\Controller\Author::insert">insert</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#73"><abbr title="Librarian\Controller\Author::update">update</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#113"><abbr title="Librarian\Controller\Author::remove">remove</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#56"><abbr title="Librarian\Controller\Book::insert">insert</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#73"><abbr title="Librarian\Controller\Book::update">update</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#108"><abbr title="Librarian\Controller\Book::remove">remove</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#34"><abbr title="Librarian\Controller\Book::save">save</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="src/Controller/REST/AbstractRESTController.php.html#9"><abbr title="Librarian\Controller\REST\AbstractRESTController::run">run</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="src/Test/PHPServer.php.html#45"><abbr title="Librarian\Test\PHPServer::stop">stop</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#161"><abbr title="Librarian\Controller\Author::getAuthorFinder">getAuthorFinder</abbr></a></td><td class="text-right">21</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#159"><abbr title="Librarian\Controller\Book::getBookFinder">getBookFinder</abbr></a></td><td class="text-right">21</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#100"><abbr title="Librarian\Controller\Author::delete">delete</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#95"><abbr title="Librarian\Controller\Book::delete">delete</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#177"><abbr title="Librarian\Controller\Book::listAuthorsForSelect">listAuthorsForSelect</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#10"><abbr title="Librarian\Model\AuthorProxy::getDataGateway">getDataGateway</abbr></a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#42"><abbr title="Librarian\Model\AuthorProxy::getFinder">getFinder</abbr></a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#10"><abbr title="Librarian\Model\BookProxy::getDataGateway">getDataGateway</abbr></a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#42"><abbr title="Librarian\Model\BookProxy::getFinder">getFinder</abbr></a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#143"><abbr title="Librarian\Controller\Author::listAuthorsInTable">listAuthorsInTable</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#138"><abbr title="Librarian\Controller\Book::listBooksInTable">listBooksInTable</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="src/Controller/REST/AbstractRESTController.php.html#34"><abbr title="Librarian\Controller\REST\AbstractRESTController::getPutData">getPutData</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="src/Test/PHPServer.php.html#24"><abbr title="Librarian\Test\PHPServer::start">start</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookCSVFinder.php.html#17"><abbr title="Librarian\Model\Filesystem\BookCSVFinder::readByCode">readByCode</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Controller/AbstractPageController.php.html#19"><abbr title="Librarian\Controller\AbstractPageController::redirect">redirect</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookJSONFinder.php.html#17"><abbr title="Librarian\Model\Filesystem\BookJSONFinder::readByCode">readByCode</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="src/Model/Filesystem/AuthorJSONFinder.php.html#15"><abbr title="Librarian\Model\Filesystem\AuthorJSONFinder::readByCode">readByCode</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookCSVFinder.php.html#42"><abbr title="Librarian\Model\Filesystem\BookCSVFinder::readAll">readAll</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="src/Model/Filesystem/AuthorCSVFinder.php.html#42"><abbr title="Librarian\Model\Filesystem\AuthorCSVFinder::readAll">readAll</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookJSONFinder.php.html#39"><abbr title="Librarian\Model\Filesystem\BookJSONFinder::readAll">readAll</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="src/Model/Filesystem/AuthorJSONFinder.php.html#38"><abbr title="Librarian\Model\Filesystem\AuthorJSONFinder::readAll">readAll</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="src/Model/Filesystem/BookPlainTextFinder.php.html#42"><abbr title="Librarian\Model\Filesystem\BookPlainTextFinder::readAll">readAll</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="src/Model/Filesystem/AuthorPlainTextFinder.php.html#42"><abbr title="Librarian\Model\Filesystem\AuthorPlainTextFinder::readAll">readAll</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#27"><abbr title="Librarian\Model\AuthorProxy::save">save</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#28"><abbr title="Librarian\Model\BookProxy::save">save</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="src/Controller/Author.php.html#133"><abbr title="Librarian\Controller\Author::getByCode">getByCode</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="src/Controller/Book.php.html#128"><abbr title="Librarian\Controller\Book::getByCode">getByCode</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#60"><abbr title="Librarian\Model\AuthorProxy::getByCode">getByCode</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#70"><abbr title="Librarian\Model\AuthorProxy::update">update</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="src/Model/AuthorProxy.php.html#80"><abbr title="Librarian\Model\AuthorProxy::delete">delete</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#59"><abbr title="Librarian\Model\BookProxy::getByCode">getByCode</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#84"><abbr title="Librarian\Model\BookProxy::delete">delete</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="src/Test/PHPServer.php.html#16"><abbr title="Librarian\Test\PHPServer::getInstance">getInstance</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="src/Model/BookProxy.php.html#69"><abbr title="Librarian\Model\BookProxy::update">update</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="src/Model/ODM/AuthorCollectionFinder.php.html#24"><abbr title="Librarian\Model\ODM\AuthorCollectionFinder::readAll">readAll</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="src/Model/ODM/BookCollectionFinder.php.html#25"><abbr title="Librarian\Model\ODM\BookCollectionFinder::readAll">readAll</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 11.0.5</a> using <a href="https://www.php.net/" target="_top">PHP 8.3.12</a> and <a href="https://phpunit.de/">PHPUnit 11.3.1</a> at Wed Oct 2 21:42:32 UTC 2024.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js?v=11.0.5" type="text/javascript"></script>
+  <script src="_js/d3.min.js?v=11.0.5" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js?v=11.0.5" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([2,3,0,0,0,0,2,0,0,5,3,38], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([22,0,0,2,0,4,7,1,5,9,0,118], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,3,"<a href=\"src\/Controller\/AbstractPageController.php.html#7\">Librarian\\Controller\\AbstractPageController<\/a>"],[8.60215053763441,47,"<a href=\"src\/Controller\/Author.php.html#17\">Librarian\\Controller\\Author<\/a>"],[8.24742268041237,49,"<a href=\"src\/Controller\/Book.php.html#19\">Librarian\\Controller\\Book<\/a>"],[100,1,"<a href=\"src\/Controller\/Index.php.html#7\">Librarian\\Controller\\Index<\/a>"],[0,9,"<a href=\"src\/Controller\/REST\/AbstractRESTController.php.html#7\">Librarian\\Controller\\REST\\AbstractRESTController<\/a>"],[100,9,"<a href=\"src\/Controller\/REST\/AuthorREST.php.html#9\">Librarian\\Controller\\REST\\AuthorREST<\/a>"],[100,9,"<a href=\"src\/Controller\/REST\/BookREST.php.html#8\">Librarian\\Controller\\REST\\BookREST<\/a>"],[100,2,"<a href=\"src\/Filter\/TagFilter.php.html#7\">Librarian\\Filter\\TagFilter<\/a>"],[100,0,"<a href=\"src\/Model\/AbstractCode.php.html#7\">Librarian\\Model\\AbstractCode<\/a>"],[100,8,"<a href=\"src\/Model\/AbstractRowSet.php.html#7\">Librarian\\Model\\AbstractRowSet<\/a>"],[100,4,"<a href=\"src\/Model\/Author.php.html#10\">Librarian\\Model\\Author<\/a>"],[51.21951219512195,23,"<a href=\"src\/Model\/AuthorProxy.php.html#8\">Librarian\\Model\\AuthorProxy<\/a>"],[100,2,"<a href=\"src\/Model\/AuthorRowSet.php.html#7\">Librarian\\Model\\AuthorRowSet<\/a>"],[100,3,"<a href=\"src\/Model\/Book.php.html#9\">Librarian\\Model\\Book<\/a>"],[55.55555555555556,23,"<a href=\"src\/Model\/BookProxy.php.html#8\">Librarian\\Model\\BookProxy<\/a>"],[100,2,"<a href=\"src\/Model\/BookRowSet.php.html#7\">Librarian\\Model\\BookRowSet<\/a>"],[100,11,"<a href=\"src\/Model\/Entity.php.html#10\">Librarian\\Model\\Entity<\/a>"],[100,1,"<a href=\"src\/Model\/Filesystem\/AbstractAuthorFilesystem.php.html#7\">Librarian\\Model\\Filesystem\\AbstractAuthorFilesystem<\/a>"],[100,0,"<a href=\"src\/Model\/Filesystem\/AbstractBookFilesystem.php.html#7\">Librarian\\Model\\Filesystem\\AbstractBookFilesystem<\/a>"],[100,14,"<a href=\"src\/Model\/Filesystem\/AuthorCSV.php.html#9\">Librarian\\Model\\Filesystem\\AuthorCSV<\/a>"],[94.5945945945946,11,"<a href=\"src\/Model\/Filesystem\/AuthorCSVFinder.php.html#14\">Librarian\\Model\\Filesystem\\AuthorCSVFinder<\/a>"],[100,12,"<a href=\"src\/Model\/Filesystem\/AuthorJSON.php.html#9\">Librarian\\Model\\Filesystem\\AuthorJSON<\/a>"],[87.5,9,"<a href=\"src\/Model\/Filesystem\/AuthorJSONFinder.php.html#13\">Librarian\\Model\\Filesystem\\AuthorJSONFinder<\/a>"],[100,8,"<a href=\"src\/Model\/Filesystem\/AuthorPlainText.php.html#9\">Librarian\\Model\\Filesystem\\AuthorPlainText<\/a>"],[94.5945945945946,8,"<a href=\"src\/Model\/Filesystem\/AuthorPlainTextFinder.php.html#14\">Librarian\\Model\\Filesystem\\AuthorPlainTextFinder<\/a>"],[100,14,"<a href=\"src\/Model\/Filesystem\/BookCSV.php.html#9\">Librarian\\Model\\Filesystem\\BookCSV<\/a>"],[88.57142857142857,11,"<a href=\"src\/Model\/Filesystem\/BookCSVFinder.php.html#15\">Librarian\\Model\\Filesystem\\BookCSVFinder<\/a>"],[100,11,"<a href=\"src\/Model\/Filesystem\/BookJSON.php.html#9\">Librarian\\Model\\Filesystem\\BookJSON<\/a>"],[86.66666666666667,9,"<a href=\"src\/Model\/Filesystem\/BookJSONFinder.php.html#15\">Librarian\\Model\\Filesystem\\BookJSONFinder<\/a>"],[100,8,"<a href=\"src\/Model\/Filesystem\/BookPlainText.php.html#9\">Librarian\\Model\\Filesystem\\BookPlainText<\/a>"],[94.28571428571428,8,"<a href=\"src\/Model\/Filesystem\/BookPlainTextFinder.php.html#15\">Librarian\\Model\\Filesystem\\BookPlainTextFinder<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/AbstractCollection.php.html#8\">Librarian\\Model\\ODM\\AbstractCollection<\/a>"],[100,3,"<a href=\"src\/Model\/ODM\/AuthorCollection.php.html#9\">Librarian\\Model\\ODM\\AuthorCollection<\/a>"],[87.5,4,"<a href=\"src\/Model\/ODM\/AuthorCollectionFinder.php.html#13\">Librarian\\Model\\ODM\\AuthorCollectionFinder<\/a>"],[100,4,"<a href=\"src\/Model\/ODM\/AuthorCollectionRowGateway.php.html#10\">Librarian\\Model\\ODM\\AuthorCollectionRowGateway<\/a>"],[100,3,"<a href=\"src\/Model\/ODM\/BookCollection.php.html#9\">Librarian\\Model\\ODM\\BookCollection<\/a>"],[87.5,4,"<a href=\"src\/Model\/ODM\/BookCollectionFinder.php.html#14\">Librarian\\Model\\ODM\\BookCollectionFinder<\/a>"],[100,4,"<a href=\"src\/Model\/ODM\/BookCollectionRowGateway.php.html#11\">Librarian\\Model\\ODM\\BookCollectionRowGateway<\/a>"],[100,3,"<a href=\"src\/Model\/ODM\/Collection.php.html#8\">Librarian\\Model\\ODM\\Collection<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/AbstractDatabase.php.html#7\">Librarian\\Model\\ORM\\AbstractDatabase<\/a>"],[100,5,"<a href=\"src\/Model\/ORM\/AuthorFinder.php.html#11\">Librarian\\Model\\ORM\\AuthorFinder<\/a>"],[100,10,"<a href=\"src\/Model\/ORM\/AuthorRowGateway.php.html#9\">Librarian\\Model\\ORM\\AuthorRowGateway<\/a>"],[100,9,"<a href=\"src\/Model\/ORM\/AuthorTableGateway.php.html#8\">Librarian\\Model\\ORM\\AuthorTableGateway<\/a>"],[100,5,"<a href=\"src\/Model\/ORM\/BookFinder.php.html#13\">Librarian\\Model\\ORM\\BookFinder<\/a>"],[100,8,"<a href=\"src\/Model\/ORM\/BookRowGateway.php.html#11\">Librarian\\Model\\ORM\\BookRowGateway<\/a>"],[100,9,"<a href=\"src\/Model\/ORM\/BookTableGateway.php.html#9\">Librarian\\Model\\ORM\\BookTableGateway<\/a>"],[100,2,"<a href=\"src\/Model\/ORM\/Table.php.html#9\">Librarian\\Model\\ORM\\Table<\/a>"],[5.405405405405405,12,"<a href=\"src\/Test\/PHPServer.php.html#8\">Librarian\\Test\\PHPServer<\/a>"],[100,12,"<a href=\"src\/Util\/Config.php.html#7\">Librarian\\Util\\Config<\/a>"],[100,3,"<a href=\"src\/Validator\/NameValidator.php.html#7\">Librarian\\Validator\\NameValidator<\/a>"],[100,3,"<a href=\"src\/Validator\/TitleValidator.php.html#7\">Librarian\\Validator\\TitleValidator<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/CollectionTrait.php.html#8\">Librarian\\Model\\ODM\\CollectionTrait<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/DatabaseTrait.php.html#8\">Librarian\\Model\\ORM\\DatabaseTrait<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"src\/Controller\/AbstractPageController.php.html#11\">Librarian\\Controller\\AbstractPageController::run<\/a>"],[0,2,"<a href=\"src\/Controller\/AbstractPageController.php.html#19\">Librarian\\Controller\\AbstractPageController::redirect<\/a>"],[100,1,"<a href=\"src\/Controller\/Author.php.html#21\">Librarian\\Controller\\Author::list<\/a>"],[100,1,"<a href=\"src\/Controller\/Author.php.html#26\">Librarian\\Controller\\Author::edit<\/a>"],[0,8,"<a href=\"src\/Controller\/Author.php.html#32\">Librarian\\Controller\\Author::save<\/a>"],[0,1,"<a href=\"src\/Controller\/Author.php.html#51\">Librarian\\Controller\\Author::message<\/a>"],[0,7,"<a href=\"src\/Controller\/Author.php.html#56\">Librarian\\Controller\\Author::insert<\/a>"],[0,7,"<a href=\"src\/Controller\/Author.php.html#73\">Librarian\\Controller\\Author::update<\/a>"],[0,4,"<a href=\"src\/Controller\/Author.php.html#100\">Librarian\\Controller\\Author::delete<\/a>"],[0,7,"<a href=\"src\/Controller\/Author.php.html#113\">Librarian\\Controller\\Author::remove<\/a>"],[50,2,"<a href=\"src\/Controller\/Author.php.html#133\">Librarian\\Controller\\Author::getByCode<\/a>"],[0,3,"<a href=\"src\/Controller\/Author.php.html#143\">Librarian\\Controller\\Author::listAuthorsInTable<\/a>"],[25,6,"<a href=\"src\/Controller\/Author.php.html#161\">Librarian\\Controller\\Author::getAuthorFinder<\/a>"],[100,1,"<a href=\"src\/Controller\/Book.php.html#23\">Librarian\\Controller\\Book::list<\/a>"],[100,1,"<a href=\"src\/Controller\/Book.php.html#28\">Librarian\\Controller\\Book::edit<\/a>"],[0,6,"<a href=\"src\/Controller\/Book.php.html#34\">Librarian\\Controller\\Book::save<\/a>"],[0,1,"<a href=\"src\/Controller\/Book.php.html#51\">Librarian\\Controller\\Book::message<\/a>"],[0,7,"<a href=\"src\/Controller\/Book.php.html#56\">Librarian\\Controller\\Book::insert<\/a>"],[0,7,"<a href=\"src\/Controller\/Book.php.html#73\">Librarian\\Controller\\Book::update<\/a>"],[0,4,"<a href=\"src\/Controller\/Book.php.html#95\">Librarian\\Controller\\Book::delete<\/a>"],[0,7,"<a href=\"src\/Controller\/Book.php.html#108\">Librarian\\Controller\\Book::remove<\/a>"],[50,2,"<a href=\"src\/Controller\/Book.php.html#128\">Librarian\\Controller\\Book::getByCode<\/a>"],[0,3,"<a href=\"src\/Controller\/Book.php.html#138\">Librarian\\Controller\\Book::listBooksInTable<\/a>"],[25,6,"<a href=\"src\/Controller\/Book.php.html#159\">Librarian\\Controller\\Book::getBookFinder<\/a>"],[0,4,"<a href=\"src\/Controller\/Book.php.html#177\">Librarian\\Controller\\Book::listAuthorsForSelect<\/a>"],[100,1,"<a href=\"src\/Controller\/Index.php.html#9\">Librarian\\Controller\\Index::index<\/a>"],[0,6,"<a href=\"src\/Controller\/REST\/AbstractRESTController.php.html#9\">Librarian\\Controller\\REST\\AbstractRESTController::run<\/a>"],[0,3,"<a href=\"src\/Controller\/REST\/AbstractRESTController.php.html#34\">Librarian\\Controller\\REST\\AbstractRESTController::getPutData<\/a>"],[100,0,"<a href=\"src\/Controller\/REST\/AbstractRESTController.php.html#51\">Librarian\\Controller\\REST\\AbstractRESTController::post<\/a>"],[100,0,"<a href=\"src\/Controller\/REST\/AbstractRESTController.php.html#53\">Librarian\\Controller\\REST\\AbstractRESTController::get<\/a>"],[100,0,"<a href=\"src\/Controller\/REST\/AbstractRESTController.php.html#55\">Librarian\\Controller\\REST\\AbstractRESTController::put<\/a>"],[100,0,"<a href=\"src\/Controller\/REST\/AbstractRESTController.php.html#57\">Librarian\\Controller\\REST\\AbstractRESTController::delete<\/a>"],[100,1,"<a href=\"src\/Controller\/REST\/AuthorREST.php.html#13\">Librarian\\Controller\\REST\\AuthorREST::__construct<\/a>"],[100,2,"<a href=\"src\/Controller\/REST\/AuthorREST.php.html#18\">Librarian\\Controller\\REST\\AuthorREST::post<\/a>"],[100,2,"<a href=\"src\/Controller\/REST\/AuthorREST.php.html#33\">Librarian\\Controller\\REST\\AuthorREST::get<\/a>"],[100,2,"<a href=\"src\/Controller\/REST\/AuthorREST.php.html#41\">Librarian\\Controller\\REST\\AuthorREST::put<\/a>"],[100,2,"<a href=\"src\/Controller\/REST\/AuthorREST.php.html#53\">Librarian\\Controller\\REST\\AuthorREST::delete<\/a>"],[100,1,"<a href=\"src\/Controller\/REST\/BookREST.php.html#12\">Librarian\\Controller\\REST\\BookREST::__construct<\/a>"],[100,2,"<a href=\"src\/Controller\/REST\/BookREST.php.html#17\">Librarian\\Controller\\REST\\BookREST::post<\/a>"],[100,2,"<a href=\"src\/Controller\/REST\/BookREST.php.html#33\">Librarian\\Controller\\REST\\BookREST::get<\/a>"],[100,2,"<a href=\"src\/Controller\/REST\/BookREST.php.html#41\">Librarian\\Controller\\REST\\BookREST::put<\/a>"],[100,2,"<a href=\"src\/Controller\/REST\/BookREST.php.html#52\">Librarian\\Controller\\REST\\BookREST::delete<\/a>"],[100,1,"<a href=\"src\/Filter\/TagFilter.php.html#9\">Librarian\\Filter\\TagFilter::__invoke<\/a>"],[100,1,"<a href=\"src\/Filter\/TagFilter.php.html#14\">Librarian\\Filter\\TagFilter::filter<\/a>"],[100,1,"<a href=\"src\/Model\/AbstractRowSet.php.html#12\">Librarian\\Model\\AbstractRowSet::add<\/a>"],[100,1,"<a href=\"src\/Model\/AbstractRowSet.php.html#17\">Librarian\\Model\\AbstractRowSet::current<\/a>"],[100,1,"<a href=\"src\/Model\/AbstractRowSet.php.html#22\">Librarian\\Model\\AbstractRowSet::key<\/a>"],[100,1,"<a href=\"src\/Model\/AbstractRowSet.php.html#27\">Librarian\\Model\\AbstractRowSet::next<\/a>"],[100,1,"<a href=\"src\/Model\/AbstractRowSet.php.html#32\">Librarian\\Model\\AbstractRowSet::rewind<\/a>"],[100,1,"<a href=\"src\/Model\/AbstractRowSet.php.html#37\">Librarian\\Model\\AbstractRowSet::valid<\/a>"],[100,1,"<a href=\"src\/Model\/AbstractRowSet.php.html#42\">Librarian\\Model\\AbstractRowSet::get<\/a>"],[100,1,"<a href=\"src\/Model\/AbstractRowSet.php.html#47\">Librarian\\Model\\AbstractRowSet::getRows<\/a>"],[100,1,"<a href=\"src\/Model\/Author.php.html#16\">Librarian\\Model\\Author::__construct<\/a>"],[100,3,"<a href=\"src\/Model\/Author.php.html#25\">Librarian\\Model\\Author::isValid<\/a>"],[45.45454545454545,7,"<a href=\"src\/Model\/AuthorProxy.php.html#10\">Librarian\\Model\\AuthorProxy::getDataGateway<\/a>"],[71.42857142857143,3,"<a href=\"src\/Model\/AuthorProxy.php.html#27\">Librarian\\Model\\AuthorProxy::save<\/a>"],[45.45454545454545,7,"<a href=\"src\/Model\/AuthorProxy.php.html#42\">Librarian\\Model\\AuthorProxy::getFinder<\/a>"],[50,2,"<a href=\"src\/Model\/AuthorProxy.php.html#60\">Librarian\\Model\\AuthorProxy::getByCode<\/a>"],[50,2,"<a href=\"src\/Model\/AuthorProxy.php.html#70\">Librarian\\Model\\AuthorProxy::update<\/a>"],[50,2,"<a href=\"src\/Model\/AuthorProxy.php.html#80\">Librarian\\Model\\AuthorProxy::delete<\/a>"],[100,2,"<a href=\"src\/Model\/AuthorRowSet.php.html#9\">Librarian\\Model\\AuthorRowSet::__construct<\/a>"],[100,2,"<a href=\"src\/Model\/Book.php.html#14\">Librarian\\Model\\Book::__construct<\/a>"],[100,1,"<a href=\"src\/Model\/Book.php.html#22\">Librarian\\Model\\Book::isValid<\/a>"],[45.45454545454545,7,"<a href=\"src\/Model\/BookProxy.php.html#10\">Librarian\\Model\\BookProxy::getDataGateway<\/a>"],[71.42857142857143,3,"<a href=\"src\/Model\/BookProxy.php.html#28\">Librarian\\Model\\BookProxy::save<\/a>"],[45.45454545454545,7,"<a href=\"src\/Model\/BookProxy.php.html#42\">Librarian\\Model\\BookProxy::getFinder<\/a>"],[50,2,"<a href=\"src\/Model\/BookProxy.php.html#59\">Librarian\\Model\\BookProxy::getByCode<\/a>"],[75,2,"<a href=\"src\/Model\/BookProxy.php.html#69\">Librarian\\Model\\BookProxy::update<\/a>"],[50,2,"<a href=\"src\/Model\/BookProxy.php.html#84\">Librarian\\Model\\BookProxy::delete<\/a>"],[100,2,"<a href=\"src\/Model\/BookRowSet.php.html#9\">Librarian\\Model\\BookRowSet::__construct<\/a>"],[100,7,"<a href=\"src\/Model\/Entity.php.html#12\">Librarian\\Model\\Entity::clear<\/a>"],[100,4,"<a href=\"src\/Model\/Entity.php.html#32\">Librarian\\Model\\Entity::getPathForFile<\/a>"],[100,1,"<a href=\"src\/Model\/Filesystem\/AbstractAuthorFilesystem.php.html#13\">Librarian\\Model\\Filesystem\\AbstractAuthorFilesystem::formatField<\/a>"],[100,3,"<a href=\"src\/Model\/Filesystem\/AuthorCSV.php.html#11\">Librarian\\Model\\Filesystem\\AuthorCSV::save<\/a>"],[100,6,"<a href=\"src\/Model\/Filesystem\/AuthorCSV.php.html#41\">Librarian\\Model\\Filesystem\\AuthorCSV::update<\/a>"],[100,5,"<a href=\"src\/Model\/Filesystem\/AuthorCSV.php.html#80\">Librarian\\Model\\Filesystem\\AuthorCSV::delete<\/a>"],[100,6,"<a href=\"src\/Model\/Filesystem\/AuthorCSVFinder.php.html#16\">Librarian\\Model\\Filesystem\\AuthorCSVFinder::readByCode<\/a>"],[88.88888888888889,5,"<a href=\"src\/Model\/Filesystem\/AuthorCSVFinder.php.html#42\">Librarian\\Model\\Filesystem\\AuthorCSVFinder::readAll<\/a>"],[100,4,"<a href=\"src\/Model\/Filesystem\/AuthorJSON.php.html#11\">Librarian\\Model\\Filesystem\\AuthorJSON::save<\/a>"],[100,5,"<a href=\"src\/Model\/Filesystem\/AuthorJSON.php.html#44\">Librarian\\Model\\Filesystem\\AuthorJSON::update<\/a>"],[100,3,"<a href=\"src\/Model\/Filesystem\/AuthorJSON.php.html#68\">Librarian\\Model\\Filesystem\\AuthorJSON::delete<\/a>"],[87.5,5,"<a href=\"src\/Model\/Filesystem\/AuthorJSONFinder.php.html#15\">Librarian\\Model\\Filesystem\\AuthorJSONFinder::readByCode<\/a>"],[87.5,4,"<a href=\"src\/Model\/Filesystem\/AuthorJSONFinder.php.html#38\">Librarian\\Model\\Filesystem\\AuthorJSONFinder::readAll<\/a>"],[100,1,"<a href=\"src\/Model\/Filesystem\/AuthorPlainText.php.html#11\">Librarian\\Model\\Filesystem\\AuthorPlainText::save<\/a>"],[100,4,"<a href=\"src\/Model\/Filesystem\/AuthorPlainText.php.html#32\">Librarian\\Model\\Filesystem\\AuthorPlainText::update<\/a>"],[100,3,"<a href=\"src\/Model\/Filesystem\/AuthorPlainText.php.html#66\">Librarian\\Model\\Filesystem\\AuthorPlainText::delete<\/a>"],[100,4,"<a href=\"src\/Model\/Filesystem\/AuthorPlainTextFinder.php.html#16\">Librarian\\Model\\Filesystem\\AuthorPlainTextFinder::readByCode<\/a>"],[88.88888888888889,4,"<a href=\"src\/Model\/Filesystem\/AuthorPlainTextFinder.php.html#42\">Librarian\\Model\\Filesystem\\AuthorPlainTextFinder::readAll<\/a>"],[100,3,"<a href=\"src\/Model\/Filesystem\/BookCSV.php.html#11\">Librarian\\Model\\Filesystem\\BookCSV::save<\/a>"],[100,6,"<a href=\"src\/Model\/Filesystem\/BookCSV.php.html#40\">Librarian\\Model\\Filesystem\\BookCSV::update<\/a>"],[100,5,"<a href=\"src\/Model\/Filesystem\/BookCSV.php.html#77\">Librarian\\Model\\Filesystem\\BookCSV::delete<\/a>"],[88.88888888888889,6,"<a href=\"src\/Model\/Filesystem\/BookCSVFinder.php.html#17\">Librarian\\Model\\Filesystem\\BookCSVFinder::readByCode<\/a>"],[88.23529411764706,5,"<a href=\"src\/Model\/Filesystem\/BookCSVFinder.php.html#42\">Librarian\\Model\\Filesystem\\BookCSVFinder::readAll<\/a>"],[100,4,"<a href=\"src\/Model\/Filesystem\/BookJSON.php.html#11\">Librarian\\Model\\Filesystem\\BookJSON::save<\/a>"],[100,4,"<a href=\"src\/Model\/Filesystem\/BookJSON.php.html#43\">Librarian\\Model\\Filesystem\\BookJSON::update<\/a>"],[100,3,"<a href=\"src\/Model\/Filesystem\/BookJSON.php.html#66\">Librarian\\Model\\Filesystem\\BookJSON::delete<\/a>"],[86.66666666666667,5,"<a href=\"src\/Model\/Filesystem\/BookJSONFinder.php.html#17\">Librarian\\Model\\Filesystem\\BookJSONFinder::readByCode<\/a>"],[86.66666666666667,4,"<a href=\"src\/Model\/Filesystem\/BookJSONFinder.php.html#39\">Librarian\\Model\\Filesystem\\BookJSONFinder::readAll<\/a>"],[100,1,"<a href=\"src\/Model\/Filesystem\/BookPlainText.php.html#11\">Librarian\\Model\\Filesystem\\BookPlainText::save<\/a>"],[100,4,"<a href=\"src\/Model\/Filesystem\/BookPlainText.php.html#32\">Librarian\\Model\\Filesystem\\BookPlainText::update<\/a>"],[100,3,"<a href=\"src\/Model\/Filesystem\/BookPlainText.php.html#65\">Librarian\\Model\\Filesystem\\BookPlainText::delete<\/a>"],[100,4,"<a href=\"src\/Model\/Filesystem\/BookPlainTextFinder.php.html#17\">Librarian\\Model\\Filesystem\\BookPlainTextFinder::readByCode<\/a>"],[88.23529411764706,4,"<a href=\"src\/Model\/Filesystem\/BookPlainTextFinder.php.html#42\">Librarian\\Model\\Filesystem\\BookPlainTextFinder::readAll<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/AbstractCollection.php.html#12\">Librarian\\Model\\ODM\\AbstractCollection::__construct<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/AuthorCollection.php.html#11\">Librarian\\Model\\ODM\\AuthorCollection::save<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/AuthorCollection.php.html#22\">Librarian\\Model\\ODM\\AuthorCollection::update<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/AuthorCollection.php.html#31\">Librarian\\Model\\ODM\\AuthorCollection::delete<\/a>"],[100,2,"<a href=\"src\/Model\/ODM\/AuthorCollectionFinder.php.html#15\">Librarian\\Model\\ODM\\AuthorCollectionFinder::readByCode<\/a>"],[75,2,"<a href=\"src\/Model\/ODM\/AuthorCollectionFinder.php.html#24\">Librarian\\Model\\ODM\\AuthorCollectionFinder::readAll<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/AuthorCollectionRowGateway.php.html#14\">Librarian\\Model\\ODM\\AuthorCollectionRowGateway::__construct<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/AuthorCollectionRowGateway.php.html#20\">Librarian\\Model\\ODM\\AuthorCollectionRowGateway::save<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/AuthorCollectionRowGateway.php.html#31\">Librarian\\Model\\ODM\\AuthorCollectionRowGateway::update<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/AuthorCollectionRowGateway.php.html#44\">Librarian\\Model\\ODM\\AuthorCollectionRowGateway::delete<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/BookCollection.php.html#11\">Librarian\\Model\\ODM\\BookCollection::save<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/BookCollection.php.html#21\">Librarian\\Model\\ODM\\BookCollection::update<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/BookCollection.php.html#30\">Librarian\\Model\\ODM\\BookCollection::delete<\/a>"],[100,2,"<a href=\"src\/Model\/ODM\/BookCollectionFinder.php.html#16\">Librarian\\Model\\ODM\\BookCollectionFinder::readByCode<\/a>"],[75,2,"<a href=\"src\/Model\/ODM\/BookCollectionFinder.php.html#25\">Librarian\\Model\\ODM\\BookCollectionFinder::readAll<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/BookCollectionRowGateway.php.html#15\">Librarian\\Model\\ODM\\BookCollectionRowGateway::__construct<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/BookCollectionRowGateway.php.html#21\">Librarian\\Model\\ODM\\BookCollectionRowGateway::save<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/BookCollectionRowGateway.php.html#31\">Librarian\\Model\\ODM\\BookCollectionRowGateway::update<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/BookCollectionRowGateway.php.html#43\">Librarian\\Model\\ODM\\BookCollectionRowGateway::delete<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/Collection.php.html#12\">Librarian\\Model\\ODM\\Collection::__construct<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/Collection.php.html#17\">Librarian\\Model\\ODM\\Collection::drop<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/Collection.php.html#25\">Librarian\\Model\\ODM\\Collection::getConnection<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/AbstractDatabase.php.html#11\">Librarian\\Model\\ORM\\AbstractDatabase::__construct<\/a>"],[100,2,"<a href=\"src\/Model\/ORM\/AuthorFinder.php.html#13\">Librarian\\Model\\ORM\\AuthorFinder::readByCode<\/a>"],[100,3,"<a href=\"src\/Model\/ORM\/AuthorFinder.php.html#30\">Librarian\\Model\\ORM\\AuthorFinder::readAll<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/AuthorRowGateway.php.html#13\">Librarian\\Model\\ORM\\AuthorRowGateway::__construct<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/AuthorRowGateway.php.html#19\">Librarian\\Model\\ORM\\AuthorRowGateway::save<\/a>"],[100,3,"<a href=\"src\/Model\/ORM\/AuthorRowGateway.php.html#30\">Librarian\\Model\\ORM\\AuthorRowGateway::update<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/AuthorRowGateway.php.html#54\">Librarian\\Model\\ORM\\AuthorRowGateway::delete<\/a>"],[100,4,"<a href=\"src\/Model\/ORM\/AuthorRowGateway.php.html#63\">Librarian\\Model\\ORM\\AuthorRowGateway::isEmpty<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/AuthorTableGateway.php.html#10\">Librarian\\Model\\ORM\\AuthorTableGateway::save<\/a>"],[100,2,"<a href=\"src\/Model\/ORM\/AuthorTableGateway.php.html#21\">Librarian\\Model\\ORM\\AuthorTableGateway::readByCode<\/a>"],[100,2,"<a href=\"src\/Model\/ORM\/AuthorTableGateway.php.html#31\">Librarian\\Model\\ORM\\AuthorTableGateway::readAuthors<\/a>"],[100,3,"<a href=\"src\/Model\/ORM\/AuthorTableGateway.php.html#40\">Librarian\\Model\\ORM\\AuthorTableGateway::update<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/AuthorTableGateway.php.html#60\">Librarian\\Model\\ORM\\AuthorTableGateway::delete<\/a>"],[100,2,"<a href=\"src\/Model\/ORM\/BookFinder.php.html#15\">Librarian\\Model\\ORM\\BookFinder::readByCode<\/a>"],[100,3,"<a href=\"src\/Model\/ORM\/BookFinder.php.html#32\">Librarian\\Model\\ORM\\BookFinder::readAll<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/BookRowGateway.php.html#15\">Librarian\\Model\\ORM\\BookRowGateway::__construct<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/BookRowGateway.php.html#21\">Librarian\\Model\\ORM\\BookRowGateway::save<\/a>"],[100,3,"<a href=\"src\/Model\/ORM\/BookRowGateway.php.html#31\">Librarian\\Model\\ORM\\BookRowGateway::update<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/BookRowGateway.php.html#54\">Librarian\\Model\\ORM\\BookRowGateway::delete<\/a>"],[100,2,"<a href=\"src\/Model\/ORM\/BookRowGateway.php.html#63\">Librarian\\Model\\ORM\\BookRowGateway::isEmpty<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/BookTableGateway.php.html#11\">Librarian\\Model\\ORM\\BookTableGateway::save<\/a>"],[100,2,"<a href=\"src\/Model\/ORM\/BookTableGateway.php.html#21\">Librarian\\Model\\ORM\\BookTableGateway::readByCode<\/a>"],[100,2,"<a href=\"src\/Model\/ORM\/BookTableGateway.php.html#31\">Librarian\\Model\\ORM\\BookTableGateway::readBooks<\/a>"],[100,3,"<a href=\"src\/Model\/ORM\/BookTableGateway.php.html#40\">Librarian\\Model\\ORM\\BookTableGateway::update<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/BookTableGateway.php.html#59\">Librarian\\Model\\ORM\\BookTableGateway::delete<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/Table.php.html#14\">Librarian\\Model\\ORM\\Table::__construct<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/Table.php.html#21\">Librarian\\Model\\ORM\\Table::truncate<\/a>"],[0,1,"<a href=\"src\/Test\/PHPServer.php.html#13\">Librarian\\Test\\PHPServer::__construct<\/a>"],[66.66666666666666,2,"<a href=\"src\/Test\/PHPServer.php.html#16\">Librarian\\Test\\PHPServer::getInstance<\/a>"],[0,3,"<a href=\"src\/Test\/PHPServer.php.html#24\">Librarian\\Test\\PHPServer::start<\/a>"],[0,6,"<a href=\"src\/Test\/PHPServer.php.html#45\">Librarian\\Test\\PHPServer::stop<\/a>"],[100,4,"<a href=\"src\/Util\/Config.php.html#12\">Librarian\\Util\\Config::get<\/a>"],[100,4,"<a href=\"src\/Util\/Config.php.html#26\">Librarian\\Util\\Config::getConfigFileName<\/a>"],[100,1,"<a href=\"src\/Util\/Config.php.html#36\">Librarian\\Util\\Config::override<\/a>"],[100,1,"<a href=\"src\/Util\/Config.php.html#41\">Librarian\\Util\\Config::change<\/a>"],[100,1,"<a href=\"src\/Util\/Config.php.html#52\">Librarian\\Util\\Config::clear<\/a>"],[100,1,"<a href=\"src\/Util\/Config.php.html#58\">Librarian\\Util\\Config::getPathFile<\/a>"],[100,1,"<a href=\"src\/Validator\/NameValidator.php.html#9\">Librarian\\Validator\\NameValidator::__invoke<\/a>"],[100,2,"<a href=\"src\/Validator\/NameValidator.php.html#14\">Librarian\\Validator\\NameValidator::isValid<\/a>"],[100,1,"<a href=\"src\/Validator\/TitleValidator.php.html#9\">Librarian\\Validator\\TitleValidator::__invoke<\/a>"],[100,2,"<a href=\"src\/Validator\/TitleValidator.php.html#14\">Librarian\\Validator\\TitleValidator::isValid<\/a>"],[100,1,"<a href=\"src\/Model\/ODM\/CollectionTrait.php.html#12\">Librarian\\Model\\ODM\\CollectionTrait::initDatabase<\/a>"],[100,1,"<a href=\"src\/Model\/ORM\/DatabaseTrait.php.html#12\">Librarian\\Model\\ORM\\DatabaseTrait::initDatabase<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
