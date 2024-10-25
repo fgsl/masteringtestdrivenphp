@@ -55,7 +55,7 @@ class Author extends AbstractPageController
 
     protected function insert($lastName, $middleName, $firstName): bool
     {
-        $storageFormat = Config::get('storage_format'); error_log("storageFormat $storageFormat");
+        $storageFormat = Config::get('storage_format');
         $dataGateway = 'Librarian\Model\\' .  match($storageFormat){
             'txt' => 'Filesystem\AuthorPlainText',
             'csv' => 'Filesystem\AuthorCSV',
