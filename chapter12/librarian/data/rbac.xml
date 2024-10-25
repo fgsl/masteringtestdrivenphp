@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rbac>
+    <role name="admin">
+        <resource name="author">
+            <permission>list</permission>
+            <permission>edit</permission>
+            <permission>save</permission>
+            <permission>delete</permission>
+            <permission>message</permission>
+        </resource>
+        <resource name="book">
+            <permission>list</permission>
+            <permission>edit</permission>
+            <permission>save</permission>
+            <permission>delete</permission>
+            <permission>message</permission>
+        </resource>                
+    </role>
+    <user name="jack">
+        <role>admin</role>
+    </user>
+</rbac>

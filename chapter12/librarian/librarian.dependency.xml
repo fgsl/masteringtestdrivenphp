@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies generated="2024-09-14T02:25:55" pdepend="2.16.2snapshot202312171812">
+  <package name="Librarian\Controller">
+    <class name="AbstractPageController">
+      <efferent/>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Author"/>
+        <type namespace="Librarian\Controller" name="Book"/>
+        <type namespace="Librarian\Controller" name="Index"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Controller/AbstractPageController.php"/>
+    </class>
+    <class name="Author">
+      <efferent>
+        <type namespace="Librarian\Controller" name="AbstractPageController"/>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="" name="Exception"/>
+        <type namespace="Librarian\Model" name="Author"/>
+        <type namespace="Librarian\Model" name="AuthorRowSet"/>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorPlainTextFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorJSONFinder"/>
+        <type namespace="Librarian\Model\ORM" name="AuthorFinder"/>
+        <type namespace="Librarian\Model\ODM" name="AuthorCollectionFinder"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Book"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Controller/Author.php"/>
+    </class>
+    <class name="Book">
+      <efferent>
+        <type namespace="Librarian\Controller" name="AbstractPageController"/>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="" name="Exception"/>
+        <type namespace="Librarian\Model" name="Book"/>
+        <type namespace="Librarian\Model" name="BookRowSet"/>
+        <type namespace="Librarian\Model" name="AuthorProxy"/>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookPlainTextFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookJSONFinder"/>
+        <type namespace="Librarian\Model\ORM" name="BookFinder"/>
+        <type namespace="Librarian\Model\ODM" name="BookCollectionFinder"/>
+        <type namespace="Librarian\Controller" name="Author"/>
+        <type namespace="Librarian\Model" name="AuthorRowSet"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Controller/Book.php"/>
+    </class>
+    <class name="Index">
+      <efferent>
+        <type namespace="Librarian\Controller" name="AbstractPageController"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Controller/Index.php"/>
+    </class>
+  </package>
+  <package name="Librarian\Controller\REST">
+    <class name="AbstractRESTController">
+      <efferent>
+        <type namespace="Librarian\Controller\REST" name="mixed"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller\REST" name="AuthorREST"/>
+        <type namespace="Librarian\Controller\REST" name="BookREST"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Controller/REST/AbstractRESTController.php"/>
+    </class>
+    <class name="AuthorREST">
+      <efferent>
+        <type namespace="Librarian\Controller\REST" name="AbstractRESTController"/>
+        <type namespace="Librarian\Model" name="AuthorProxy"/>
+        <type namespace="Librarian\Controller\REST" name="mixed"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Controller/REST/AuthorREST.php"/>
+    </class>
+    <class name="BookREST">
+      <efferent>
+        <type namespace="Librarian\Controller\REST" name="AbstractRESTController"/>
+        <type namespace="Librarian\Model" name="BookProxy"/>
+        <type namespace="Librarian\Controller\REST" name="mixed"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Controller/REST/BookREST.php"/>
+    </class>
+  </package>
+  <package name="Librarian\Model">
+    <class name="AbstractCode">
+      <efferent/>
+      <afferent>
+        <type namespace="Librarian\Model" name="Author"/>
+        <type namespace="Librarian\Model" name="Book"/>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorPlainTextFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookPlainTextFinder"/>
+        <type namespace="Librarian\Model\ODM" name="AuthorCollectionFinder"/>
+        <type namespace="Librarian\Model\ODM" name="BookCollectionFinder"/>
+        <type namespace="Librarian\Model\ORM" name="AuthorFinder"/>
+        <type namespace="Librarian\Model\ORM" name="BookFinder"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/AbstractCode.php"/>
+    </class>
+    <class name="AbstractRowSet">
+      <efferent>
+        <type namespace="" name="Iterator"/>
+        <type namespace="Librarian\Model" name="object"/>
+        <type namespace="Librarian\Model" name="mixed"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Model" name="AuthorRowSet"/>
+        <type namespace="Librarian\Model" name="BookRowSet"/>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorPlainTextFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookPlainTextFinder"/>
+        <type namespace="Librarian\Model\ODM" name="AuthorCollectionFinder"/>
+        <type namespace="Librarian\Model\ODM" name="BookCollectionFinder"/>
+        <type namespace="Librarian\Model\ORM" name="AuthorFinder"/>
+        <type namespace="Librarian\Model\ORM" name="BookFinder"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/AbstractRowSet.php"/>
+    </class>
+    <class name="Author">
+      <efferent>
+        <type namespace="Librarian\Model" name="AbstractCode"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Author"/>
+        <type namespace="Librarian\Model" name="AuthorProxy"/>
+        <type namespace="Librarian\Model" name="AuthorRowSet"/>
+        <type namespace="Librarian\Model" name="Book"/>
+        <type namespace="Librarian\Model" name="BookRowSet"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorPlainTextFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookPlainTextFinder"/>
+        <type namespace="Librarian\Model\ODM" name="AuthorCollectionFinder"/>
+        <type namespace="Librarian\Model\ODM" name="AuthorCollectionRowGateway"/>
+        <type namespace="Librarian\Model\ODM" name="BookCollectionFinder"/>
+        <type namespace="Librarian\Model\ODM" name="BookCollectionRowGateway"/>
+        <type namespace="Librarian\Model\ORM" name="AuthorRowGateway"/>
+        <type namespace="Librarian\Model\ORM" name="BookFinder"/>
+        <type namespace="Librarian\Model\ORM" name="BookRowGateway"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Author.php"/>
+    </class>
+    <class name="AuthorProxy">
+      <efferent>
+        <type namespace="Librarian\Model" name="object"/>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="" name="Throwable"/>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model" name="Author"/>
+        <type namespace="" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Book"/>
+        <type namespace="Librarian\Controller\REST" name="AuthorREST"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/AuthorProxy.php"/>
+    </class>
+    <class name="AuthorRowSet">
+      <efferent>
+        <type namespace="Librarian\Model" name="AbstractRowSet"/>
+        <type namespace="Librarian\Model" name="Author"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Author"/>
+        <type namespace="Librarian\Controller" name="Book"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorPlainTextFinder"/>
+        <type namespace="Librarian\Model\ODM" name="AuthorCollectionFinder"/>
+        <type namespace="Librarian\Model\ORM" name="AuthorFinder"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/AuthorRowSet.php"/>
+    </class>
+    <class name="Book">
+      <efferent>
+        <type namespace="Librarian\Model" name="AbstractCode"/>
+        <type namespace="Librarian\Model" name="Author"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Book"/>
+        <type namespace="Librarian\Model" name="BookProxy"/>
+        <type namespace="Librarian\Model" name="BookRowSet"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookPlainTextFinder"/>
+        <type namespace="Librarian\Model\ODM" name="BookCollectionFinder"/>
+        <type namespace="Librarian\Model\ODM" name="BookCollectionRowGateway"/>
+        <type namespace="Librarian\Model\ORM" name="BookRowGateway"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Book.php"/>
+    </class>
+    <class name="BookProxy">
+      <efferent>
+        <type namespace="Librarian\Model" name="object"/>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="" name="Throwable"/>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model" name="Book"/>
+        <type namespace="" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller\REST" name="BookREST"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/BookProxy.php"/>
+    </class>
+    <class name="BookRowSet">
+      <efferent>
+        <type namespace="Librarian\Model" name="AbstractRowSet"/>
+        <type namespace="Librarian\Model" name="Book"/>
+        <type namespace="Librarian\Model" name="Author"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Book"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookPlainTextFinder"/>
+        <type namespace="Librarian\Model\ODM" name="BookCollectionFinder"/>
+        <type namespace="Librarian\Model\ORM" name="BookFinder"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/BookRowSet.php"/>
+    </class>
+    <class name="Entity">
+      <efferent>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="Librarian\Model\ORM" name="Table"/>
+        <type namespace="Librarian\Model\ODM" name="Collection"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Entity.php"/>
+    </class>
+    <interface name="FinderInterface">
+      <efferent>
+        <type namespace="Librarian\Model" name="AbstractCode"/>
+        <type namespace="Librarian\Model" name="AbstractRowSet"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Author"/>
+        <type namespace="Librarian\Controller" name="Book"/>
+        <type namespace="Librarian\Model" name="AuthorProxy"/>
+        <type namespace="Librarian\Model" name="BookProxy"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorPlainTextFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookPlainTextFinder"/>
+        <type namespace="Librarian\Model\ODM" name="AuthorCollectionFinder"/>
+        <type namespace="Librarian\Model\ODM" name="BookCollectionFinder"/>
+        <type namespace="Librarian\Model\ORM" name="AuthorFinder"/>
+        <type namespace="Librarian\Model\ORM" name="BookFinder"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/FinderInterface.php"/>
+    </interface>
+    <interface name="RowGatewayInterface">
+      <efferent/>
+      <afferent>
+        <type namespace="Librarian\Model\ODM" name="AuthorCollectionRowGateway"/>
+        <type namespace="Librarian\Model\ODM" name="BookCollectionRowGateway"/>
+        <type namespace="Librarian\Model\ORM" name="AuthorRowGateway"/>
+        <type namespace="Librarian\Model\ORM" name="BookRowGateway"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/RowGatewayInterface.php"/>
+    </interface>
+  </package>
+  <package name="Librarian\Model\Filesystem">
+    <class name="AbstractAuthorFilesystem">
+      <efferent/>
+      <afferent>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractBookFilesystem"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorCSV"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorJSON"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorPlainText"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorPlainTextFinder"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/AbstractAuthorFilesystem.php"/>
+    </class>
+    <class name="AbstractBookFilesystem">
+      <efferent>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractAuthorFilesystem"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Model\Filesystem" name="BookCSV"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookJSON"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookPlainText"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookPlainTextFinder"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/AbstractBookFilesystem.php"/>
+    </class>
+    <class name="AuthorCSV">
+      <efferent>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractAuthorFilesystem"/>
+        <type namespace="Librarian\Util" name="Config"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/AuthorCSV.php"/>
+    </class>
+    <class name="AuthorCSVFinder">
+      <efferent>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractAuthorFilesystem"/>
+        <type namespace="Librarian\Model" name="AbstractCode"/>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="Librarian\Model" name="Author"/>
+        <type namespace="Librarian\Model" name="AbstractRowSet"/>
+        <type namespace="Librarian\Model" name="AuthorRowSet"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Author"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/AuthorCSVFinder.php"/>
+    </class>
+    <class name="AuthorJSON">
+      <efferent>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractAuthorFilesystem"/>
+        <type namespace="Librarian\Util" name="Config"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/AuthorJSON.php"/>
+    </class>
+    <class name="AuthorJSONFinder">
+      <efferent>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractAuthorFilesystem"/>
+        <type namespace="Librarian\Model" name="AbstractCode"/>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="Librarian\Model" name="Author"/>
+        <type namespace="Librarian\Model" name="AbstractRowSet"/>
+        <type namespace="Librarian\Model" name="AuthorRowSet"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Author"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/AuthorJSONFinder.php"/>
+    </class>
+    <class name="AuthorPlainText">
+      <efferent>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractAuthorFilesystem"/>
+        <type namespace="Librarian\Util" name="Config"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/AuthorPlainText.php"/>
+    </class>
+    <class name="AuthorPlainTextFinder">
+      <efferent>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractAuthorFilesystem"/>
+        <type namespace="Librarian\Model" name="AbstractCode"/>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="Librarian\Model" name="Author"/>
+        <type namespace="Librarian\Model" name="AbstractRowSet"/>
+        <type namespace="Librarian\Model" name="AuthorRowSet"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Author"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/AuthorPlainTextFinder.php"/>
+    </class>
+    <class name="BookCSV">
+      <efferent>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractBookFilesystem"/>
+        <type namespace="Librarian\Util" name="Config"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/BookCSV.php"/>
+    </class>
+    <class name="BookCSVFinder">
+      <efferent>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractBookFilesystem"/>
+        <type namespace="Librarian\Model" name="AbstractCode"/>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="Librarian\Model" name="Book"/>
+        <type namespace="Librarian\Model" name="Author"/>
+        <type namespace="Librarian\Model" name="AbstractRowSet"/>
+        <type namespace="Librarian\Model" name="BookRowSet"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Book"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/BookCSVFinder.php"/>
+    </class>
+    <class name="BookJSON">
+      <efferent>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractBookFilesystem"/>
+        <type namespace="Librarian\Util" name="Config"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/BookJSON.php"/>
+    </class>
+    <class name="BookJSONFinder">
+      <efferent>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractBookFilesystem"/>
+        <type namespace="Librarian\Model" name="AbstractCode"/>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="Librarian\Model" name="Book"/>
+        <type namespace="Librarian\Model" name="Author"/>
+        <type namespace="Librarian\Model" name="AbstractRowSet"/>
+        <type namespace="Librarian\Model" name="BookRowSet"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Book"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/BookJSONFinder.php"/>
+    </class>
+    <class name="BookPlainText">
+      <efferent>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractBookFilesystem"/>
+        <type namespace="Librarian\Util" name="Config"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/BookPlainText.php"/>
+    </class>
+    <class name="BookPlainTextFinder">
+      <efferent>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\Filesystem" name="AbstractBookFilesystem"/>
+        <type namespace="Librarian\Model" name="AbstractCode"/>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="Librarian\Model" name="Book"/>
+        <type namespace="Librarian\Model" name="Author"/>
+        <type namespace="Librarian\Model" name="AbstractRowSet"/>
+        <type namespace="Librarian\Model" name="BookRowSet"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Book"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/Filesystem/BookPlainTextFinder.php"/>
+    </class>
+  </package>
+  <package name="Librarian\Model\ODM">
+    <class name="AbstractCollection">
+      <efferent/>
+      <afferent>
+        <type namespace="Librarian\Model\ODM" name="AuthorCollection"/>
+        <type namespace="Librarian\Model\ODM" name="AuthorCollectionFinder"/>
+        <type namespace="Librarian\Model\ODM" name="BookCollection"/>
+        <type namespace="Librarian\Model\ODM" name="BookCollectionFinder"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ODM/AbstractCollection.php"/>
+    </class>
+    <class name="AuthorCollection">
+      <efferent>
+        <type namespace="Librarian\Model\ODM" name="AbstractCollection"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ODM/AuthorCollection.php"/>
+    </class>
+    <class name="AuthorCollectionFinder">
+      <efferent>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\ODM" name="AbstractCollection"/>
+        <type namespace="Librarian\Model" name="AbstractCode"/>
+        <type namespace="Librarian\Model" name="Author"/>
+        <type namespace="Librarian\Model" name="AbstractRowSet"/>
+        <type namespace="Librarian\Model" name="AuthorRowSet"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Author"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ODM/AuthorCollectionFinder.php"/>
+    </class>
+    <class name="AuthorCollectionRowGateway">
+      <efferent>
+        <type namespace="Librarian\Model" name="RowGatewayInterface"/>
+        <type namespace="Librarian\Model" name="Author"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ODM/AuthorCollectionRowGateway.php"/>
+    </class>
+    <class name="BookCollection">
+      <efferent>
+        <type namespace="Librarian\Model\ODM" name="AbstractCollection"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ODM/BookCollection.php"/>
+    </class>
+    <class name="BookCollectionFinder">
+      <efferent>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\ODM" name="AbstractCollection"/>
+        <type namespace="Librarian\Model" name="AbstractCode"/>
+        <type namespace="Librarian\Model" name="Book"/>
+        <type namespace="Librarian\Model" name="Author"/>
+        <type namespace="Librarian\Model" name="AbstractRowSet"/>
+        <type namespace="Librarian\Model" name="BookRowSet"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Book"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ODM/BookCollectionFinder.php"/>
+    </class>
+    <class name="BookCollectionRowGateway">
+      <efferent>
+        <type namespace="Librarian\Model" name="RowGatewayInterface"/>
+        <type namespace="Librarian\Model" name="Book"/>
+        <type namespace="Librarian\Model" name="Author"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ODM/BookCollectionRowGateway.php"/>
+    </class>
+    <class name="Collection">
+      <efferent>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="MongoDB" name="Client"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Model" name="Entity"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ODM/Collection.php"/>
+    </class>
+    <trait name="CollectionTrait">
+      <efferent>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="MongoDB" name="Client"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ODM/CollectionTrait.php"/>
+    </trait>
+  </package>
+  <package name="Librarian\Model\ORM">
+    <class name="AbstractDatabase">
+      <efferent/>
+      <afferent>
+        <type namespace="Librarian\Model\ORM" name="AuthorFinder"/>
+        <type namespace="Librarian\Model\ORM" name="AuthorTableGateway"/>
+        <type namespace="Librarian\Model\ORM" name="BookFinder"/>
+        <type namespace="Librarian\Model\ORM" name="BookTableGateway"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ORM/AbstractDatabase.php"/>
+    </class>
+    <class name="AuthorFinder">
+      <efferent>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\ORM" name="AbstractDatabase"/>
+        <type namespace="Librarian\Model" name="AbstractCode"/>
+        <type namespace="" name="PDO"/>
+        <type namespace="Librarian\Model\ORM" name="AuthorRowGateway"/>
+        <type namespace="Librarian\Model" name="AbstractRowSet"/>
+        <type namespace="Librarian\Model" name="AuthorRowSet"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Author"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ORM/AuthorFinder.php"/>
+    </class>
+    <class name="AuthorRowGateway">
+      <efferent>
+        <type namespace="Librarian\Model" name="RowGatewayInterface"/>
+        <type namespace="Librarian\Model" name="Author"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Model\ORM" name="AuthorFinder"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ORM/AuthorRowGateway.php"/>
+    </class>
+    <class name="AuthorTableGateway">
+      <efferent>
+        <type namespace="Librarian\Model\ORM" name="AbstractDatabase"/>
+        <type namespace="" name="PDO"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ORM/AuthorTableGateway.php"/>
+    </class>
+    <class name="BookFinder">
+      <efferent>
+        <type namespace="Librarian\Model" name="FinderInterface"/>
+        <type namespace="Librarian\Model\ORM" name="AbstractDatabase"/>
+        <type namespace="Librarian\Model" name="AbstractCode"/>
+        <type namespace="" name="PDO"/>
+        <type namespace="Librarian\Model\ORM" name="BookRowGateway"/>
+        <type namespace="Librarian\Model" name="AbstractRowSet"/>
+        <type namespace="Librarian\Model" name="BookRowSet"/>
+        <type namespace="Librarian\Model" name="Author"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Book"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ORM/BookFinder.php"/>
+    </class>
+    <class name="BookRowGateway">
+      <efferent>
+        <type namespace="Librarian\Model" name="RowGatewayInterface"/>
+        <type namespace="Librarian\Model" name="Book"/>
+        <type namespace="Librarian\Model" name="Author"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Model\ORM" name="BookFinder"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ORM/BookRowGateway.php"/>
+    </class>
+    <class name="BookTableGateway">
+      <efferent>
+        <type namespace="Librarian\Model\ORM" name="AbstractDatabase"/>
+        <type namespace="" name="PDO"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ORM/BookTableGateway.php"/>
+    </class>
+    <trait name="DatabaseTrait">
+      <efferent>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="" name="PDO"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ORM/DatabaseTrait.php"/>
+    </trait>
+    <class name="Table">
+      <efferent>
+        <type namespace="Librarian\Util" name="Config"/>
+        <type namespace="" name="PDO"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Model" name="Entity"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Model/ORM/Table.php"/>
+    </class>
+  </package>
+  <package name="Librarian\Test">
+    <class name="AbstractDatabaseTest">
+      <efferent>
+        <type namespace="PHPUnit\Framework" name="TestCase"/>
+      </efferent>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Test/AbstractDatabaseTest.php"/>
+    </class>
+    <class name="PHPServer">
+      <efferent/>
+      <afferent/>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Test/PHPServer.php"/>
+    </class>
+  </package>
+  <package name="Librarian\Util">
+    <class name="Config">
+      <efferent>
+        <type namespace="Librarian\Util" name="mixed"/>
+      </efferent>
+      <afferent>
+        <type namespace="Librarian\Controller" name="Author"/>
+        <type namespace="Librarian\Controller" name="Book"/>
+        <type namespace="Librarian\Model" name="AuthorProxy"/>
+        <type namespace="Librarian\Model" name="BookProxy"/>
+        <type namespace="Librarian\Model" name="Entity"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorCSV"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorJSON"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorPlainText"/>
+        <type namespace="Librarian\Model\Filesystem" name="AuthorPlainTextFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookCSV"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookCSVFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookJSON"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookJSONFinder"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookPlainText"/>
+        <type namespace="Librarian\Model\Filesystem" name="BookPlainTextFinder"/>
+        <type namespace="Librarian\Model\ODM" name="Collection"/>
+        <type namespace="Librarian\Model\ODM" name="CollectionTrait"/>
+        <type namespace="Librarian\Model\ORM" name="DatabaseTrait"/>
+        <type namespace="Librarian\Model\ORM" name="Table"/>
+      </afferent>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter10/librarian/src/Util/Config.php"/>
+    </class>
+  </package>
+</dependencies>

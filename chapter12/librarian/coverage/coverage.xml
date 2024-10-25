@@ -1,0 +1,1914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1727889369">
+  <project timestamp="1727889369">
+    <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/index.php">
+      <line num="2" type="stmt" count="0"/>
+      <line num="4" type="stmt" count="0"/>
+      <line num="5" type="stmt" count="0"/>
+      <line num="6" type="stmt" count="0"/>
+      <line num="7" type="stmt" count="0"/>
+      <line num="9" type="stmt" count="0"/>
+      <line num="10" type="stmt" count="0"/>
+      <line num="12" type="stmt" count="0"/>
+      <line num="15" type="stmt" count="0"/>
+      <metrics loc="15" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="9" coveredelements="0"/>
+    </file>
+    <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/router.php">
+      <line num="2" type="stmt" count="0"/>
+      <line num="3" type="stmt" count="0"/>
+      <line num="4" type="stmt" count="0"/>
+      <line num="5" type="stmt" count="0"/>
+      <line num="7" type="stmt" count="0"/>
+      <line num="8" type="stmt" count="0"/>
+      <line num="9" type="stmt" count="0"/>
+      <line num="10" type="stmt" count="0"/>
+      <line num="11" type="stmt" count="0"/>
+      <line num="13" type="stmt" count="0"/>
+      <metrics loc="13" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="10" coveredelements="0"/>
+    </file>
+    <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/runtests.php">
+      <line num="4" type="stmt" count="0"/>
+      <line num="5" type="stmt" count="0"/>
+      <line num="6" type="stmt" count="0"/>
+      <line num="7" type="stmt" count="0"/>
+      <metrics loc="7" ncloc="7" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="4" coveredelements="0"/>
+    </file>
+    <package name="Librarian\Controller">
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Controller/AbstractPageController.php">
+        <class name="Librarian\Controller\AbstractPageController" namespace="Librarian\Controller">
+          <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="11" coveredelements="0"/>
+        </class>
+        <line num="11" type="method" name="run" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="15" type="stmt" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="19" type="method" name="redirect" visibility="protected" complexity="2" crap="6" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <metrics loc="29" ncloc="25" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="11" coveredelements="0"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Controller/Author.php">
+        <class name="Librarian\Controller\Author" namespace="Librarian\Controller">
+          <metrics complexity="47" methods="11" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="93" coveredstatements="8" elements="104" coveredelements="10"/>
+        </class>
+        <line num="21" type="method" name="list" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="26" type="method" name="edit" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <line num="32" type="method" name="save" visibility="public" complexity="8" crap="72" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="51" type="method" name="message" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="56" type="method" name="insert" visibility="protected" complexity="7" crap="56" count="0"/>
+        <line num="58" type="stmt" count="0"/>
+        <line num="59" type="stmt" count="0"/>
+        <line num="60" type="stmt" count="0"/>
+        <line num="61" type="stmt" count="0"/>
+        <line num="62" type="stmt" count="0"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="64" type="stmt" count="0"/>
+        <line num="65" type="stmt" count="0"/>
+        <line num="67" type="stmt" count="0"/>
+        <line num="68" type="stmt" count="0"/>
+        <line num="69" type="stmt" count="0"/>
+        <line num="73" type="method" name="update" visibility="protected" complexity="7" crap="56" count="0"/>
+        <line num="75" type="stmt" count="0"/>
+        <line num="77" type="stmt" count="0"/>
+        <line num="78" type="stmt" count="0"/>
+        <line num="79" type="stmt" count="0"/>
+        <line num="80" type="stmt" count="0"/>
+        <line num="81" type="stmt" count="0"/>
+        <line num="82" type="stmt" count="0"/>
+        <line num="83" type="stmt" count="0"/>
+        <line num="84" type="stmt" count="0"/>
+        <line num="85" type="stmt" count="0"/>
+        <line num="86" type="stmt" count="0"/>
+        <line num="87" type="stmt" count="0"/>
+        <line num="88" type="stmt" count="0"/>
+        <line num="90" type="stmt" count="0"/>
+        <line num="91" type="stmt" count="0"/>
+        <line num="92" type="stmt" count="0"/>
+        <line num="93" type="stmt" count="0"/>
+        <line num="94" type="stmt" count="0"/>
+        <line num="95" type="stmt" count="0"/>
+        <line num="96" type="stmt" count="0"/>
+        <line num="100" type="method" name="delete" visibility="public" complexity="4" crap="20" count="0"/>
+        <line num="102" type="stmt" count="0"/>
+        <line num="103" type="stmt" count="0"/>
+        <line num="104" type="stmt" count="0"/>
+        <line num="105" type="stmt" count="0"/>
+        <line num="107" type="stmt" count="0"/>
+        <line num="108" type="stmt" count="0"/>
+        <line num="110" type="stmt" count="0"/>
+        <line num="113" type="method" name="remove" visibility="protected" complexity="7" crap="56" count="0"/>
+        <line num="115" type="stmt" count="0"/>
+        <line num="117" type="stmt" count="0"/>
+        <line num="118" type="stmt" count="0"/>
+        <line num="119" type="stmt" count="0"/>
+        <line num="120" type="stmt" count="0"/>
+        <line num="121" type="stmt" count="0"/>
+        <line num="122" type="stmt" count="0"/>
+        <line num="123" type="stmt" count="0"/>
+        <line num="124" type="stmt" count="0"/>
+        <line num="127" type="stmt" count="0"/>
+        <line num="128" type="stmt" count="0"/>
+        <line num="129" type="stmt" count="0"/>
+        <line num="133" type="method" name="getByCode" visibility="protected" complexity="2" crap="2.50" count="1"/>
+        <line num="136" type="stmt" count="1"/>
+        <line num="137" type="stmt" count="0"/>
+        <line num="138" type="stmt" count="0"/>
+        <line num="140" type="stmt" count="1"/>
+        <line num="143" type="method" name="listAuthorsInTable" visibility="protected" complexity="3" crap="12" count="0"/>
+        <line num="146" type="stmt" count="0"/>
+        <line num="147" type="stmt" count="0"/>
+        <line num="148" type="stmt" count="0"/>
+        <line num="150" type="stmt" count="0"/>
+        <line num="151" type="stmt" count="0"/>
+        <line num="152" type="stmt" count="0"/>
+        <line num="153" type="stmt" count="0"/>
+        <line num="154" type="stmt" count="0"/>
+        <line num="155" type="stmt" count="0"/>
+        <line num="156" type="stmt" count="0"/>
+        <line num="158" type="stmt" count="0"/>
+        <line num="161" type="method" name="getAuthorFinder" visibility="public" complexity="6" crap="21.19" count="1"/>
+        <line num="163" type="stmt" count="1"/>
+        <line num="165" type="stmt" count="1"/>
+        <line num="166" type="stmt" count="1"/>
+        <line num="167" type="stmt" count="0"/>
+        <line num="168" type="stmt" count="0"/>
+        <line num="169" type="stmt" count="0"/>
+        <line num="170" type="stmt" count="0"/>
+        <line num="171" type="stmt" count="0"/>
+        <line num="172" type="stmt" count="0"/>
+        <line num="173" type="stmt" count="0"/>
+        <line num="174" type="stmt" count="0"/>
+        <line num="176" type="stmt" count="0"/>
+        <metrics loc="179" ncloc="175" classes="1" methods="11" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="93" coveredstatements="8" elements="104" coveredelements="10"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Controller/Book.php">
+        <class name="Librarian\Controller\Book" namespace="Librarian\Controller">
+          <metrics complexity="49" methods="12" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="97" coveredstatements="8" elements="109" coveredelements="10"/>
+        </class>
+        <line num="23" type="method" name="list" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="28" type="method" name="edit" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="34" type="method" name="save" visibility="public" complexity="6" crap="42" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="51" type="method" name="message" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="56" type="method" name="insert" visibility="protected" complexity="7" crap="56" count="0"/>
+        <line num="58" type="stmt" count="0"/>
+        <line num="59" type="stmt" count="0"/>
+        <line num="60" type="stmt" count="0"/>
+        <line num="61" type="stmt" count="0"/>
+        <line num="62" type="stmt" count="0"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="64" type="stmt" count="0"/>
+        <line num="65" type="stmt" count="0"/>
+        <line num="67" type="stmt" count="0"/>
+        <line num="68" type="stmt" count="0"/>
+        <line num="69" type="stmt" count="0"/>
+        <line num="73" type="method" name="update" visibility="protected" complexity="7" crap="56" count="0"/>
+        <line num="75" type="stmt" count="0"/>
+        <line num="77" type="stmt" count="0"/>
+        <line num="78" type="stmt" count="0"/>
+        <line num="79" type="stmt" count="0"/>
+        <line num="80" type="stmt" count="0"/>
+        <line num="81" type="stmt" count="0"/>
+        <line num="82" type="stmt" count="0"/>
+        <line num="83" type="stmt" count="0"/>
+        <line num="84" type="stmt" count="0"/>
+        <line num="85" type="stmt" count="0"/>
+        <line num="86" type="stmt" count="0"/>
+        <line num="87" type="stmt" count="0"/>
+        <line num="89" type="stmt" count="0"/>
+        <line num="90" type="stmt" count="0"/>
+        <line num="91" type="stmt" count="0"/>
+        <line num="95" type="method" name="delete" visibility="public" complexity="4" crap="20" count="0"/>
+        <line num="97" type="stmt" count="0"/>
+        <line num="98" type="stmt" count="0"/>
+        <line num="99" type="stmt" count="0"/>
+        <line num="100" type="stmt" count="0"/>
+        <line num="102" type="stmt" count="0"/>
+        <line num="103" type="stmt" count="0"/>
+        <line num="105" type="stmt" count="0"/>
+        <line num="108" type="method" name="remove" visibility="protected" complexity="7" crap="56" count="0"/>
+        <line num="110" type="stmt" count="0"/>
+        <line num="112" type="stmt" count="0"/>
+        <line num="113" type="stmt" count="0"/>
+        <line num="114" type="stmt" count="0"/>
+        <line num="115" type="stmt" count="0"/>
+        <line num="116" type="stmt" count="0"/>
+        <line num="117" type="stmt" count="0"/>
+        <line num="118" type="stmt" count="0"/>
+        <line num="119" type="stmt" count="0"/>
+        <line num="122" type="stmt" count="0"/>
+        <line num="123" type="stmt" count="0"/>
+        <line num="124" type="stmt" count="0"/>
+        <line num="128" type="method" name="getByCode" visibility="protected" complexity="2" crap="2.50" count="1"/>
+        <line num="131" type="stmt" count="1"/>
+        <line num="132" type="stmt" count="0"/>
+        <line num="133" type="stmt" count="0"/>
+        <line num="135" type="stmt" count="1"/>
+        <line num="138" type="method" name="listBooksInTable" visibility="protected" complexity="3" crap="12" count="0"/>
+        <line num="141" type="stmt" count="0"/>
+        <line num="142" type="stmt" count="0"/>
+        <line num="143" type="stmt" count="0"/>
+        <line num="145" type="stmt" count="0"/>
+        <line num="146" type="stmt" count="0"/>
+        <line num="147" type="stmt" count="0"/>
+        <line num="148" type="stmt" count="0"/>
+        <line num="149" type="stmt" count="0"/>
+        <line num="150" type="stmt" count="0"/>
+        <line num="151" type="stmt" count="0"/>
+        <line num="152" type="stmt" count="0"/>
+        <line num="153" type="stmt" count="0"/>
+        <line num="154" type="stmt" count="0"/>
+        <line num="156" type="stmt" count="0"/>
+        <line num="159" type="method" name="getBookFinder" visibility="protected" complexity="6" crap="21.19" count="1"/>
+        <line num="161" type="stmt" count="1"/>
+        <line num="163" type="stmt" count="1"/>
+        <line num="164" type="stmt" count="1"/>
+        <line num="165" type="stmt" count="0"/>
+        <line num="166" type="stmt" count="0"/>
+        <line num="167" type="stmt" count="0"/>
+        <line num="168" type="stmt" count="0"/>
+        <line num="169" type="stmt" count="0"/>
+        <line num="170" type="stmt" count="0"/>
+        <line num="171" type="stmt" count="0"/>
+        <line num="172" type="stmt" count="0"/>
+        <line num="174" type="stmt" count="0"/>
+        <line num="177" type="method" name="listAuthorsForSelect" visibility="protected" complexity="4" crap="20" count="0"/>
+        <line num="180" type="stmt" count="0"/>
+        <line num="181" type="stmt" count="0"/>
+        <line num="182" type="stmt" count="0"/>
+        <line num="184" type="stmt" count="0"/>
+        <line num="185" type="stmt" count="0"/>
+        <line num="186" type="stmt" count="0"/>
+        <line num="187" type="stmt" count="0"/>
+        <line num="189" type="stmt" count="0"/>
+        <metrics loc="192" ncloc="188" classes="1" methods="12" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="97" coveredstatements="8" elements="109" coveredelements="10"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Controller/Index.php">
+        <class name="Librarian\Controller\Index" namespace="Librarian\Controller">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="9" type="method" name="index" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="12" type="stmt" count="1"/>
+        <metrics loc="14" ncloc="10" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+    </package>
+    <package name="Librarian\Controller\REST">
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Controller/REST/AbstractRESTController.php">
+        <class name="Librarian\Controller\REST\AbstractRESTController" namespace="Librarian\Controller\REST">
+          <metrics complexity="9" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="0" elements="32" coveredelements="0"/>
+        </class>
+        <line num="9" type="method" name="run" visibility="public" complexity="6" crap="42" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="12" type="stmt" count="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="15" type="stmt" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="34" type="method" name="getPutData" visibility="protected" complexity="3" crap="12" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="48" type="stmt" count="0"/>
+        <metrics loc="59" ncloc="55" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="0" elements="32" coveredelements="0"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Controller/REST/AuthorREST.php">
+        <class name="Librarian\Controller\REST\AuthorREST" namespace="Librarian\Controller\REST">
+          <metrics complexity="9" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="26" coveredelements="26"/>
+        </class>
+        <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="15" type="stmt" count="10"/>
+        <line num="18" type="method" name="post" visibility="public" complexity="2" crap="2" count="10"/>
+        <line num="20" type="stmt" count="10"/>
+        <line num="21" type="stmt" count="10"/>
+        <line num="22" type="stmt" count="10"/>
+        <line num="24" type="stmt" count="10"/>
+        <line num="26" type="stmt" count="10"/>
+        <line num="28" type="stmt" count="10"/>
+        <line num="30" type="stmt" count="10"/>
+        <line num="33" type="method" name="get" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="35" type="stmt" count="4"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="3"/>
+        <line num="41" type="method" name="put" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="53" type="method" name="delete" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <metrics loc="63" ncloc="59" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="26" coveredelements="26"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Controller/REST/BookREST.php">
+        <class name="Librarian\Controller\REST\BookREST" namespace="Librarian\Controller\REST">
+          <metrics complexity="9" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="24" coveredelements="24"/>
+        </class>
+        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="14" type="stmt" count="5"/>
+        <line num="17" type="method" name="post" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="19" type="stmt" count="5"/>
+        <line num="20" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="24" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <line num="28" type="stmt" count="5"/>
+        <line num="33" type="method" name="get" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="35" type="stmt" count="4"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="3"/>
+        <line num="41" type="method" name="put" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="52" type="method" name="delete" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <metrics loc="62" ncloc="58" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="24" coveredelements="24"/>
+      </file>
+    </package>
+    <package name="Librarian\Filter">
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Filter/TagFilter.php">
+        <class name="Librarian\Filter\TagFilter" namespace="Librarian\Filter">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+        </class>
+        <line num="9" type="method" name="__invoke" visibility="public" complexity="1" crap="1" count="104"/>
+        <line num="11" type="stmt" count="104"/>
+        <line num="14" type="method" name="filter" visibility="public" complexity="1" crap="1" count="104"/>
+        <line num="16" type="stmt" count="104"/>
+        <metrics loc="19" ncloc="15" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+      </file>
+    </package>
+    <package name="Librarian\Model">
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/AbstractCode.php">
+        <class name="Librarian\Model\AbstractCode" namespace="Librarian\Model">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="11" ncloc="7" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/AbstractRowSet.php">
+        <class name="Librarian\Model\AbstractRowSet" namespace="Librarian\Model">
+          <metrics complexity="8" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="16" coveredelements="16"/>
+        </class>
+        <line num="12" type="method" name="add" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="14" type="stmt" count="13"/>
+        <line num="17" type="method" name="current" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="22" type="method" name="key" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="24" type="stmt" count="14"/>
+        <line num="27" type="method" name="next" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="29" type="stmt" count="14"/>
+        <line num="32" type="method" name="rewind" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="34" type="stmt" count="14"/>
+        <line num="37" type="method" name="valid" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="39" type="stmt" count="14"/>
+        <line num="42" type="method" name="get" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="44" type="stmt" count="14"/>
+        <line num="47" type="method" name="getRows" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="49" type="stmt" count="3"/>
+        <metrics loc="52" ncloc="48" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="16" coveredelements="16"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Author.php">
+        <class name="Librarian\Model\Author" namespace="Librarian\Model">
+          <metrics complexity="4" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+        </class>
+        <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="104"/>
+        <line num="18" type="stmt" count="104"/>
+        <line num="19" type="stmt" count="104"/>
+        <line num="20" type="stmt" count="104"/>
+        <line num="21" type="stmt" count="104"/>
+        <line num="22" type="stmt" count="104"/>
+        <line num="25" type="method" name="isValid" visibility="public" complexity="3" crap="3" count="12"/>
+        <line num="27" type="stmt" count="12"/>
+        <line num="28" type="stmt" count="12"/>
+        <metrics loc="31" ncloc="27" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/AuthorProxy.php">
+        <class name="Librarian\Model\AuthorProxy" namespace="Librarian\Model">
+          <metrics complexity="23" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="41" coveredstatements="21" elements="47" coveredelements="21"/>
+        </class>
+        <line num="10" type="method" name="getDataGateway" visibility="private" complexity="7" crap="14.95" count="10"/>
+        <line num="12" type="stmt" count="10"/>
+        <line num="14" type="stmt" count="10"/>
+        <line num="15" type="stmt" count="10"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="10"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="10"/>
+        <line num="27" type="method" name="save" visibility="public" complexity="3" crap="3.21" count="11"/>
+        <line num="29" type="stmt" count="11"/>
+        <line num="30" type="stmt" count="11"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="10"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="10"/>
+        <line num="42" type="method" name="getFinder" visibility="public" complexity="7" crap="14.95" count="4"/>
+        <line num="44" type="stmt" count="4"/>
+        <line num="47" type="stmt" count="4"/>
+        <line num="48" type="stmt" count="4"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="53" type="stmt" count="4"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="55" type="stmt" count="0"/>
+        <line num="57" type="stmt" count="4"/>
+        <line num="60" type="method" name="getByCode" visibility="public" complexity="2" crap="2.50" count="3"/>
+        <line num="63" type="stmt" count="3"/>
+        <line num="64" type="stmt" count="0"/>
+        <line num="65" type="stmt" count="0"/>
+        <line num="67" type="stmt" count="3"/>
+        <line num="70" type="method" name="update" visibility="public" complexity="2" crap="2.50" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="0"/>
+        <line num="75" type="stmt" count="0"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="80" type="method" name="delete" visibility="public" complexity="2" crap="2.50" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="84" type="stmt" count="0"/>
+        <line num="85" type="stmt" count="0"/>
+        <line num="87" type="stmt" count="1"/>
+        <metrics loc="90" ncloc="86" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="41" coveredstatements="21" elements="47" coveredelements="21"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/AuthorRowSet.php">
+        <class name="Librarian\Model\AuthorRowSet" namespace="Librarian\Model">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+        </class>
+        <line num="9" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="8"/>
+        <line num="11" type="stmt" count="8"/>
+        <line num="12" type="stmt" count="2"/>
+        <line num="13" type="stmt" count="2"/>
+        <line num="14" type="stmt" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="16" type="stmt" count="2"/>
+        <line num="17" type="stmt" count="2"/>
+        <metrics loc="21" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Book.php">
+        <class name="Librarian\Model\Book" namespace="Librarian\Model">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+        </class>
+        <line num="14" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="51"/>
+        <line num="16" type="stmt" count="51"/>
+        <line num="17" type="stmt" count="51"/>
+        <line num="18" type="stmt" count="51"/>
+        <line num="19" type="stmt" count="51"/>
+        <line num="22" type="method" name="isValid" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="24" type="stmt" count="7"/>
+        <line num="25" type="stmt" count="7"/>
+        <metrics loc="28" ncloc="24" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/BookProxy.php">
+        <class name="Librarian\Model\BookProxy" namespace="Librarian\Model">
+          <metrics complexity="23" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="25" elements="51" coveredelements="25"/>
+        </class>
+        <line num="10" type="method" name="getDataGateway" visibility="private" complexity="7" crap="14.95" count="5"/>
+        <line num="12" type="stmt" count="5"/>
+        <line num="15" type="stmt" count="5"/>
+        <line num="16" type="stmt" count="5"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="28" type="method" name="save" visibility="public" complexity="3" crap="3.21" count="6"/>
+        <line num="30" type="stmt" count="6"/>
+        <line num="31" type="stmt" count="6"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="5"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="5"/>
+        <line num="42" type="method" name="getFinder" visibility="public" complexity="7" crap="14.95" count="4"/>
+        <line num="44" type="stmt" count="4"/>
+        <line num="46" type="stmt" count="4"/>
+        <line num="47" type="stmt" count="4"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="4"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="56" type="stmt" count="4"/>
+        <line num="59" type="method" name="getByCode" visibility="public" complexity="2" crap="2.50" count="3"/>
+        <line num="62" type="stmt" count="3"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="64" type="stmt" count="0"/>
+        <line num="66" type="stmt" count="3"/>
+        <line num="69" type="method" name="update" visibility="public" complexity="2" crap="2.06" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="78" type="stmt" count="0"/>
+        <line num="79" type="stmt" count="0"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="84" type="method" name="delete" visibility="public" complexity="2" crap="2.50" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="88" type="stmt" count="0"/>
+        <line num="89" type="stmt" count="0"/>
+        <line num="91" type="stmt" count="1"/>
+        <metrics loc="94" ncloc="90" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="25" elements="51" coveredelements="25"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/BookRowSet.php">
+        <class name="Librarian\Model\BookRowSet" namespace="Librarian\Model">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+        </class>
+        <line num="9" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="8"/>
+        <line num="11" type="stmt" count="8"/>
+        <line num="13" type="stmt" count="2"/>
+        <metrics loc="18" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Entity.php">
+        <class name="Librarian\Model\Entity" namespace="Librarian\Model">
+          <metrics complexity="11" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="26" coveredelements="26"/>
+        </class>
+        <line num="12" type="method" name="clear" visibility="public" complexity="7" crap="7" count="53"/>
+        <line num="14" type="stmt" count="53"/>
+        <line num="16" type="stmt" count="53"/>
+        <line num="18" type="stmt" count="53"/>
+        <line num="19" type="stmt" count="21"/>
+        <line num="20" type="stmt" count="11"/>
+        <line num="21" type="stmt" count="53"/>
+        <line num="22" type="stmt" count="53"/>
+        <line num="23" type="stmt" count="53"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="32" type="method" name="getPathForFile" visibility="private" complexity="4" crap="4" count="53"/>
+        <line num="34" type="stmt" count="53"/>
+        <line num="36" type="stmt" count="53"/>
+        <line num="38" type="stmt" count="53"/>
+        <line num="39" type="stmt" count="33"/>
+        <line num="40" type="stmt" count="33"/>
+        <line num="41" type="stmt" count="21"/>
+        <line num="42" type="stmt" count="11"/>
+        <line num="43" type="stmt" count="11"/>
+        <line num="44" type="stmt" count="11"/>
+        <line num="45" type="stmt" count="11"/>
+        <line num="47" type="stmt" count="53"/>
+        <metrics loc="51" ncloc="47" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="26" coveredelements="26"/>
+      </file>
+    </package>
+    <package name="Librarian\Model\Filesystem">
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/AbstractAuthorFilesystem.php">
+        <class name="Librarian\Model\Filesystem\AbstractAuthorFilesystem" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="13" type="method" name="formatField" visibility="public" complexity="1" crap="1" count="30"/>
+        <line num="15" type="stmt" count="30"/>
+        <metrics loc="18" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/AbstractBookFilesystem.php">
+        <class name="Librarian\Model\Filesystem\AbstractBookFilesystem" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="12" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/AuthorCSV.php">
+        <class name="Librarian\Model\Filesystem\AuthorCSV" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="14" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="75" coveredstatements="75" elements="78" coveredelements="78"/>
+        </class>
+        <line num="11" type="method" name="save" visibility="public" complexity="3" crap="3" count="10"/>
+        <line num="13" type="stmt" count="10"/>
+        <line num="14" type="stmt" count="10"/>
+        <line num="15" type="stmt" count="10"/>
+        <line num="16" type="stmt" count="10"/>
+        <line num="17" type="stmt" count="10"/>
+        <line num="18" type="stmt" count="10"/>
+        <line num="20" type="stmt" count="10"/>
+        <line num="21" type="stmt" count="10"/>
+        <line num="22" type="stmt" count="10"/>
+        <line num="23" type="stmt" count="10"/>
+        <line num="24" type="stmt" count="10"/>
+        <line num="25" type="stmt" count="10"/>
+        <line num="26" type="stmt" count="10"/>
+        <line num="27" type="stmt" count="10"/>
+        <line num="28" type="stmt" count="10"/>
+        <line num="29" type="stmt" count="10"/>
+        <line num="30" type="stmt" count="10"/>
+        <line num="31" type="stmt" count="10"/>
+        <line num="32" type="stmt" count="10"/>
+        <line num="33" type="stmt" count="10"/>
+        <line num="34" type="stmt" count="10"/>
+        <line num="36" type="stmt" count="10"/>
+        <line num="37" type="stmt" count="10"/>
+        <line num="38" type="stmt" count="10"/>
+        <line num="41" type="method" name="update" visibility="public" complexity="6" crap="6" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="68" type="stmt" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="80" type="method" name="delete" visibility="public" complexity="5" crap="5" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="85" type="stmt" count="1"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="88" type="stmt" count="1"/>
+        <line num="89" type="stmt" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="91" type="stmt" count="1"/>
+        <line num="92" type="stmt" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="95" type="stmt" count="1"/>
+        <line num="97" type="stmt" count="1"/>
+        <line num="98" type="stmt" count="1"/>
+        <line num="99" type="stmt" count="1"/>
+        <line num="100" type="stmt" count="1"/>
+        <line num="101" type="stmt" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <metrics loc="105" ncloc="101" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="75" coveredstatements="75" elements="78" coveredelements="78"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/AuthorCSVFinder.php">
+        <class name="Librarian\Model\Filesystem\AuthorCSVFinder" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="11" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="35" elements="39" coveredelements="36"/>
+        </class>
+        <line num="16" type="method" name="readByCode" visibility="public" complexity="6" crap="6" count="3"/>
+        <line num="18" type="stmt" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="24" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="31" type="stmt" count="3"/>
+        <line num="32" type="stmt" count="3"/>
+        <line num="33" type="stmt" count="3"/>
+        <line num="34" type="stmt" count="3"/>
+        <line num="35" type="stmt" count="3"/>
+        <line num="38" type="stmt" count="3"/>
+        <line num="39" type="stmt" count="3"/>
+        <line num="42" type="method" name="readAll" visibility="public" complexity="5" crap="5.03" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <metrics loc="66" ncloc="62" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="35" elements="39" coveredelements="36"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/AuthorJSON.php">
+        <class name="Librarian\Model\Filesystem\AuthorJSON" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="12" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="57" coveredstatements="57" elements="60" coveredelements="60"/>
+        </class>
+        <line num="11" type="method" name="save" visibility="public" complexity="4" crap="4" count="10"/>
+        <line num="13" type="stmt" count="10"/>
+        <line num="14" type="stmt" count="10"/>
+        <line num="15" type="stmt" count="10"/>
+        <line num="16" type="stmt" count="10"/>
+        <line num="17" type="stmt" count="10"/>
+        <line num="18" type="stmt" count="10"/>
+        <line num="20" type="stmt" count="10"/>
+        <line num="21" type="stmt" count="10"/>
+        <line num="22" type="stmt" count="4"/>
+        <line num="24" type="stmt" count="10"/>
+        <line num="25" type="stmt" count="10"/>
+        <line num="26" type="stmt" count="10"/>
+        <line num="27" type="stmt" count="10"/>
+        <line num="28" type="stmt" count="10"/>
+        <line num="29" type="stmt" count="10"/>
+        <line num="30" type="stmt" count="10"/>
+        <line num="31" type="stmt" count="10"/>
+        <line num="32" type="stmt" count="10"/>
+        <line num="33" type="stmt" count="10"/>
+        <line num="34" type="stmt" count="10"/>
+        <line num="35" type="stmt" count="10"/>
+        <line num="36" type="stmt" count="10"/>
+        <line num="37" type="stmt" count="10"/>
+        <line num="38" type="stmt" count="10"/>
+        <line num="40" type="stmt" count="10"/>
+        <line num="41" type="stmt" count="10"/>
+        <line num="44" type="method" name="update" visibility="public" complexity="5" crap="5" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="68" type="method" name="delete" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="85" type="stmt" count="1"/>
+        <metrics loc="88" ncloc="84" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="57" coveredstatements="57" elements="60" coveredelements="60"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/AuthorJSONFinder.php">
+        <class name="Librarian\Model\Filesystem\AuthorJSONFinder" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="9" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="28" elements="34" coveredelements="28"/>
+        </class>
+        <line num="15" type="method" name="readByCode" visibility="public" complexity="5" crap="5.05" count="3"/>
+        <line num="17" type="stmt" count="3"/>
+        <line num="18" type="stmt" count="3"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="3"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="24" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="31" type="stmt" count="3"/>
+        <line num="32" type="stmt" count="3"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="38" type="method" name="readAll" visibility="public" complexity="4" crap="4.03" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <metrics loc="60" ncloc="56" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="28" elements="34" coveredelements="28"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/AuthorPlainText.php">
+        <class name="Librarian\Model\Filesystem\AuthorPlainText" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="8" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="62" coveredstatements="62" elements="65" coveredelements="65"/>
+        </class>
+        <line num="11" type="method" name="save" visibility="public" complexity="1" crap="1" count="20"/>
+        <line num="13" type="stmt" count="20"/>
+        <line num="14" type="stmt" count="20"/>
+        <line num="15" type="stmt" count="20"/>
+        <line num="16" type="stmt" count="20"/>
+        <line num="17" type="stmt" count="20"/>
+        <line num="18" type="stmt" count="20"/>
+        <line num="19" type="stmt" count="20"/>
+        <line num="20" type="stmt" count="20"/>
+        <line num="21" type="stmt" count="20"/>
+        <line num="22" type="stmt" count="20"/>
+        <line num="23" type="stmt" count="20"/>
+        <line num="24" type="stmt" count="20"/>
+        <line num="25" type="stmt" count="20"/>
+        <line num="26" type="stmt" count="20"/>
+        <line num="27" type="stmt" count="20"/>
+        <line num="28" type="stmt" count="20"/>
+        <line num="29" type="stmt" count="20"/>
+        <line num="32" type="method" name="update" visibility="public" complexity="4" crap="4" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="46" type="stmt" count="2"/>
+        <line num="47" type="stmt" count="2"/>
+        <line num="48" type="stmt" count="2"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="2"/>
+        <line num="54" type="stmt" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="58" type="stmt" count="2"/>
+        <line num="59" type="stmt" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="63" type="stmt" count="2"/>
+        <line num="66" type="method" name="delete" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="68" type="stmt" count="2"/>
+        <line num="69" type="stmt" count="2"/>
+        <line num="70" type="stmt" count="2"/>
+        <line num="71" type="stmt" count="2"/>
+        <line num="72" type="stmt" count="2"/>
+        <line num="73" type="stmt" count="2"/>
+        <line num="74" type="stmt" count="2"/>
+        <line num="75" type="stmt" count="2"/>
+        <line num="76" type="stmt" count="2"/>
+        <line num="77" type="stmt" count="2"/>
+        <line num="78" type="stmt" count="2"/>
+        <line num="80" type="stmt" count="2"/>
+        <line num="82" type="stmt" count="2"/>
+        <line num="83" type="stmt" count="2"/>
+        <line num="84" type="stmt" count="2"/>
+        <line num="85" type="stmt" count="2"/>
+        <line num="86" type="stmt" count="2"/>
+        <line num="87" type="stmt" count="2"/>
+        <metrics loc="90" ncloc="86" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="62" coveredstatements="62" elements="65" coveredelements="65"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/AuthorPlainTextFinder.php">
+        <class name="Librarian\Model\Filesystem\AuthorPlainTextFinder" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="8" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="35" elements="39" coveredelements="36"/>
+        </class>
+        <line num="16" type="method" name="readByCode" visibility="public" complexity="4" crap="4" count="7"/>
+        <line num="18" type="stmt" count="7"/>
+        <line num="19" type="stmt" count="7"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="7"/>
+        <line num="24" type="stmt" count="7"/>
+        <line num="25" type="stmt" count="7"/>
+        <line num="26" type="stmt" count="7"/>
+        <line num="27" type="stmt" count="7"/>
+        <line num="28" type="stmt" count="7"/>
+        <line num="29" type="stmt" count="7"/>
+        <line num="30" type="stmt" count="7"/>
+        <line num="31" type="stmt" count="7"/>
+        <line num="32" type="stmt" count="7"/>
+        <line num="33" type="stmt" count="7"/>
+        <line num="34" type="stmt" count="7"/>
+        <line num="35" type="stmt" count="7"/>
+        <line num="38" type="stmt" count="7"/>
+        <line num="39" type="stmt" count="7"/>
+        <line num="42" type="method" name="readAll" visibility="public" complexity="4" crap="4.02" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="2"/>
+        <line num="54" type="stmt" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <line num="58" type="stmt" count="2"/>
+        <line num="59" type="stmt" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="63" type="stmt" count="2"/>
+        <line num="64" type="stmt" count="2"/>
+        <metrics loc="67" ncloc="63" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="35" elements="39" coveredelements="36"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/BookCSV.php">
+        <class name="Librarian\Model\Filesystem\BookCSV" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="14" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="72" coveredstatements="72" elements="75" coveredelements="75"/>
+        </class>
+        <line num="11" type="method" name="save" visibility="public" complexity="3" crap="3" count="5"/>
+        <line num="13" type="stmt" count="5"/>
+        <line num="14" type="stmt" count="5"/>
+        <line num="15" type="stmt" count="5"/>
+        <line num="16" type="stmt" count="5"/>
+        <line num="17" type="stmt" count="5"/>
+        <line num="18" type="stmt" count="5"/>
+        <line num="20" type="stmt" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="23" type="stmt" count="5"/>
+        <line num="24" type="stmt" count="5"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <line num="27" type="stmt" count="5"/>
+        <line num="28" type="stmt" count="5"/>
+        <line num="29" type="stmt" count="5"/>
+        <line num="30" type="stmt" count="5"/>
+        <line num="31" type="stmt" count="5"/>
+        <line num="32" type="stmt" count="5"/>
+        <line num="33" type="stmt" count="5"/>
+        <line num="35" type="stmt" count="5"/>
+        <line num="36" type="stmt" count="5"/>
+        <line num="37" type="stmt" count="5"/>
+        <line num="40" type="method" name="update" visibility="public" complexity="6" crap="6" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="77" type="method" name="delete" visibility="public" complexity="5" crap="5" count="1"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="85" type="stmt" count="1"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="88" type="stmt" count="1"/>
+        <line num="89" type="stmt" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="92" type="stmt" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="95" type="stmt" count="1"/>
+        <line num="96" type="stmt" count="1"/>
+        <line num="97" type="stmt" count="1"/>
+        <line num="98" type="stmt" count="1"/>
+        <line num="99" type="stmt" count="1"/>
+        <metrics loc="101" ncloc="97" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="72" coveredstatements="72" elements="75" coveredelements="75"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/BookCSVFinder.php">
+        <class name="Librarian\Model\Filesystem\BookCSVFinder" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="11" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="31" elements="37" coveredelements="31"/>
+        </class>
+        <line num="17" type="method" name="readByCode" visibility="public" complexity="6" crap="6.05" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="31" type="stmt" count="3"/>
+        <line num="32" type="stmt" count="3"/>
+        <line num="33" type="stmt" count="3"/>
+        <line num="34" type="stmt" count="3"/>
+        <line num="35" type="stmt" count="3"/>
+        <line num="38" type="stmt" count="3"/>
+        <line num="39" type="stmt" count="3"/>
+        <line num="42" type="method" name="readAll" visibility="public" complexity="5" crap="5.04" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <metrics loc="64" ncloc="60" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="31" elements="37" coveredelements="31"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/BookJSON.php">
+        <class name="Librarian\Model\Filesystem\BookJSON" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="11" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="55" coveredstatements="55" elements="58" coveredelements="58"/>
+        </class>
+        <line num="11" type="method" name="save" visibility="public" complexity="4" crap="4" count="5"/>
+        <line num="13" type="stmt" count="5"/>
+        <line num="14" type="stmt" count="5"/>
+        <line num="15" type="stmt" count="5"/>
+        <line num="16" type="stmt" count="5"/>
+        <line num="17" type="stmt" count="5"/>
+        <line num="18" type="stmt" count="5"/>
+        <line num="20" type="stmt" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="3"/>
+        <line num="24" type="stmt" count="5"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <line num="27" type="stmt" count="5"/>
+        <line num="28" type="stmt" count="5"/>
+        <line num="29" type="stmt" count="5"/>
+        <line num="30" type="stmt" count="5"/>
+        <line num="31" type="stmt" count="5"/>
+        <line num="32" type="stmt" count="5"/>
+        <line num="33" type="stmt" count="5"/>
+        <line num="34" type="stmt" count="5"/>
+        <line num="35" type="stmt" count="5"/>
+        <line num="36" type="stmt" count="5"/>
+        <line num="37" type="stmt" count="5"/>
+        <line num="39" type="stmt" count="5"/>
+        <line num="40" type="stmt" count="5"/>
+        <line num="43" type="method" name="update" visibility="public" complexity="4" crap="4" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="66" type="method" name="delete" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="68" type="stmt" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="78" type="stmt" count="1"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <metrics loc="85" ncloc="81" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="55" coveredstatements="55" elements="58" coveredelements="58"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/BookJSONFinder.php">
+        <class name="Librarian\Model\Filesystem\BookJSONFinder" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="9" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="26" elements="32" coveredelements="26"/>
+        </class>
+        <line num="17" type="method" name="readByCode" visibility="public" complexity="5" crap="5.06" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="31" type="stmt" count="3"/>
+        <line num="32" type="stmt" count="3"/>
+        <line num="33" type="stmt" count="3"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="39" type="method" name="readAll" visibility="public" complexity="4" crap="4.04" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <metrics loc="59" ncloc="55" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="26" elements="32" coveredelements="26"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/BookPlainText.php">
+        <class name="Librarian\Model\Filesystem\BookPlainText" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="8" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="61" coveredstatements="61" elements="64" coveredelements="64"/>
+        </class>
+        <line num="11" type="method" name="save" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="13" type="stmt" count="10"/>
+        <line num="14" type="stmt" count="10"/>
+        <line num="15" type="stmt" count="10"/>
+        <line num="16" type="stmt" count="10"/>
+        <line num="17" type="stmt" count="10"/>
+        <line num="18" type="stmt" count="10"/>
+        <line num="19" type="stmt" count="10"/>
+        <line num="20" type="stmt" count="10"/>
+        <line num="21" type="stmt" count="10"/>
+        <line num="22" type="stmt" count="10"/>
+        <line num="23" type="stmt" count="10"/>
+        <line num="24" type="stmt" count="10"/>
+        <line num="25" type="stmt" count="10"/>
+        <line num="26" type="stmt" count="10"/>
+        <line num="27" type="stmt" count="10"/>
+        <line num="28" type="stmt" count="10"/>
+        <line num="29" type="stmt" count="10"/>
+        <line num="32" type="method" name="update" visibility="public" complexity="4" crap="4" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="46" type="stmt" count="2"/>
+        <line num="47" type="stmt" count="2"/>
+        <line num="48" type="stmt" count="2"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <line num="58" type="stmt" count="2"/>
+        <line num="59" type="stmt" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="65" type="method" name="delete" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="67" type="stmt" count="2"/>
+        <line num="68" type="stmt" count="2"/>
+        <line num="69" type="stmt" count="2"/>
+        <line num="70" type="stmt" count="2"/>
+        <line num="71" type="stmt" count="2"/>
+        <line num="72" type="stmt" count="2"/>
+        <line num="73" type="stmt" count="2"/>
+        <line num="74" type="stmt" count="2"/>
+        <line num="75" type="stmt" count="2"/>
+        <line num="76" type="stmt" count="2"/>
+        <line num="77" type="stmt" count="2"/>
+        <line num="79" type="stmt" count="2"/>
+        <line num="81" type="stmt" count="2"/>
+        <line num="82" type="stmt" count="2"/>
+        <line num="83" type="stmt" count="2"/>
+        <line num="84" type="stmt" count="2"/>
+        <line num="85" type="stmt" count="2"/>
+        <line num="86" type="stmt" count="2"/>
+        <metrics loc="88" ncloc="84" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="61" coveredstatements="61" elements="64" coveredelements="64"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/Filesystem/BookPlainTextFinder.php">
+        <class name="Librarian\Model\Filesystem\BookPlainTextFinder" namespace="Librarian\Model\Filesystem">
+          <metrics complexity="8" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="33" elements="37" coveredelements="34"/>
+        </class>
+        <line num="17" type="method" name="readByCode" visibility="public" complexity="4" crap="4" count="7"/>
+        <line num="19" type="stmt" count="7"/>
+        <line num="20" type="stmt" count="7"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="7"/>
+        <line num="25" type="stmt" count="7"/>
+        <line num="26" type="stmt" count="7"/>
+        <line num="27" type="stmt" count="7"/>
+        <line num="28" type="stmt" count="7"/>
+        <line num="29" type="stmt" count="7"/>
+        <line num="30" type="stmt" count="7"/>
+        <line num="31" type="stmt" count="7"/>
+        <line num="32" type="stmt" count="7"/>
+        <line num="33" type="stmt" count="7"/>
+        <line num="34" type="stmt" count="7"/>
+        <line num="35" type="stmt" count="7"/>
+        <line num="38" type="stmt" count="7"/>
+        <line num="39" type="stmt" count="7"/>
+        <line num="42" type="method" name="readAll" visibility="public" complexity="4" crap="4.03" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="2"/>
+        <line num="54" type="stmt" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <line num="58" type="stmt" count="2"/>
+        <line num="59" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="63" type="stmt" count="2"/>
+        <metrics loc="65" ncloc="61" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="33" elements="37" coveredelements="34"/>
+      </file>
+    </package>
+    <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/FinderInterface.php">
+      <metrics loc="12" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="Librarian\Model\ODM">
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ODM/AbstractCollection.php">
+        <class name="Librarian\Model\ODM\AbstractCollection" namespace="Librarian\Model\ODM">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="18"/>
+        <line num="14" type="stmt" count="18"/>
+        <metrics loc="16" ncloc="12" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ODM/AuthorCollection.php">
+        <class name="Librarian\Model\ODM\AuthorCollection" namespace="Librarian\Model\ODM">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="17" coveredelements="17"/>
+        </class>
+        <line num="11" type="method" name="save" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="13" type="stmt" count="10"/>
+        <line num="14" type="stmt" count="10"/>
+        <line num="15" type="stmt" count="10"/>
+        <line num="16" type="stmt" count="10"/>
+        <line num="17" type="stmt" count="10"/>
+        <line num="18" type="stmt" count="10"/>
+        <line num="19" type="stmt" count="10"/>
+        <line num="22" type="method" name="update" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="31" type="method" name="delete" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <metrics loc="36" ncloc="32" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="17" coveredelements="17"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ODM/AuthorCollectionFinder.php">
+        <class name="Librarian\Model\ODM\AuthorCollectionFinder" namespace="Librarian\Model\ODM">
+          <metrics complexity="4" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="7" elements="10" coveredelements="8"/>
+        </class>
+        <line num="15" type="method" name="readByCode" visibility="public" complexity="2" crap="2" count="6"/>
+        <line num="17" type="stmt" count="6"/>
+        <line num="18" type="stmt" count="6"/>
+        <line num="19" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="6"/>
+        <line num="24" type="method" name="readAll" visibility="public" complexity="2" crap="2.06" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="2"/>
+        <metrics loc="32" ncloc="28" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="7" elements="10" coveredelements="8"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ODM/AuthorCollectionRowGateway.php">
+        <class name="Librarian\Model\ODM\AuthorCollectionRowGateway" namespace="Librarian\Model\ODM">
+          <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="24" coveredelements="24"/>
+        </class>
+        <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="16" type="stmt" count="10"/>
+        <line num="17" type="stmt" count="10"/>
+        <line num="20" type="method" name="save" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="22" type="stmt" count="10"/>
+        <line num="23" type="stmt" count="10"/>
+        <line num="24" type="stmt" count="10"/>
+        <line num="25" type="stmt" count="10"/>
+        <line num="26" type="stmt" count="10"/>
+        <line num="27" type="stmt" count="10"/>
+        <line num="28" type="stmt" count="10"/>
+        <line num="31" type="method" name="update" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="44" type="method" name="delete" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <metrics loc="49" ncloc="45" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="24" coveredelements="24"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ODM/BookCollection.php">
+        <class name="Librarian\Model\ODM\BookCollection" namespace="Librarian\Model\ODM">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="16" coveredelements="16"/>
+        </class>
+        <line num="11" type="method" name="save" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="13" type="stmt" count="5"/>
+        <line num="14" type="stmt" count="5"/>
+        <line num="15" type="stmt" count="5"/>
+        <line num="16" type="stmt" count="5"/>
+        <line num="17" type="stmt" count="5"/>
+        <line num="18" type="stmt" count="5"/>
+        <line num="21" type="method" name="update" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="30" type="method" name="delete" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <metrics loc="35" ncloc="31" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="16" coveredelements="16"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ODM/BookCollectionFinder.php">
+        <class name="Librarian\Model\ODM\BookCollectionFinder" namespace="Librarian\Model\ODM">
+          <metrics complexity="4" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="7" elements="10" coveredelements="8"/>
+        </class>
+        <line num="16" type="method" name="readByCode" visibility="public" complexity="2" crap="2" count="6"/>
+        <line num="18" type="stmt" count="6"/>
+        <line num="19" type="stmt" count="6"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="6"/>
+        <line num="25" type="method" name="readAll" visibility="public" complexity="2" crap="2.06" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="2"/>
+        <metrics loc="33" ncloc="29" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="7" elements="10" coveredelements="8"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ODM/BookCollectionRowGateway.php">
+        <class name="Librarian\Model\ODM\BookCollectionRowGateway" namespace="Librarian\Model\ODM">
+          <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="22" coveredelements="22"/>
+        </class>
+        <line num="15" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="17" type="stmt" count="5"/>
+        <line num="18" type="stmt" count="5"/>
+        <line num="21" type="method" name="save" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="23" type="stmt" count="5"/>
+        <line num="24" type="stmt" count="5"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <line num="27" type="stmt" count="5"/>
+        <line num="28" type="stmt" count="5"/>
+        <line num="31" type="method" name="update" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="43" type="method" name="delete" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <metrics loc="48" ncloc="44" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="22" coveredelements="22"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ODM/Collection.php">
+        <class name="Librarian\Model\ODM\Collection" namespace="Librarian\Model\ODM">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="11" coveredelements="11"/>
+        </class>
+        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="21"/>
+        <line num="14" type="stmt" count="21"/>
+        <line num="17" type="method" name="drop" visibility="public" complexity="1" crap="1" count="21"/>
+        <line num="19" type="stmt" count="21"/>
+        <line num="20" type="stmt" count="21"/>
+        <line num="21" type="stmt" count="21"/>
+        <line num="22" type="stmt" count="21"/>
+        <line num="25" type="method" name="getConnection" visibility="private" complexity="1" crap="1" count="21"/>
+        <line num="27" type="stmt" count="21"/>
+        <line num="28" type="stmt" count="21"/>
+        <line num="29" type="stmt" count="21"/>
+        <metrics loc="32" ncloc="28" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="11" coveredelements="11"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ODM/CollectionTrait.php">
+        <class name="Librarian\Model\ODM\CollectionTrait" namespace="Librarian\Model\ODM">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="12" type="method" name="initDatabase" visibility="protected" complexity="1" crap="1" count="20"/>
+        <line num="14" type="stmt" count="20"/>
+        <line num="15" type="stmt" count="20"/>
+        <line num="16" type="stmt" count="20"/>
+        <metrics loc="18" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+    </package>
+    <package name="Librarian\Model\ORM">
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ORM/AbstractDatabase.php">
+        <class name="Librarian\Model\ORM\AbstractDatabase" namespace="Librarian\Model\ORM">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="11" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="28"/>
+        <line num="13" type="stmt" count="28"/>
+        <metrics loc="16" ncloc="12" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ORM/AuthorFinder.php">
+        <class name="Librarian\Model\ORM\AuthorFinder" namespace="Librarian\Model\ORM">
+          <metrics complexity="5" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="29" coveredelements="29"/>
+        </class>
+        <line num="13" type="method" name="readByCode" visibility="public" complexity="2" crap="2" count="6"/>
+        <line num="15" type="stmt" count="6"/>
+        <line num="16" type="stmt" count="6"/>
+        <line num="17" type="stmt" count="6"/>
+        <line num="18" type="stmt" count="6"/>
+        <line num="19" type="stmt" count="6"/>
+        <line num="20" type="stmt" count="6"/>
+        <line num="21" type="stmt" count="6"/>
+        <line num="22" type="stmt" count="6"/>
+        <line num="23" type="stmt" count="6"/>
+        <line num="24" type="stmt" count="6"/>
+        <line num="25" type="stmt" count="6"/>
+        <line num="27" type="stmt" count="6"/>
+        <line num="30" type="method" name="readAll" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="48" type="stmt" count="2"/>
+        <metrics loc="51" ncloc="47" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="29" coveredelements="29"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ORM/AuthorRowGateway.php">
+        <class name="Librarian\Model\ORM\AuthorRowGateway" namespace="Librarian\Model\ORM">
+          <metrics complexity="10" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="36" elements="41" coveredelements="41"/>
+        </class>
+        <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="15" type="stmt" count="14"/>
+        <line num="16" type="stmt" count="14"/>
+        <line num="19" type="method" name="save" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="21" type="stmt" count="10"/>
+        <line num="22" type="stmt" count="10"/>
+        <line num="23" type="stmt" count="10"/>
+        <line num="24" type="stmt" count="10"/>
+        <line num="25" type="stmt" count="10"/>
+        <line num="26" type="stmt" count="10"/>
+        <line num="27" type="stmt" count="10"/>
+        <line num="30" type="method" name="update" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="54" type="method" name="delete" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="63" type="method" name="isEmpty" visibility="public" complexity="4" crap="4" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="68" type="stmt" count="1"/>
+        <metrics loc="71" ncloc="67" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="36" elements="41" coveredelements="41"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ORM/AuthorTableGateway.php">
+        <class name="Librarian\Model\ORM\AuthorTableGateway" namespace="Librarian\Model\ORM">
+          <metrics complexity="9" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="37" elements="42" coveredelements="42"/>
+        </class>
+        <line num="10" type="method" name="save" visibility="public" complexity="1" crap="1" count="20"/>
+        <line num="12" type="stmt" count="20"/>
+        <line num="13" type="stmt" count="20"/>
+        <line num="14" type="stmt" count="20"/>
+        <line num="15" type="stmt" count="20"/>
+        <line num="16" type="stmt" count="20"/>
+        <line num="17" type="stmt" count="20"/>
+        <line num="18" type="stmt" count="20"/>
+        <line num="21" type="method" name="readByCode" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="24" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="31" type="method" name="readAuthors" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="40" type="method" name="update" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="46" type="stmt" count="2"/>
+        <line num="47" type="stmt" count="2"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <line num="60" type="method" name="delete" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="63" type="stmt" count="2"/>
+        <line num="64" type="stmt" count="2"/>
+        <line num="65" type="stmt" count="2"/>
+        <line num="66" type="stmt" count="2"/>
+        <metrics loc="69" ncloc="65" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="37" elements="42" coveredelements="42"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ORM/BookFinder.php">
+        <class name="Librarian\Model\ORM\BookFinder" namespace="Librarian\Model\ORM">
+          <metrics complexity="5" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="26" coveredelements="26"/>
+        </class>
+        <line num="15" type="method" name="readByCode" visibility="public" complexity="2" crap="2" count="6"/>
+        <line num="17" type="stmt" count="6"/>
+        <line num="18" type="stmt" count="6"/>
+        <line num="19" type="stmt" count="6"/>
+        <line num="20" type="stmt" count="6"/>
+        <line num="21" type="stmt" count="6"/>
+        <line num="22" type="stmt" count="6"/>
+        <line num="23" type="stmt" count="6"/>
+        <line num="24" type="stmt" count="6"/>
+        <line num="25" type="stmt" count="6"/>
+        <line num="26" type="stmt" count="6"/>
+        <line num="28" type="stmt" count="6"/>
+        <line num="32" type="method" name="readAll" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="48" type="stmt" count="2"/>
+        <metrics loc="51" ncloc="47" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="26" coveredelements="26"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ORM/BookRowGateway.php">
+        <class name="Librarian\Model\ORM\BookRowGateway" namespace="Librarian\Model\ORM">
+          <metrics complexity="8" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="32" elements="37" coveredelements="37"/>
+        </class>
+        <line num="15" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="17" type="stmt" count="9"/>
+        <line num="18" type="stmt" count="9"/>
+        <line num="21" type="method" name="save" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="23" type="stmt" count="5"/>
+        <line num="24" type="stmt" count="5"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <line num="27" type="stmt" count="5"/>
+        <line num="28" type="stmt" count="5"/>
+        <line num="31" type="method" name="update" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="54" type="method" name="delete" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="63" type="method" name="isEmpty" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <metrics loc="69" ncloc="65" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="32" elements="37" coveredelements="37"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ORM/BookTableGateway.php">
+        <class name="Librarian\Model\ORM\BookTableGateway" namespace="Librarian\Model\ORM">
+          <metrics complexity="9" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="35" elements="40" coveredelements="40"/>
+        </class>
+        <line num="11" type="method" name="save" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="13" type="stmt" count="10"/>
+        <line num="14" type="stmt" count="10"/>
+        <line num="15" type="stmt" count="10"/>
+        <line num="16" type="stmt" count="10"/>
+        <line num="17" type="stmt" count="10"/>
+        <line num="18" type="stmt" count="10"/>
+        <line num="21" type="method" name="readByCode" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="24" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="31" type="method" name="readBooks" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="40" type="method" name="update" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="46" type="stmt" count="2"/>
+        <line num="47" type="stmt" count="2"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="59" type="method" name="delete" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="63" type="stmt" count="2"/>
+        <line num="64" type="stmt" count="2"/>
+        <line num="65" type="stmt" count="2"/>
+        <metrics loc="68" ncloc="64" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="35" elements="40" coveredelements="40"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ORM/DatabaseTrait.php">
+        <class name="Librarian\Model\ORM\DatabaseTrait" namespace="Librarian\Model\ORM">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+        </class>
+        <line num="12" type="method" name="initDatabase" visibility="public" complexity="1" crap="1" count="30"/>
+        <line num="14" type="stmt" count="30"/>
+        <line num="15" type="stmt" count="30"/>
+        <metrics loc="18" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/ORM/Table.php">
+        <class name="Librarian\Model\ORM\Table" namespace="Librarian\Model\ORM">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+        </class>
+        <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="31"/>
+        <line num="16" type="stmt" count="31"/>
+        <line num="17" type="stmt" count="31"/>
+        <line num="18" type="stmt" count="31"/>
+        <line num="21" type="method" name="truncate" visibility="public" complexity="1" crap="1" count="31"/>
+        <line num="23" type="stmt" count="31"/>
+        <line num="24" type="stmt" count="31"/>
+        <line num="25" type="stmt" count="31"/>
+        <line num="26" type="stmt" count="31"/>
+        <line num="27" type="stmt" count="31"/>
+        <line num="28" type="stmt" count="31"/>
+        <metrics loc="31" ncloc="27" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+      </file>
+    </package>
+    <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Model/RowGatewayInterface.php">
+      <metrics loc="13" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Test/DatabaseTestInterface.php">
+      <metrics loc="30" ncloc="24" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="Librarian\Test">
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Test/PHPServer.php">
+        <class name="Librarian\Test\PHPServer" namespace="Librarian\Test">
+          <metrics complexity="12" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="2" elements="41" coveredelements="2"/>
+        </class>
+        <line num="13" type="method" name="__construct" visibility="private" complexity="1" crap="2" count="0"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="16" type="method" name="getInstance" visibility="public" complexity="2" crap="2.15" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="24" type="method" name="start" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="45" type="method" name="stop" visibility="public" complexity="6" crap="42" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="56" type="stmt" count="0"/>
+        <line num="57" type="stmt" count="0"/>
+        <line num="58" type="stmt" count="0"/>
+        <line num="59" type="stmt" count="0"/>
+        <line num="60" type="stmt" count="0"/>
+        <line num="61" type="stmt" count="0"/>
+        <line num="64" type="stmt" count="0"/>
+        <line num="65" type="stmt" count="0"/>
+        <line num="66" type="stmt" count="0"/>
+        <line num="67" type="stmt" count="0"/>
+        <line num="68" type="stmt" count="0"/>
+        <line num="70" type="stmt" count="0"/>
+        <metrics loc="74" ncloc="70" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="2" elements="41" coveredelements="2"/>
+      </file>
+    </package>
+    <package name="Librarian\Util">
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Util/Config.php">
+        <class name="Librarian\Util\Config" namespace="Librarian\Util">
+          <metrics complexity="12" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="31" coveredelements="31"/>
+        </class>
+        <line num="12" type="method" name="get" visibility="public" complexity="4" crap="4" count="106"/>
+        <line num="14" type="stmt" count="106"/>
+        <line num="15" type="stmt" count="56"/>
+        <line num="17" type="stmt" count="106"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="106"/>
+        <line num="23" type="stmt" count="106"/>
+        <line num="26" type="method" name="getConfigFileName" visibility="private" complexity="4" crap="4" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="36" type="method" name="override" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="41" type="method" name="change" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="52" type="method" name="clear" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="58" type="method" name="getPathFile" visibility="public" complexity="1" crap="1" count="42"/>
+        <line num="60" type="stmt" count="42"/>
+        <line num="61" type="stmt" count="42"/>
+        <metrics loc="64" ncloc="60" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="31" coveredelements="31"/>
+      </file>
+    </package>
+    <package name="Librarian\Validator">
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Validator/NameValidator.php">
+        <class name="Librarian\Validator\NameValidator" namespace="Librarian\Validator">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+        </class>
+        <line num="9" type="method" name="__invoke" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="11" type="stmt" count="12"/>
+        <line num="14" type="method" name="isValid" visibility="public" complexity="2" crap="2" count="12"/>
+        <line num="16" type="stmt" count="12"/>
+        <line num="17" type="stmt" count="12"/>
+        <metrics loc="20" ncloc="16" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/media/fgsl/hdd/masteringtestdrivenphp/chapter11/librarian/src/Validator/TitleValidator.php">
+        <class name="Librarian\Validator\TitleValidator" namespace="Librarian\Validator">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+        </class>
+        <line num="9" type="method" name="__invoke" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="11" type="stmt" count="7"/>
+        <line num="14" type="method" name="isValid" visibility="public" complexity="2" crap="2" count="7"/>
+        <line num="16" type="stmt" count="7"/>
+        <line num="17" type="stmt" count="7"/>
+        <metrics loc="20" ncloc="16" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+      </file>
+    </package>
+    <metrics files="59" loc="2992" ncloc="2766" classes="51" methods="164" coveredmethods="114" conditionals="0" coveredconditionals="0" statements="1388" coveredstatements="1057" elements="1552" coveredelements="1171"/>
+  </project>
+</coverage>

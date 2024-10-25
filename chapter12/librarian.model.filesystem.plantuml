@@ -1,0 +1,74 @@
+@startuml class-diagram
+  class "AuthorPlainTextFinder" as AuthorPlainTextFinder {
+    +readByCode(code)
+    +readAll()
+  }
+  class "AbstractBookFilesystem" as AbstractBookFilesystem {
+  }
+  class "BookCSV" as BookCSV {
+    +save(book)
+    +update(code, data)
+    +delete(code)
+  }
+  class "BookJSON" as BookJSON {
+    +save(book)
+    +update(code, data)
+    +delete(code)
+  }
+  class "AuthorPlainText" as AuthorPlainText {
+    +save(author)
+    +update(code, data)
+    +delete(code)
+  }
+  class "AuthorCSVFinder" as AuthorCSVFinder {
+    +readByCode(code)
+    +readAll()
+  }
+  class "AuthorJSONFinder" as AuthorJSONFinder {
+    +readByCode(code)
+    +readAll()
+  }
+  class "BookPlainText" as BookPlainText {
+    +save(book)
+    +update(code, data)
+    +delete(code)
+  }
+  class "BookCSVFinder" as BookCSVFinder {
+    +readByCode(code)
+    +readAll()
+  }
+  class "AbstractAuthorFilesystem" as AbstractAuthorFilesystem {
+    +formatField(field, length)
+  }
+  class "AuthorCSV" as AuthorCSV {
+    +save(author)
+    +update(code, data)
+    +delete(code)
+  }
+  class "BookPlainTextFinder" as BookPlainTextFinder {
+    +readByCode(code)
+    +readAll()
+  }
+  class "BookJSONFinder" as BookJSONFinder {
+    +readByCode(code)
+    +readAll()
+  }
+  class "AuthorJSON" as AuthorJSON {
+    +save(author)
+    +update(code, data)
+    +delete(code)
+  }
+  AbstractAuthorFilesystem <|-- AbstractBookFilesystem
+  AbstractAuthorFilesystem <|-- AuthorCSV
+  AbstractAuthorFilesystem <|-- AuthorCSVFinder
+  AbstractAuthorFilesystem <|-- AuthorJSON
+  AbstractAuthorFilesystem <|-- AuthorJSONFinder
+  AbstractAuthorFilesystem <|-- AuthorPlainText
+  AbstractAuthorFilesystem <|-- AuthorPlainTextFinder
+  AbstractBookFilesystem <|-- BookCSV
+  AbstractBookFilesystem <|-- BookCSVFinder
+  AbstractBookFilesystem <|-- BookJSON
+  AbstractBookFilesystem <|-- BookJSONFinder
+  AbstractBookFilesystem <|-- BookPlainText
+  AbstractBookFilesystem <|-- BookPlainTextFinder
+@enduml
