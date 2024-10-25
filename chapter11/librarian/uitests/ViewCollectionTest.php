@@ -44,13 +44,13 @@ class ViewCollectionTest extends ViewDatabaseTest
     public static function setUpBeforeClass(): void
     {
         putenv('LIBRARIAN_TEST_ENVIRONMENT=true');        
-        Config::change("'txt'","'ddb'");
+        Config::change('storage_format','ddb');
         PHPServer::getInstance()->start();
     }
 
     public static function tearDownAfterClass():void
     {
-        Config::change("'ddb'","'txt'");
+        Config::change('storage_format','txt');
         putenv('LIBRARIAN_TEST_ENVIRONMENT=false');
         PHPServer::getInstance()->stop();
     }
