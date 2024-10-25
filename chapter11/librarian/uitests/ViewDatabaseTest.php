@@ -39,7 +39,7 @@ class ViewDatabaseTest extends TestCase
     public static function setUpBeforeClass(): void
     {
         putenv('LIBRARIAN_TEST_ENVIRONMENT=true');
-        Config::change("'txt'","'rdb'");
+        Config::change('storage_format','rdb');
         PHPServer::getInstance()->start();
     }
 
@@ -283,7 +283,7 @@ class ViewDatabaseTest extends TestCase
 
     public static function tearDownAfterClass():void
     {
-        Config::change("'rdb'","'txt'");
+        Config::change('storage_format','txt');
         putenv('LIBRARIAN_TEST_ENVIRONMENT=false');
         PHPServer::getInstance()->stop();
     }

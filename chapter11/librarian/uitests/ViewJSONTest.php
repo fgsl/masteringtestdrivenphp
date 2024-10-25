@@ -45,7 +45,7 @@ class ViewJSONTest extends TestCase
     public static function setUpBeforeClass(): void
     {
         putenv('LIBRARIAN_TEST_ENVIRONMENT=true');
-        Config::change("'txt'","'json'");
+        Config::change('storage_format','json');
         PHPServer::getInstance()->start();
     }
 
@@ -289,7 +289,7 @@ class ViewJSONTest extends TestCase
 
     public static function tearDownAfterClass():void
     {
-        Config::change("'json'","'txt'");
+        Config::change('storage_format','txt');
         putenv('LIBRARIAN_TEST_ENVIRONMENT=false');
         PHPServer::getInstance()->stop();
         Entity::clear('book');

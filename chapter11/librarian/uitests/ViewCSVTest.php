@@ -55,7 +55,7 @@ class ViewCSVTest extends TestCase
     public static function setUpBeforeClass(): void
     {
         putenv('LIBRARIAN_TEST_ENVIRONMENT=true');
-        Config::change("'txt'","'csv'");
+        Config::change('storage_format','csv');
         PHPServer::getInstance()->start();
     }
 
@@ -299,7 +299,7 @@ class ViewCSVTest extends TestCase
 
     public static function tearDownAfterClass():void
     {
-        Config::change("'csv'","'txt'");
+        Config::change('storage_format','txt');
         putenv('LIBRARIAN_TEST_ENVIRONMENT=false');
         PHPServer::getInstance()->stop();
         Entity::clear('book');
