@@ -1,0 +1,92 @@
+@startuml class-diagram
+  class "BookProxy" as BookProxy {
+    -getDataGateway()
+    +save(title, authorCode)
+    +getFinder()
+    +getByCode(code)
+    +update(code, title, authorCode)
+    +delete(code)
+  }
+  interface "FinderInterface" as FinderInterface {
+    +readByCode(code)
+    +readAll()
+  }
+  class "BookRowSet" as BookRowSet {
+    +__construct(rows)
+  }
+  interface "RowGatewayInterface" as RowGatewayInterface {
+    +save()
+    +update()
+    +delete()
+  }
+  class "Book" as Book {
+    +title : string
+    +author : ?Author
+    +__construct(code, title, author)
+    +isValid()
+  }
+  class "Entity" as Entity {
+    {static} +clear(entity)
+    {static} -getPathForFile(entity)
+  }
+  class "AbstractCode" as AbstractCode {
+    +code : int
+  }
+  class "AbstractRowSet" as AbstractRowSet {
+    #rows : array
+    #key : int
+    +add(row)
+    +current()
+    +key()
+    +next()
+    +rewind()
+    +valid()
+    +get(key)
+    +getRows()
+  }
+  class "AuthorProxy" as AuthorProxy {
+    -getDataGateway()
+    +save(lastName, middleName, firstName)
+    +getFinder()
+    +getByCode(code)
+    +update(code, data)
+    +delete(code)
+  }
+  class "AuthorRowSet" as AuthorRowSet {
+    +__construct(rows)
+  }
+  interface "BookWriterInterface" as BookWriterInterface {
+    +save(book)
+  }
+  class "Author" as Author {
+    +firstName : string
+    +middleName : string
+    +lastName : string
+    +__construct(code, firstName, middleName, lastName)
+    +isValid()
+  }
+  interface "WriterInterface" as WriterInterface {
+    +update(code, data)
+    +delete(code)
+  }
+  interface "AuthorWriterInterface" as AuthorWriterInterface {
+    +save(author)
+  }
+  AbstractCode <|-- Author
+  AbstractCode <|-- Book
+  AbstractRowSet <|-- AuthorRowSet
+  AbstractRowSet <|-- BookRowSet
+  AuthorProxy ..> Author
+  AuthorProxy ..> FinderInterface
+  AuthorRowSet ..> Author
+  AuthorWriterInterface ..> Author
+  Book ..> Author
+  BookProxy ..> Author
+  BookProxy ..> Book
+  BookProxy ..> FinderInterface
+  BookRowSet ..> Author
+  BookRowSet ..> Book
+  BookWriterInterface ..> Book
+  FinderInterface ..> AbstractCode
+  FinderInterface ..> AbstractRowSet
+@enduml

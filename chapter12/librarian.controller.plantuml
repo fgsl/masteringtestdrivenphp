@@ -1,0 +1,71 @@
+@startuml class-diagram
+  class "Book" as Book {
+    #book : Book
+    +list()
+    +edit()
+    +save()
+    +message()
+    #insert(title, authorCode)
+    #update(code, title, authorCode)
+    +delete()
+    #remove(code)
+    #getByCode(code)
+    #listBooksInTable()
+    #getBookFinder()
+    #listAuthorsForSelect(code)
+  }
+  class "Index" as Index {
+    +index()
+  }
+  class "Author" as Author {
+    #author : Author
+    +list()
+    +edit()
+    +save()
+    +message()
+    #insert(lastName, middleName, firstName)
+    #update(code, lastName, middleName, firstName)
+    +delete()
+    #remove(code)
+    #getByCode(code)
+    #listAuthorsInTable()
+    +getAuthorFinder()
+  }
+  class "AbstractPageController" as AbstractPageController {
+    -controller : string
+    +run(action)
+    #redirect(controller, action, args)
+  }
+  package REST as REST {
+    class "AbstractRESTController" as REST_AbstractRESTController {
+      +run(action)
+      #getPutData()
+      {abstract} +post(data)
+      {abstract} +get(code)
+      {abstract} +put(data)
+      {abstract} +delete(code)
+    }
+    class "BookREST" as REST_BookREST {
+      -bookProxy : BookProxy
+      +__construct()
+      +post(data)
+      +get(code)
+      +put(data)
+      +delete(code)
+    }
+    class "AuthorREST" as REST_AuthorREST {
+      -authorProxy : AuthorProxy
+      +__construct()
+      +post(data)
+      +get(code)
+      +put(data)
+      +delete(code)
+    }
+  }
+  AbstractPageController <|-- Author
+  AbstractPageController <|-- Book
+  AbstractPageController <|-- Index
+  Book ..> Author
+  REST_AbstractRESTController <|-- REST_AuthorREST
+  REST_AbstractRESTController <|-- REST_BookREST
+@enduml

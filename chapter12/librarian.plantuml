@@ -1,0 +1,474 @@
+@startuml class-diagram
+  package Controller as Controller {
+    class "Book" as Controller_Book {
+      #book : Book
+      +list()
+      +edit()
+      +save()
+      +message()
+      #insert(title, authorCode)
+      #update(code, title, authorCode)
+      +delete()
+      #remove(code)
+      #getByCode(code)
+      #listBooksInTable()
+      #getBookFinder()
+      #listAuthorsForSelect(code)
+    }
+    class "Index" as Controller_Index {
+      +index()
+    }
+    class "Author" as Controller_Author {
+      #author : Author
+      +list()
+      +edit()
+      +save()
+      +message()
+      #insert(lastName, middleName, firstName)
+      #update(code, lastName, middleName, firstName)
+      +delete()
+      #remove(code)
+      #getByCode(code)
+      #listAuthorsInTable()
+      +getAuthorFinder()
+    }
+    class "AbstractPageController" as Controller_AbstractPageController {
+      -controller : string
+      +run(action)
+      #redirect(controller, action, args)
+    }
+    package REST as Controller.REST {
+      class "AbstractRESTController" as Controller_REST_AbstractRESTController {
+        +run(action)
+        #getPutData()
+        {abstract} +post(data)
+        {abstract} +get(code)
+        {abstract} +put(data)
+        {abstract} +delete(code)
+      }
+      class "BookREST" as Controller_REST_BookREST {
+        -bookProxy : BookProxy
+        +__construct()
+        +post(data)
+        +get(code)
+        +put(data)
+        +delete(code)
+      }
+      class "AuthorREST" as Controller_REST_AuthorREST {
+        -authorProxy : AuthorProxy
+        +__construct()
+        +post(data)
+        +get(code)
+        +put(data)
+        +delete(code)
+      }
+    }
+  }
+  package Test as Test {
+    class "AbstractDatabaseTest" as Test_AbstractDatabaseTest {
+      {abstract} +testSaveAuthor()
+      {abstract} +testReadAuthor()
+      {abstract} +testReadAuthors()
+      {abstract} +testUpdateAuthor()
+      {abstract} +testDeleteAuthor()
+      {abstract} +testReadBook()
+      {abstract} +testReadBooks()
+      {abstract} +testUpdateBook()
+      {abstract} +testDeleteBook()
+    }
+    class "PHPServer" as Test_PHPServer {
+      -process : 
+      -instance : 
+      -__construct()
+      {static} +getInstance()
+      +start()
+      +stop()
+    }
+  }
+  package Model as Model {
+    class "BookProxy" as Model_BookProxy {
+      -getDataGateway()
+      +save(title, authorCode)
+      +getFinder()
+      +getByCode(code)
+      +update(code, title, authorCode)
+      +delete(code)
+    }
+    interface "FinderInterface" as Model_FinderInterface {
+      +readByCode(code)
+      +readAll()
+    }
+    class "BookRowSet" as Model_BookRowSet {
+      +__construct(rows)
+    }
+    interface "RowGatewayInterface" as Model_RowGatewayInterface {
+      +save()
+      +update()
+      +delete()
+    }
+    class "Book" as Model_Book {
+      +title : string
+      +author : ?Author
+      +__construct(code, title, author)
+    }
+    class "Entity" as Model_Entity {
+      {static} +clear(entity)
+      {static} -getPathForFile(entity)
+    }
+    class "AbstractCode" as Model_AbstractCode {
+      +code : int
+    }
+    class "AbstractRowSet" as Model_AbstractRowSet {
+      #rows : array
+      #key : int
+      +add(row)
+      +current()
+      +key()
+      +next()
+      +rewind()
+      +valid()
+      +get(key)
+      +getRows()
+    }
+    class "AuthorProxy" as Model_AuthorProxy {
+      -getDataGateway()
+      +save(lastName, middleName, firstName)
+      +getFinder()
+      +getByCode(code)
+      +update(code, data)
+      +delete(code)
+    }
+    class "AuthorRowSet" as Model_AuthorRowSet {
+      +__construct(rows)
+    }
+    class "Author" as Model_Author {
+      +firstName : string
+      +middleName : string
+      +lastName : string
+      +__construct(code, firstName, middleName, lastName)
+    }
+    package ODM as Model.ODM {
+      class "BookCollectionFinder" as Model_ODM_BookCollectionFinder {
+        +readByCode(code)
+        +readAll()
+      }
+      class "BookCollection" as Model_ODM_BookCollection {
+        +save(title, authorCode)
+        +update(code, data)
+        +delete(code)
+      }
+      class "BookCollectionRowGateway" as Model_ODM_BookCollectionRowGateway {
+        +__construct(code, title, author)
+        +save()
+        +update()
+        +delete()
+      }
+      class "CollectionTrait" as Model_ODM_CollectionTrait {
+        #database : 
+        #initDatabase()
+      }
+      class "AuthorCollection" as Model_ODM_AuthorCollection {
+        +save(lastName, middleName, firstName)
+        +readByCode(code)
+        +readAll()
+        +update(code, data)
+        +delete(code)
+      }
+      class "AbstractCollection" as Model_ODM_AbstractCollection {
+        +__construct()
+      }
+      class "AuthorCollectionRowGateway" as Model_ODM_AuthorCollectionRowGateway {
+        +__construct(code, firstName, middleName, lastName)
+        +save()
+        +update()
+        +delete()
+      }
+      class "Collection" as Model_ODM_Collection {
+        -name : string
+        +__construct(name)
+        +drop()
+        -getConnection()
+      }
+      class "AuthorCollectionFinder" as Model_ODM_AuthorCollectionFinder {
+        +readByCode(code)
+        +readAll()
+      }
+    }
+    package ORM as Model.ORM {
+      class "BookFinder" as Model_ORM_BookFinder {
+        +readByCode(code)
+        +readAll()
+      }
+      class "BookTableGateway" as Model_ORM_BookTableGateway {
+        +save(title, authorCode)
+        +readByCode(code)
+        +readBooks()
+        +update(code, data)
+        +delete(code)
+      }
+      class "BookRowGateway" as Model_ORM_BookRowGateway {
+        +__construct(code, title, author)
+        +save()
+        +update()
+        +delete()
+        +isEmpty()
+      }
+      class "DatabaseTrait" as Model_ORM_DatabaseTrait {
+        #pdo : PDO
+        +initDatabase()
+      }
+      class "AuthorFinder" as Model_ORM_AuthorFinder {
+        +readByCode(code)
+        +readAll()
+      }
+      class "AuthorRowGateway" as Model_ORM_AuthorRowGateway {
+        +__construct(code, firstName, middleName, lastName)
+        +save()
+        +update()
+        +delete()
+        +isEmpty()
+      }
+      class "AbstractDatabase" as Model_ORM_AbstractDatabase {
+        +__construct()
+      }
+      class "AuthorTableGateway" as Model_ORM_AuthorTableGateway {
+        +save(lastName, middleName, firstName)
+        +readByCode(code)
+        +readAuthors()
+        +update(code, data)
+        +delete(code)
+      }
+      class "Table" as Model_ORM_Table {
+        -table : 
+        -connection : PDO
+        +__construct(table)
+        +truncate()
+      }
+    }
+    package Filesystem as Model.Filesystem {
+      class "AuthorPlainTextFinder" as Model_Filesystem_AuthorPlainTextFinder {
+        +readByCode(code)
+        +readAll()
+      }
+      class "AbstractBookFilesystem" as Model_Filesystem_AbstractBookFilesystem {
+      }
+      class "BookCSV" as Model_Filesystem_BookCSV {
+        +save(title, authorCode)
+        +readByCode(code)
+        +readAll()
+        +update(code, data)
+        +delete(code)
+      }
+      class "BookJSON" as Model_Filesystem_BookJSON {
+        +save(title, authorCode)
+        +readByCode(code)
+        +readAll()
+        +update(code, data)
+        +delete(code)
+      }
+      class "AuthorPlainText" as Model_Filesystem_AuthorPlainText {
+        +save(lastName, middleName, firstName)
+        +update(code, data)
+        +delete(code)
+      }
+      class "AuthorCSVFinder" as Model_Filesystem_AuthorCSVFinder {
+        +readByCode(code)
+        +readAll()
+      }
+      class "AuthorJSONFinder" as Model_Filesystem_AuthorJSONFinder {
+        +readByCode(code)
+        +readAll()
+      }
+      class "BookPlainText" as Model_Filesystem_BookPlainText {
+        +save(title, authorCode)
+        +update(code, data)
+        +delete(code)
+      }
+      class "BookCSVFinder" as Model_Filesystem_BookCSVFinder {
+        +readByCode(code)
+        +readAll()
+      }
+      class "AbstractAuthorFilesystem" as Model_Filesystem_AbstractAuthorFilesystem {
+        +formatField(field, length)
+      }
+      class "AuthorCSV" as Model_Filesystem_AuthorCSV {
+        +save(lastName, middleName, firstName)
+        +update(code, data)
+        +delete(code)
+      }
+      class "BookPlainTextFinder" as Model_Filesystem_BookPlainTextFinder {
+        +readByCode(code)
+        +readAll()
+      }
+      class "BookJSONFinder" as Model_Filesystem_BookJSONFinder {
+        +readByCode(code)
+        +readAll()
+      }
+      class "AuthorJSON" as Model_Filesystem_AuthorJSON {
+        +save(lastName, middleName, firstName)
+        +update(code, data)
+        +delete(code)
+      }
+    }
+  }
+  package Util as Util {
+    class "Config" as Util_Config {
+      -config : ?array
+      -overridedValues : array
+      {static} +get(key)
+      {static} -getConfigFileName()
+      {static} +override(key, value)
+      {static} +change(current, new)
+    }
+  }
+  Controller_AbstractPageController <|-- Controller_Author
+  Controller_AbstractPageController <|-- Controller_Book
+  Controller_AbstractPageController <|-- Controller_Index
+  Controller_Author ..> Model_Author
+  Controller_Author ..> Model_AuthorRowSet
+  Controller_Author ..> Model_Filesystem_AuthorCSVFinder
+  Controller_Author ..> Model_Filesystem_AuthorJSONFinder
+  Controller_Author ..> Model_Filesystem_AuthorPlainTextFinder
+  Controller_Author ..> Model_FinderInterface
+  Controller_Author ..> Model_ODM_AuthorCollectionFinder
+  Controller_Author ..> Model_ORM_AuthorFinder
+  Controller_Author ..> Util_Config
+  Controller_Book ..> Controller_Author
+  Controller_Book ..> Model_AuthorProxy
+  Controller_Book ..> Model_AuthorRowSet
+  Controller_Book ..> Model_Book
+  Controller_Book ..> Model_BookRowSet
+  Controller_Book ..> Model_Filesystem_BookCSVFinder
+  Controller_Book ..> Model_Filesystem_BookJSONFinder
+  Controller_Book ..> Model_Filesystem_BookPlainTextFinder
+  Controller_Book ..> Model_FinderInterface
+  Controller_Book ..> Model_ODM_BookCollectionFinder
+  Controller_Book ..> Model_ORM_BookFinder
+  Controller_Book ..> Util_Config
+  Controller_REST_AbstractRESTController <|-- Controller_REST_AuthorREST
+  Controller_REST_AbstractRESTController <|-- Controller_REST_BookREST
+  Controller_REST_AuthorREST ..> Model_AuthorProxy
+  Controller_REST_BookREST ..> Model_BookProxy
+  Model_AbstractCode <|-- Model_Author
+  Model_AbstractCode <|-- Model_Book
+  Model_AbstractRowSet <|-- Model_AuthorRowSet
+  Model_AbstractRowSet <|-- Model_BookRowSet
+  Model_Author <|-- Model_ODM_AuthorCollectionRowGateway
+  Model_Author <|-- Model_ORM_AuthorRowGateway
+  Model_AuthorProxy ..> Model_Author
+  Model_AuthorProxy ..> Model_FinderInterface
+  Model_AuthorProxy ..> Util_Config
+  Model_AuthorRowSet ..> Model_Author
+  Model_Book ..> Model_Author
+  Model_Book <|-- Model_ODM_BookCollectionRowGateway
+  Model_Book <|-- Model_ORM_BookRowGateway
+  Model_BookProxy ..> Model_Book
+  Model_BookProxy ..> Model_FinderInterface
+  Model_BookProxy ..> Util_Config
+  Model_BookRowSet ..> Model_Author
+  Model_BookRowSet ..> Model_Book
+  Model_Entity ..> Model_ODM_Collection
+  Model_Entity ..> Model_ORM_Table
+  Model_Entity ..> Util_Config
+  Model_Filesystem_AbstractAuthorFilesystem <|-- Model_Filesystem_AbstractBookFilesystem
+  Model_Filesystem_AbstractAuthorFilesystem <|-- Model_Filesystem_AuthorCSV
+  Model_Filesystem_AbstractAuthorFilesystem <|-- Model_Filesystem_AuthorCSVFinder
+  Model_Filesystem_AbstractAuthorFilesystem <|-- Model_Filesystem_AuthorJSON
+  Model_Filesystem_AbstractAuthorFilesystem <|-- Model_Filesystem_AuthorJSONFinder
+  Model_Filesystem_AbstractAuthorFilesystem <|-- Model_Filesystem_AuthorPlainText
+  Model_Filesystem_AbstractAuthorFilesystem <|-- Model_Filesystem_AuthorPlainTextFinder
+  Model_Filesystem_AbstractBookFilesystem <|-- Model_Filesystem_BookCSV
+  Model_Filesystem_AbstractBookFilesystem <|-- Model_Filesystem_BookCSVFinder
+  Model_Filesystem_AbstractBookFilesystem <|-- Model_Filesystem_BookJSON
+  Model_Filesystem_AbstractBookFilesystem <|-- Model_Filesystem_BookJSONFinder
+  Model_Filesystem_AbstractBookFilesystem <|-- Model_Filesystem_BookPlainText
+  Model_Filesystem_AbstractBookFilesystem <|-- Model_Filesystem_BookPlainTextFinder
+  Model_Filesystem_AuthorCSV ..> Util_Config
+  Model_Filesystem_AuthorCSVFinder ..> Model_AbstractCode
+  Model_Filesystem_AuthorCSVFinder ..> Model_AbstractRowSet
+  Model_Filesystem_AuthorCSVFinder ..> Model_Author
+  Model_Filesystem_AuthorCSVFinder ..> Model_AuthorRowSet
+  Model_Filesystem_AuthorCSVFinder ..> Util_Config
+  Model_Filesystem_AuthorJSON ..> Util_Config
+  Model_Filesystem_AuthorJSONFinder ..> Model_AbstractCode
+  Model_Filesystem_AuthorJSONFinder ..> Model_AbstractRowSet
+  Model_Filesystem_AuthorJSONFinder ..> Model_Author
+  Model_Filesystem_AuthorJSONFinder ..> Model_AuthorRowSet
+  Model_Filesystem_AuthorJSONFinder ..> Util_Config
+  Model_Filesystem_AuthorPlainText ..> Util_Config
+  Model_Filesystem_AuthorPlainTextFinder ..> Model_AbstractCode
+  Model_Filesystem_AuthorPlainTextFinder ..> Model_AbstractRowSet
+  Model_Filesystem_AuthorPlainTextFinder ..> Model_Author
+  Model_Filesystem_AuthorPlainTextFinder ..> Model_AuthorRowSet
+  Model_Filesystem_AuthorPlainTextFinder ..> Util_Config
+  Model_Filesystem_BookCSV ..> Util_Config
+  Model_Filesystem_BookCSVFinder ..> Model_AbstractCode
+  Model_Filesystem_BookCSVFinder ..> Model_AbstractRowSet
+  Model_Filesystem_BookCSVFinder ..> Model_Author
+  Model_Filesystem_BookCSVFinder ..> Model_Book
+  Model_Filesystem_BookCSVFinder ..> Model_BookRowSet
+  Model_Filesystem_BookCSVFinder ..> Util_Config
+  Model_Filesystem_BookJSON ..> Util_Config
+  Model_Filesystem_BookJSONFinder ..> Model_AbstractCode
+  Model_Filesystem_BookJSONFinder ..> Model_AbstractRowSet
+  Model_Filesystem_BookJSONFinder ..> Model_Author
+  Model_Filesystem_BookJSONFinder ..> Model_Book
+  Model_Filesystem_BookJSONFinder ..> Model_BookRowSet
+  Model_Filesystem_BookJSONFinder ..> Util_Config
+  Model_Filesystem_BookPlainText ..> Util_Config
+  Model_Filesystem_BookPlainTextFinder ..> Model_AbstractCode
+  Model_Filesystem_BookPlainTextFinder ..> Model_AbstractRowSet
+  Model_Filesystem_BookPlainTextFinder ..> Model_Author
+  Model_Filesystem_BookPlainTextFinder ..> Model_Book
+  Model_Filesystem_BookPlainTextFinder ..> Model_BookRowSet
+  Model_Filesystem_BookPlainTextFinder ..> Util_Config
+  Model_FinderInterface ..> Model_AbstractCode
+  Model_FinderInterface ..> Model_AbstractRowSet
+  Model_FinderInterface <|-- Model_Filesystem_AuthorCSVFinder
+  Model_FinderInterface <|-- Model_Filesystem_AuthorJSONFinder
+  Model_FinderInterface <|-- Model_Filesystem_AuthorPlainTextFinder
+  Model_FinderInterface <|-- Model_Filesystem_BookCSVFinder
+  Model_FinderInterface <|-- Model_Filesystem_BookJSONFinder
+  Model_FinderInterface <|-- Model_Filesystem_BookPlainTextFinder
+  Model_FinderInterface <|-- Model_ODM_AuthorCollectionFinder
+  Model_FinderInterface <|-- Model_ODM_BookCollectionFinder
+  Model_FinderInterface <|-- Model_ORM_AuthorFinder
+  Model_FinderInterface <|-- Model_ORM_BookFinder
+  Model_ODM_AbstractCollection <|-- Model_ODM_AuthorCollection
+  Model_ODM_AbstractCollection <|-- Model_ODM_AuthorCollectionFinder
+  Model_ODM_AbstractCollection <|-- Model_ODM_BookCollection
+  Model_ODM_AbstractCollection <|-- Model_ODM_BookCollectionFinder
+  Model_ODM_AuthorCollectionFinder ..> Model_AbstractCode
+  Model_ODM_AuthorCollectionFinder ..> Model_AbstractRowSet
+  Model_ODM_AuthorCollectionFinder ..> Model_Author
+  Model_ODM_AuthorCollectionFinder ..> Model_AuthorRowSet
+  Model_ODM_BookCollectionFinder ..> Model_AbstractCode
+  Model_ODM_BookCollectionFinder ..> Model_AbstractRowSet
+  Model_ODM_BookCollectionFinder ..> Model_Author
+  Model_ODM_BookCollectionFinder ..> Model_Book
+  Model_ODM_BookCollectionFinder ..> Model_BookRowSet
+  Model_ODM_BookCollectionRowGateway ..> Model_Author
+  Model_ODM_Collection ..> Util_Config
+  Model_ODM_CollectionTrait ..> Util_Config
+  Model_ORM_AbstractDatabase <|-- Model_ORM_AuthorFinder
+  Model_ORM_AbstractDatabase <|-- Model_ORM_AuthorTableGateway
+  Model_ORM_AbstractDatabase <|-- Model_ORM_BookFinder
+  Model_ORM_AbstractDatabase <|-- Model_ORM_BookTableGateway
+  Model_ORM_AuthorFinder ..> Model_AbstractCode
+  Model_ORM_AuthorFinder ..> Model_AbstractRowSet
+  Model_ORM_AuthorFinder ..> Model_AuthorRowSet
+  Model_ORM_AuthorFinder ..> Model_ORM_AuthorRowGateway
+  Model_ORM_BookFinder ..> Model_AbstractCode
+  Model_ORM_BookFinder ..> Model_AbstractRowSet
+  Model_ORM_BookFinder ..> Model_Author
+  Model_ORM_BookFinder ..> Model_BookRowSet
+  Model_ORM_BookFinder ..> Model_ORM_BookRowGateway
+  Model_ORM_BookRowGateway ..> Model_Author
+  Model_ORM_DatabaseTrait ..> Util_Config
+  Model_ORM_Table ..> Util_Config
+  Model_RowGatewayInterface <|-- Model_ODM_AuthorCollectionRowGateway
+  Model_RowGatewayInterface <|-- Model_ODM_BookCollectionRowGateway
+  Model_RowGatewayInterface <|-- Model_ORM_AuthorRowGateway
+  Model_RowGatewayInterface <|-- Model_ORM_BookRowGateway
+  Test_PHPServer ..> Test_PHPServer
+@enduml

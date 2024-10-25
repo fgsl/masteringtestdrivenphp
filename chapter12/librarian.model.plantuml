@@ -1,0 +1,335 @@
+@startuml class-diagram
+  class "BookProxy" as BookProxy {
+    -getDataGateway()
+    +save(title, authorCode)
+    +getFinder()
+    +getByCode(code)
+    +update(code, title, authorCode)
+    +delete(code)
+  }
+  interface "FinderInterface" as FinderInterface {
+    +readByCode(code)
+    +readAll()
+  }
+  class "BookRowSet" as BookRowSet {
+    +__construct(rows)
+  }
+  interface "RowGatewayInterface" as RowGatewayInterface {
+    +save()
+    +update()
+    +delete()
+  }
+  class "Book" as Book {
+    +title : string
+    +author : ?Author
+    +__construct(code, title, author)
+    +isValid()
+  }
+  class "Entity" as Entity {
+    {static} +clear(entity)
+    {static} -getPathForFile(entity)
+  }
+  class "AbstractCode" as AbstractCode {
+    +code : int
+  }
+  class "AbstractRowSet" as AbstractRowSet {
+    #rows : array
+    #key : int
+    +add(row)
+    +current()
+    +key()
+    +next()
+    +rewind()
+    +valid()
+    +get(key)
+    +getRows()
+  }
+  class "AuthorProxy" as AuthorProxy {
+    -getDataGateway()
+    +save(lastName, middleName, firstName)
+    +getFinder()
+    +getByCode(code)
+    +update(code, data)
+    +delete(code)
+  }
+  class "AuthorRowSet" as AuthorRowSet {
+    +__construct(rows)
+  }
+  class "Author" as Author {
+    +firstName : string
+    +middleName : string
+    +lastName : string
+    +__construct(code, firstName, middleName, lastName)
+    +isValid()
+  }
+  package ODM as ODM {
+    class "BookCollectionFinder" as ODM_BookCollectionFinder {
+      +readByCode(code)
+      +readAll()
+    }
+    class "BookCollection" as ODM_BookCollection {
+      +save(book)
+      +update(code, data)
+      +delete(code)
+    }
+    class "BookCollectionRowGateway" as ODM_BookCollectionRowGateway {
+      +__construct(code, title, author)
+      +save()
+      +update()
+      +delete()
+    }
+    class "CollectionTrait" as ODM_CollectionTrait {
+      #database : 
+      #initDatabase()
+    }
+    class "AuthorCollection" as ODM_AuthorCollection {
+      +save(author)
+      +update(code, data)
+      +delete(code)
+    }
+    class "AbstractCollection" as ODM_AbstractCollection {
+      +__construct()
+    }
+    class "AuthorCollectionRowGateway" as ODM_AuthorCollectionRowGateway {
+      +__construct(code, firstName, middleName, lastName)
+      +save()
+      +update()
+      +delete()
+    }
+    class "Collection" as ODM_Collection {
+      -name : string
+      +__construct(name)
+      +drop()
+      -getConnection()
+    }
+    class "AuthorCollectionFinder" as ODM_AuthorCollectionFinder {
+      +readByCode(code)
+      +readAll()
+    }
+  }
+  package ORM as ORM {
+    class "BookFinder" as ORM_BookFinder {
+      +readByCode(code)
+      +readAll()
+    }
+    class "BookTableGateway" as ORM_BookTableGateway {
+      +save(book)
+      +readByCode(code)
+      +readBooks()
+      +update(code, data)
+      +delete(code)
+    }
+    class "BookRowGateway" as ORM_BookRowGateway {
+      +__construct(code, title, author)
+      +save()
+      +update()
+      +delete()
+      +isEmpty()
+    }
+    class "DatabaseTrait" as ORM_DatabaseTrait {
+      #pdo : PDO
+      +initDatabase()
+    }
+    class "AuthorFinder" as ORM_AuthorFinder {
+      +readByCode(code)
+      +readAll()
+    }
+    class "AuthorRowGateway" as ORM_AuthorRowGateway {
+      +__construct(code, firstName, middleName, lastName)
+      +save()
+      +update()
+      +delete()
+      +isEmpty()
+    }
+    class "AbstractDatabase" as ORM_AbstractDatabase {
+      +__construct()
+    }
+    class "AuthorTableGateway" as ORM_AuthorTableGateway {
+      +save(author)
+      +readByCode(code)
+      +readAuthors()
+      +update(code, data)
+      +delete(code)
+    }
+    class "Table" as ORM_Table {
+      -table : 
+      -connection : PDO
+      +__construct(table)
+      +truncate()
+    }
+  }
+  package Filesystem as Filesystem {
+    class "AuthorPlainTextFinder" as Filesystem_AuthorPlainTextFinder {
+      +readByCode(code)
+      +readAll()
+    }
+    class "AbstractBookFilesystem" as Filesystem_AbstractBookFilesystem {
+    }
+    class "BookCSV" as Filesystem_BookCSV {
+      +save(book)
+      +update(code, data)
+      +delete(code)
+    }
+    class "BookJSON" as Filesystem_BookJSON {
+      +save(book)
+      +update(code, data)
+      +delete(code)
+    }
+    class "AuthorPlainText" as Filesystem_AuthorPlainText {
+      +save(author)
+      +update(code, data)
+      +delete(code)
+    }
+    class "AuthorCSVFinder" as Filesystem_AuthorCSVFinder {
+      +readByCode(code)
+      +readAll()
+    }
+    class "AuthorJSONFinder" as Filesystem_AuthorJSONFinder {
+      +readByCode(code)
+      +readAll()
+    }
+    class "BookPlainText" as Filesystem_BookPlainText {
+      +save(book)
+      +update(code, data)
+      +delete(code)
+    }
+    class "BookCSVFinder" as Filesystem_BookCSVFinder {
+      +readByCode(code)
+      +readAll()
+    }
+    class "AbstractAuthorFilesystem" as Filesystem_AbstractAuthorFilesystem {
+      +formatField(field, length)
+    }
+    class "AuthorCSV" as Filesystem_AuthorCSV {
+      +save(author)
+      +update(code, data)
+      +delete(code)
+    }
+    class "BookPlainTextFinder" as Filesystem_BookPlainTextFinder {
+      +readByCode(code)
+      +readAll()
+    }
+    class "BookJSONFinder" as Filesystem_BookJSONFinder {
+      +readByCode(code)
+      +readAll()
+    }
+    class "AuthorJSON" as Filesystem_AuthorJSON {
+      +save(author)
+      +update(code, data)
+      +delete(code)
+    }
+  }
+  AbstractCode <|-- Author
+  AbstractCode <|-- Book
+  AbstractRowSet <|-- AuthorRowSet
+  AbstractRowSet <|-- BookRowSet
+  Author <|-- ODM_AuthorCollectionRowGateway
+  Author <|-- ORM_AuthorRowGateway
+  AuthorProxy ..> Author
+  AuthorProxy ..> FinderInterface
+  AuthorRowSet ..> Author
+  Book ..> Author
+  Book <|-- ODM_BookCollectionRowGateway
+  Book <|-- ORM_BookRowGateway
+  BookProxy ..> Author
+  BookProxy ..> Book
+  BookProxy ..> FinderInterface
+  BookRowSet ..> Author
+  BookRowSet ..> Book
+  Entity ..> ODM_Collection
+  Entity ..> ORM_Table
+  Filesystem_AbstractAuthorFilesystem <|-- Filesystem_AbstractBookFilesystem
+  Filesystem_AbstractAuthorFilesystem <|-- Filesystem_AuthorCSV
+  Filesystem_AbstractAuthorFilesystem <|-- Filesystem_AuthorCSVFinder
+  Filesystem_AbstractAuthorFilesystem <|-- Filesystem_AuthorJSON
+  Filesystem_AbstractAuthorFilesystem <|-- Filesystem_AuthorJSONFinder
+  Filesystem_AbstractAuthorFilesystem <|-- Filesystem_AuthorPlainText
+  Filesystem_AbstractAuthorFilesystem <|-- Filesystem_AuthorPlainTextFinder
+  Filesystem_AbstractBookFilesystem <|-- Filesystem_BookCSV
+  Filesystem_AbstractBookFilesystem <|-- Filesystem_BookCSVFinder
+  Filesystem_AbstractBookFilesystem <|-- Filesystem_BookJSON
+  Filesystem_AbstractBookFilesystem <|-- Filesystem_BookJSONFinder
+  Filesystem_AbstractBookFilesystem <|-- Filesystem_BookPlainText
+  Filesystem_AbstractBookFilesystem <|-- Filesystem_BookPlainTextFinder
+  Filesystem_AuthorCSV ..> Author
+  Filesystem_AuthorCSVFinder ..> AbstractCode
+  Filesystem_AuthorCSVFinder ..> AbstractRowSet
+  Filesystem_AuthorCSVFinder ..> Author
+  Filesystem_AuthorCSVFinder ..> AuthorRowSet
+  Filesystem_AuthorJSON ..> Author
+  Filesystem_AuthorJSONFinder ..> AbstractCode
+  Filesystem_AuthorJSONFinder ..> AbstractRowSet
+  Filesystem_AuthorJSONFinder ..> Author
+  Filesystem_AuthorJSONFinder ..> AuthorRowSet
+  Filesystem_AuthorPlainText ..> Author
+  Filesystem_AuthorPlainTextFinder ..> AbstractCode
+  Filesystem_AuthorPlainTextFinder ..> AbstractRowSet
+  Filesystem_AuthorPlainTextFinder ..> Author
+  Filesystem_AuthorPlainTextFinder ..> AuthorRowSet
+  Filesystem_BookCSV ..> Book
+  Filesystem_BookCSVFinder ..> AbstractCode
+  Filesystem_BookCSVFinder ..> AbstractRowSet
+  Filesystem_BookCSVFinder ..> Author
+  Filesystem_BookCSVFinder ..> Book
+  Filesystem_BookCSVFinder ..> BookRowSet
+  Filesystem_BookJSON ..> Book
+  Filesystem_BookJSONFinder ..> AbstractCode
+  Filesystem_BookJSONFinder ..> AbstractRowSet
+  Filesystem_BookJSONFinder ..> Author
+  Filesystem_BookJSONFinder ..> Book
+  Filesystem_BookJSONFinder ..> BookRowSet
+  Filesystem_BookPlainText ..> Book
+  Filesystem_BookPlainTextFinder ..> AbstractCode
+  Filesystem_BookPlainTextFinder ..> AbstractRowSet
+  Filesystem_BookPlainTextFinder ..> Author
+  Filesystem_BookPlainTextFinder ..> Book
+  Filesystem_BookPlainTextFinder ..> BookRowSet
+  FinderInterface ..> AbstractCode
+  FinderInterface ..> AbstractRowSet
+  FinderInterface <|-- Filesystem_AuthorCSVFinder
+  FinderInterface <|-- Filesystem_AuthorJSONFinder
+  FinderInterface <|-- Filesystem_AuthorPlainTextFinder
+  FinderInterface <|-- Filesystem_BookCSVFinder
+  FinderInterface <|-- Filesystem_BookJSONFinder
+  FinderInterface <|-- Filesystem_BookPlainTextFinder
+  FinderInterface <|-- ODM_AuthorCollectionFinder
+  FinderInterface <|-- ODM_BookCollectionFinder
+  FinderInterface <|-- ORM_AuthorFinder
+  FinderInterface <|-- ORM_BookFinder
+  ODM_AbstractCollection <|-- ODM_AuthorCollection
+  ODM_AbstractCollection <|-- ODM_AuthorCollectionFinder
+  ODM_AbstractCollection <|-- ODM_BookCollection
+  ODM_AbstractCollection <|-- ODM_BookCollectionFinder
+  ODM_AuthorCollection ..> Author
+  ODM_AuthorCollectionFinder ..> AbstractCode
+  ODM_AuthorCollectionFinder ..> AbstractRowSet
+  ODM_AuthorCollectionFinder ..> Author
+  ODM_AuthorCollectionFinder ..> AuthorRowSet
+  ODM_BookCollection ..> Book
+  ODM_BookCollectionFinder ..> AbstractCode
+  ODM_BookCollectionFinder ..> AbstractRowSet
+  ODM_BookCollectionFinder ..> Author
+  ODM_BookCollectionFinder ..> Book
+  ODM_BookCollectionFinder ..> BookRowSet
+  ODM_BookCollectionRowGateway ..> Author
+  ORM_AbstractDatabase <|-- ORM_AuthorFinder
+  ORM_AbstractDatabase <|-- ORM_AuthorTableGateway
+  ORM_AbstractDatabase <|-- ORM_BookFinder
+  ORM_AbstractDatabase <|-- ORM_BookTableGateway
+  ORM_AuthorFinder ..> AbstractCode
+  ORM_AuthorFinder ..> AbstractRowSet
+  ORM_AuthorFinder ..> AuthorRowSet
+  ORM_AuthorFinder ..> ORM_AuthorRowGateway
+  ORM_AuthorTableGateway ..> Author
+  ORM_BookFinder ..> AbstractCode
+  ORM_BookFinder ..> AbstractRowSet
+  ORM_BookFinder ..> Author
+  ORM_BookFinder ..> BookRowSet
+  ORM_BookFinder ..> ORM_BookRowGateway
+  ORM_BookRowGateway ..> Author
+  ORM_BookTableGateway ..> Book
+  RowGatewayInterface <|-- ODM_AuthorCollectionRowGateway
+  RowGatewayInterface <|-- ODM_BookCollectionRowGateway
+  RowGatewayInterface <|-- ORM_AuthorRowGateway
+  RowGatewayInterface <|-- ORM_BookRowGateway
+@enduml

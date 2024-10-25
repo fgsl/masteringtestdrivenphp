@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<acl>
+    <user name="jack">
+        <resource name="author">
+            <permission>list</permission>
+            <permission>edit</permission>
+        </resource>
+        <resource name="book">
+            <permission>list</permission>
+        </resource>                
+    </user>
+</acl>

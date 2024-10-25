@@ -1,0 +1,48 @@
+@startuml class-diagram
+  class "Adapter" as Adapter {
+    -format : 
+    -identity : string
+    -credential : string
+    -strategy : 
+    +__construct()
+    +setIdentity(identity)
+    +setCredential(credential)
+    +authenticate()
+    +isValid()
+    +hasIdentity()
+    +getIdentity()
+    +clearIdentity()
+  }
+  class "Xml" as Xml {
+    -strategy : StrategyInterface
+    -valid : 
+    +__construct(strategy)
+    +authenticate(identity, credential)
+    +isValid()
+  }
+  package Strategy as Strategy {
+    class "Session" as Strategy_Session {
+      +hasIdentity()
+      +getIdentity()
+      +clearIdentity()
+      +storeIdentity(identity, credential)
+    }
+    interface "StrategyInterface" as Strategy_StrategyInterface {
+      +hasIdentity()
+      +getIdentity()
+      +clearIdentity()
+      +storeIdentity(identity, credential)
+    }
+    class "Token" as Strategy_Token {
+      -bearerToken : ?string
+      +hasIdentity()
+      +getIdentity()
+      +clearIdentity()
+      +storeIdentity(identity, credential)
+    }
+  }
+  Adapter ..> Adapter
+  Strategy_StrategyInterface <|-- Strategy_Session
+  Strategy_StrategyInterface <|-- Strategy_Token
+  Xml ..> Strategy_StrategyInterface
+@enduml

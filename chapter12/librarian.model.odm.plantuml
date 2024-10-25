@@ -1,0 +1,49 @@
+@startuml class-diagram
+  class "BookCollectionFinder" as BookCollectionFinder {
+    +readByCode(code)
+    +readAll()
+  }
+  class "BookCollection" as BookCollection {
+    +save(book)
+    +update(code, data)
+    +delete(code)
+  }
+  class "BookCollectionRowGateway" as BookCollectionRowGateway {
+    +__construct(code, title, author)
+    +save()
+    +update()
+    +delete()
+  }
+  class "CollectionTrait" as CollectionTrait {
+    #database : 
+    #initDatabase()
+  }
+  class "AuthorCollection" as AuthorCollection {
+    +save(author)
+    +update(code, data)
+    +delete(code)
+  }
+  class "AbstractCollection" as AbstractCollection {
+    +__construct()
+  }
+  class "AuthorCollectionRowGateway" as AuthorCollectionRowGateway {
+    +__construct(code, firstName, middleName, lastName)
+    +save()
+    +update()
+    +delete()
+  }
+  class "Collection" as Collection {
+    -name : string
+    +__construct(name)
+    +drop()
+    -getConnection()
+  }
+  class "AuthorCollectionFinder" as AuthorCollectionFinder {
+    +readByCode(code)
+    +readAll()
+  }
+  AbstractCollection <|-- AuthorCollection
+  AbstractCollection <|-- AuthorCollectionFinder
+  AbstractCollection <|-- BookCollection
+  AbstractCollection <|-- BookCollectionFinder
+@enduml

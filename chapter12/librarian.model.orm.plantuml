@@ -1,0 +1,57 @@
+@startuml class-diagram
+  class "BookFinder" as BookFinder {
+    +readByCode(code)
+    +readAll()
+  }
+  class "BookTableGateway" as BookTableGateway {
+    +save(book)
+    +readByCode(code)
+    +readBooks()
+    +update(code, data)
+    +delete(code)
+  }
+  class "BookRowGateway" as BookRowGateway {
+    +__construct(code, title, author)
+    +save()
+    +update()
+    +delete()
+    +isEmpty()
+  }
+  class "DatabaseTrait" as DatabaseTrait {
+    #pdo : PDO
+    +initDatabase()
+  }
+  class "AuthorFinder" as AuthorFinder {
+    +readByCode(code)
+    +readAll()
+  }
+  class "AuthorRowGateway" as AuthorRowGateway {
+    +__construct(code, firstName, middleName, lastName)
+    +save()
+    +update()
+    +delete()
+    +isEmpty()
+  }
+  class "AbstractDatabase" as AbstractDatabase {
+    +__construct()
+  }
+  class "AuthorTableGateway" as AuthorTableGateway {
+    +save(author)
+    +readByCode(code)
+    +readAuthors()
+    +update(code, data)
+    +delete(code)
+  }
+  class "Table" as Table {
+    -table : 
+    -connection : PDO
+    +__construct(table)
+    +truncate()
+  }
+  AbstractDatabase <|-- AuthorFinder
+  AbstractDatabase <|-- AuthorTableGateway
+  AbstractDatabase <|-- BookFinder
+  AbstractDatabase <|-- BookTableGateway
+  AuthorFinder ..> AuthorRowGateway
+  BookFinder ..> BookRowGateway
+@enduml
