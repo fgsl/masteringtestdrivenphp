@@ -609,7 +609,7 @@ function updateBookInCSV(int $code, array $data)
             }
             $row = [
                 formatField($code,4),
-                formatField($book['title'],4,80),
+                formatField($book['title'],80),
                 formatField($book['author_code'],4)
             ];
             $changed = true;
